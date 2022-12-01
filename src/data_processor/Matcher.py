@@ -286,6 +286,7 @@ def get_matching_rows_golden(tables, cols, swap_src_target=False):
 
 def get_matching_tables_golden(tables, bidi=False):
     res = []
+    # print(tables)
     for name, item in tables.items():
         i = item['src']['titles'].index(item['rows']['src'])
         k = item['target']['titles'].index(item['rows']['target'])
@@ -341,3 +342,20 @@ def get_correct_source_target_cols(tables):
     print(f"total swaps = {swap_cnt}/{cnt}")
     print(f"Wrongs: {len(wrongs)}")
     print(wrongs)
+
+
+def match_lookup_table(tables: dict, lookup_tables):
+    for table in tables.items():
+        # find closest lookup_table match for src col of table
+        src_col_name = table['rows']['src']
+        src_col_position = table['source_col']
+        # for now assuming that source_col_position is always 'source', but it can actually be 'source' or 'target'. see rows.txt for each dataset for example
+        src_col_items = table['src']['items'] # for now assuming that there's only one column in source table
+        
+
+
+        pass
+
+
+    lookup_table_index = 1
+    return lookup_table_index

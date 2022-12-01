@@ -256,6 +256,7 @@ def run_pattern(item, rows, params, tables, table_name=None, rmu=None, verbose=N
 def run_aj(item, rows, params, tables, table_name=None, rmu=None, verbose=False):
     # Verbose = limited,yes,full
 
+    print(tables)
     if table_name is None:
         table_name = item['src_table'][4:]
     tbl = table_name

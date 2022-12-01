@@ -55,9 +55,27 @@ tables:
         },
         'name': 'california govs 1', 
         'rows': {'src': "Governor's Name", 'target': 'Name'},
-        'source_col': source
+        'source_col': source,
+        'LT': {
+            'titles: [# header of LT ],
+            items: [# rows of LT]
+        }
     }, 
 }         
+
+
+lookup_tables: {
+    'stocks':
+    {
+        
+        'name': 'company', # not really sure what this means
+        'titles': [# headings of lookup_table]
+        'items: [# rows of lookup table],
+        'source_col: # name of source col
+        
+    },
+    ...
+}
 '''
 
 
@@ -80,6 +98,9 @@ def get_tables_from_dir(ds_path, tbl_names, make_lower=False, verbose=False):
 
         has_gt = os.path.exists(ds_dir + "/ground truth.csv")
 
+        # not using lt, so this'll always be false for now
+        has_lt = os.path.exists(ds_dir + "/lookup_table.csv")
+
         res = {
             'src': {'name': 'src_'+dir, 'titles': None, 'items': []},
             'target': {'name': 'target_'+dir, 'titles': None, 'items': []},
@@ -88,6 +109,9 @@ def get_tables_from_dir(ds_path, tbl_names, make_lower=False, verbose=False):
 
         if has_gt:
             res['GT'] = {'titles': None, 'items': []}
+
+        if has_lt:
+            res['LT'] = {'titles': None, 'items': []}
 
 
         with open(ds_dir + "/source.csv") as f:
@@ -111,6 +135,14 @@ def get_tables_from_dir(ds_path, tbl_names, make_lower=False, verbose=False):
                     res['GT']['items'] = [line.lower().strip().split(',') for line in f.readlines()]
                 else:
                     res['GT']['items'] = [line.strip().split(',') for line in f.readlines()]
+        # not using lt, so this'll always be false for now
+        if has_lt:
+            with open(ds_dir + "/lookup_table.csv") as f:
+                res['GT']['titles'] = f.readline().strip().split(',')
+                if make_lower:
+                    res['GT']['items'] = [line.lower().strip().split(',') for line in f.readlines()]
+                else:
+                    res['GT']['items'] = [line.strip().split(',') for line in f.readlines()]
 
         with open(ds_dir + "/rows.txt") as f:
             l = f.readline().strip().split(':')
@@ -125,6 +157,10 @@ def get_tables_from_dir(ds_path, tbl_names, make_lower=False, verbose=False):
             res['source_col'] = l
 
         if has_gt:
+            print('========================')
+            print(ds_dir)
+            print(len(res['GT']['titles']))
+            print(len(res['src']['titles']) + len(res['target']['titles']))
             assert len(res['GT']['titles']) == len(res['src']['titles']) + len(res['target']['titles'])
 
             change = not res['GT']['titles'][0].startswith("source-")
@@ -140,6 +176,27 @@ def get_tables_from_dir(ds_path, tbl_names, make_lower=False, verbose=False):
                     res['GT']['titles'][i] = 'target-' + res['GT']['titles'][i]
 
                 assert res['GT']['titles'][i] == 'target-' + res['target']['titles'][i-len(res['src']['titles'])]
+
+        if has_lt:
+            print('========================')
+            print(ds_dir)
+            print(len(res['LT']['titles']))
+            print(len(res['src']['titles']) + len(res['target']['titles']))
+            assert len(res['LT']['titles']) == len(res['src']['titles']) + len(res['target']['titles'])
+
+            change = not res['LT']['titles'][0].startswith("source-")
+
+            for i in range(0, len(res['src']['titles'])):
+                if change:
+                    res['LT']['titles'][i] = 'source-' + res['LT']['titles'][i]
+
+                assert res['LT']['titles'][i] == 'source-' + res['src']['titles'][i]
+
+            for i in range(len(res['src']['titles']), len(res['LT']['titles'])):
+                if change:
+                    res['LT']['titles'][i] = 'target-' + res['LT']['titles'][i]
+
+                assert res['LT']['titles'][i] == 'target-' + res['target']['titles'][i-len(res['src']['titles'])]
 
         tables[dir] = res
         all_tables.append(res['src'])
