@@ -47,6 +47,9 @@ class RowMatcherUnit:
 
         self._fn = fn
         tp, fp = 0, 0
+
+        print('gt ', gt)
+        print('self rows ', self.rows['rows'])
         for s, val in self.rows['rows'].items():
             if s not in gt.keys():
                 fp += 1

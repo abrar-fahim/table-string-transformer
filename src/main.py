@@ -14,6 +14,8 @@ from autojoin import autojoin as aj
 from evaluator.TransformationSetEval import TransformationSetEval
 from pattern import Finder
 
+from data_processor.Matcher import match_lookup_table
+
 from Transformation.Blocks.LiteralPatternBlock import LiteralPatternBlock
 from Transformation.Blocks.PositionPatternBlock import PositionPatternBlock
 from Transformation.Blocks.TokenPatternBlock import TokenPatternBlock
@@ -46,11 +48,13 @@ PT_PARAMS = {
 
 }
 
-GOLDEN_ROWS = True
+GOLDEN_ROWS = False
 SWAP_SRC_TARGET = True
 
 DATASET = "BM"
 DS_PATH = BASE_PATH + '/data/autojoin-Benchmark/'
+
+LT_PATH = BASE_PATH + '/data/lookup_tables/'
 # DS_PATH = BASE_PATH + '/data/autojoin-no-gt/' # must set GOLDEN_ROW to False
 # DS_PATH = BASE_PATH + '/data/synthesis/'
 # DATASET = "FF"
@@ -72,6 +76,8 @@ ROW_MATCHING_N_END = 20
 
 CNT_CUR = multiprocessing.Value('i', 0)
 CNT_ALL = 0
+
+
 
 
 def get_pattern(func, params, verbose=False):
@@ -256,7 +262,7 @@ def run_pattern(item, rows, params, tables, table_name=None, rmu=None, verbose=N
 def run_aj(item, rows, params, tables, table_name=None, rmu=None, verbose=False):
     # Verbose = limited,yes,full
 
-    print(tables)
+    # print(tables)
     if table_name is None:
         table_name = item['src_table'][4:]
     tbl = table_name
@@ -324,6 +330,130 @@ def run_aj(item, rows, params, tables, table_name=None, rmu=None, verbose=False)
     if verbose:
         print(tr_eval)
     aj_print(res, res['print_name'], rmu, tr_eval)
+
+
+def lookup_table_map(tables: dict, lookup_tables: dict):
+    '''
+    Maps source column in source table to target column in target table using lookup table.
+
+    Need run_aj 2 times: 
+        - run_aj between source col and lookup table, to left-join source_table and lookup table
+        - run_aj between new left-joined source + lookup table with target table
+        
+    '''
+    for table in tables.items():
+        
+
+
+        # find best lookup table for table
+        lookup_table_name = match_lookup_table(table, lookup_tables)
+        lookup_table: dict = lookup_tables[lookup_table_name]
+
+        
+
+        # use lookup_table to replace rows of source table in tables
+
+
+        ## find index of source column
+        src_column_name = table['rows']['src']
+        src_column_index = table['src']['titles'].index(src_column_name)
+
+        ## run aj to map from source col of source table to lookup table
+        
+        ## create folder for source to lookup
+
+
+        for item in table['src']['items']:
+            item[src_column_index]
+
+        
+        # save the new source table in a new folder inside data folder, so that we can run aj as normal on the new folder
+
+        pass
+
+
+def lookup_table_brute_force(data_tables: dict, lookup_tables: dict) -> dict:
+    for data_table in data_tables.items():
+        data_table = data_table[1]
+        # print(data_table)
+        
+
+        if data_table['name'] not in ['airports', 'currency', 'stock']:
+            continue
+
+
+        src_column_name = data_table['rows']['src']
+        src_column_index = data_table['src']['titles'].index(src_column_name)
+
+        data_row_lookup_table_index = -1
+        found = False
+
+        joined_src_lookup_table = {
+            'name': data_table["name"] + "_lookup_table",
+            'titles': data_table['src']['titles'],
+            'items': []
+        }
+
+        for data_row in data_table['src']['items']:
+
+            for lookup_table in lookup_tables.items():
+                lookup_table = lookup_table[1]
+
+                # print('LOOKUP TABLE', lookup_table)
+
+                lookup_src_columnn_name = lookup_table['source_col']
+                lookup_src_columnn_index = lookup_table['titles'].index(lookup_src_columnn_name)
+
+                for lookup_row in lookup_table['items']:
+                    data_row_lookup_table_index += 1
+                    lookup_row[lookup_src_columnn_index]
+
+                    if data_row[src_column_index] == lookup_row[lookup_src_columnn_index]:
+                    # if :
+                        found= True
+                        joined_src_lookup_table['items'].append(data_row + [lookup_row[1 - lookup_src_columnn_index]]) # assuming lookup table has only 2 columns
+                        if (len(joined_src_lookup_table['titles']) < 2):
+                            joined_src_lookup_table['titles'] += [lookup_table['titles'][1 - lookup_src_columnn_index]] # appending only the target column of lookup table
+
+                        break
+
+                    pass
+
+                if found:
+                    
+                    break                    
+        
+        target_column_name = data_table['rows']['target']
+        target_column_index = data_table['target']['titles'].index(target_column_name)
+
+        data_row_lookup_table_index = -1
+        found = False
+
+        joined_src_lookup_target_table = {
+            'name': data_table["name"] + "_lookup_table_target",
+            'titles': joined_src_lookup_table['titles'] + data_table['target']['titles'],
+            'items': []
+        }
+        
+
+
+        for data_row in joined_src_lookup_table['items']:
+            
+            for target_data_row in data_table['target']['items']:
+                data_row_lookup_table_index += 1
+                target_data_row[target_column_index]
+
+                if target_data_row[target_column_index] == data_row[-1]: # assuming that the target col of lookup table is appended at the end
+                    found = True
+                    # print('LOOK ROW', lookup_row)
+                    joined_src_lookup_target_table['items'].append(data_row + target_data_row) # assuming lookup table has only 2 columns
+                    # joined_src_lookup_target_table['titles'] += [lookup_table['titles'][1 - lookup_src_columnn_index]] # appending only the target column of lookup table
+
+                    break
+
+                pass
+
+    return joined_src_lookup_target_table
 
 
 def pt_print(res, filename, row_matcher, tr_eval):
@@ -624,11 +754,55 @@ if __name__ == '__main__':
         if os.path.exists(OUTPUT_DIR):
             shutil.rmtree(OUTPUT_DIR)
 
+    # METHOD = 'LT'
+    lookup_tables = {}
+
+    tables, all_tables = dl.get_tables_from_dir(DS_PATH, [], make_lower=True, verbose=False)
+
+    
+    # lt_files = [dI for dI in os.listdir(LT_PATH)]
+    lt_files = ['airport_LT.csv']
+    make_lower = True
+    
+    for lt in lt_files:
+        res = {
+            # 'src': {'name': 'src_'+lt, 'titles': None, 'items': []},
+            # 'target': {'name': 'target_'+lt, 'titles': None, 'items': []},
+            'titles': None,
+            'items': [],
+            'name': lt,
+            'source_col': None
+        }
+        with open(LT_PATH + lt) as f:
+            res['titles'] = f.readline().strip().split(',')
+            res["source_col"] = res["titles"][0]
+            if make_lower:
+                res['items'] = [line.lower().strip().split(',') for line in f.readlines()]
+            else:
+                res['items'] = [line.strip().split(',') for line in f.readlines()]
+        lookup_tables[lt] = res
+
+    # print(lookup_tables)
+
+    # print('LOOKUPPPP ', lookup_tables)
+
+    # print("-----------------")
+    # print("-----------------")
+    # print("-----------------")
+    # print("-----------------")
+    # print("-----------------")
+
+
+
     if METHOD == 'PT':
         get_pattern('run_pattern', PT_PARAMS, verbose=False)
     elif METHOD == 'AJ':
         get_pattern('run_aj', {'subset_size': AJ_SUBSET_SIZE, 'num_subsets': AJ_NUM_SUBSET})
     elif METHOD == 'RMT':
         row_matching_test()
+    elif METHOD == 'LT':
+        out = lookup_table_brute_force(tables, lookup_tables)
+
+        print(out)
     else:
         raise NotImplementedError()

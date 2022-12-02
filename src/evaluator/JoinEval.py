@@ -41,6 +41,7 @@ class JoinEval:
     def tp(self):
         if self._tp is None:
             self._tp = self.joined.intersection(self.golden)
+            print('TRUE POSITIVES: ', self._tp)
         return self._tp
 
     @property
