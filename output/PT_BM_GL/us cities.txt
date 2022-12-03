@@ -1,0 +1,130 @@
+---------------
+Results for us cities
+Coverage in golden matched rows: 31/31 = 100.00%
+Best pattern Coverage  in golden matched rows: 67.74%
+Coverage: 31/31 = 100.00%
+Best pattern Coverage: 67.74%
+Total Patterns: 7, input rows: 31
+Average Input length (Num chars): 14.258064516129032, Average output length (Num chars): 9.0
+Max Tokens: 3
+Total Run time: 0.0247499942779541, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 70
+Total number of all generated patterns: 679
+Number of duplicate patterns removed: 166
+Total number of generated patterns to try: 513
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 132
+Number of all remaining placeholder comb.: 126
+Number of all removed placeholder comb.: 6
+Number of init remaining placeholder comb.: 66
+Number of splitted remaining placeholder comb.: 60
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 6
+
+placeholder generation time: 0.0063860416412353516
+extract patterns time: 0.0025801658630371094
+duplicate patterns remove time: 0.0004398822784423828
+patterns applying time: 0.014947891235351562
+get covering set time: 0.0003960132598876953
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 15903
+Number of successful patterns: 696
+Number of failed patterns: 15207
+Number of failed patterns filtered by cache (cache hit): 10788
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 0 ], } -> 21/31
+                     |->('albuquerque n.m.', 'albuquerque')
+                     |->('anchorage alaska', 'anchorage')
+                     |->('austin texas', 'austin')
+                     |->('baltimore md.', 'baltimore')
+                     |->('boston mass.', 'boston')
+                     |->('chicago ill.', 'chicago')
+                     |->('cleveland ohio', 'cleveland')
+                     |->('denver colo.', 'denver')
+                     |->('houston texas', 'houston')
+                     |->('jacksonville fla.', 'jacksonville')
+                     |->('miami fla.', 'miami')
+                     |->('omaha neb.', 'omaha')
+                     |->('philadelphia pa.', 'philadelphia')
+                     |->('phoenix ariz.', 'phoenix')
+                     |->('pittsburgh pa.', 'pittsburgh')
+                     |->('portland ore.', 'portland')
+                     |->('sacramento calif.', 'sacramento')
+                     |->('tampa fla.', 'tampa')
+                     |->('toledo ohio', 'toledo')
+                     |->('tucson ariz.', 'tucson')
+                     |->('wilmington del.', 'wilmington')
+                 {[SplitSubstr: 'f', 0, (0-6) ], } -> 6/31
+                     |->('austin texas', 'austin')
+                     |->('boston mass.', 'boston')
+                     |->('dallas-ft. worth texas', 'dallas')
+                     |->('denver colo.', 'denver')
+                     |->('toledo ohio', 'toledo')
+                     |->('tucson ariz.', 'tucson')
+                 {[Split: ' ', [0, 1] ], } -> 4/31
+                     |->('san francisco calif.', 'san francisco')
+                     |->('washington d.c.', 'washington d.c.')
+                     |->('baton rouge la.', 'baton rouge')
+                     |->('san diego calif.', 'san diego')
+                 {[SplitSubstr: '.', 0, (0-11) ], [LIT:'?'], } -> 2/31
+                     |->('los angeles calif.', 'los angeles?')
+                     |->('new orleans la.', 'new orleans?')
+                 {[LIT:'new york city'], } -> 1/31  -- Original Trans.: {[SplitSubstr: '.', 0, (0-9) ], [LIT:'city'], }
+                     |->('new york n.y.', 'new york city')
+                 {[LIT:'salt lake city'], } -> 1/31  -- Original Trans.: {[SplitSubstr: 'u', 0, (0-14) ], }
+                     |->('salt lake city utah', 'salt lake city')
+                 {[LIT:'atlanta?'], } -> 1/31  -- Original Trans.: {[SplitSubstr: 'g', 0, (0-7) ], [LIT:'?'], }
+                     |->('atlanta ga.', 'atlanta?')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 0 ], } -> 21/31
+                     |->('albuquerque n.m.', 'albuquerque')
+                     |->('anchorage alaska', 'anchorage')
+                     |->('austin texas', 'austin')
+                     |->('baltimore md.', 'baltimore')
+                     |->('boston mass.', 'boston')
+                     |->('chicago ill.', 'chicago')
+                     |->('cleveland ohio', 'cleveland')
+                     |->('denver colo.', 'denver')
+                     |->('houston texas', 'houston')
+                     |->('jacksonville fla.', 'jacksonville')
+                     |->('miami fla.', 'miami')
+                     |->('omaha neb.', 'omaha')
+                     |->('philadelphia pa.', 'philadelphia')
+                     |->('phoenix ariz.', 'phoenix')
+                     |->('pittsburgh pa.', 'pittsburgh')
+                     |->('portland ore.', 'portland')
+                     |->('sacramento calif.', 'sacramento')
+                     |->('tampa fla.', 'tampa')
+                     |->('toledo ohio', 'toledo')
+                     |->('tucson ariz.', 'tucson')
+                     |->('wilmington del.', 'wilmington')
+                 {[Split: ' ', [0, 1] ], } -> 4/31
+                     |->('san francisco calif.', 'san francisco')
+                     |->('washington d.c.', 'washington d.c.')
+                     |->('baton rouge la.', 'baton rouge')
+                     |->('san diego calif.', 'san diego')
+                 {[SplitSubstr: '.', 0, (0-11) ], [LIT:'?'], } -> 2/31
+                     |->('los angeles calif.', 'los angeles?')
+                     |->('new orleans la.', 'new orleans?')
+                 {[LIT:'new york city'], } -> 1/31
+                     |->('new york n.y.', 'new york city')
+                 {[SplitSubstr: 'f', 0, (0-6) ], } -> 6/31
+                     |->('austin texas', 'austin')
+                     |->('boston mass.', 'boston')
+                     |->('dallas-ft. worth texas', 'dallas')
+                     |->('denver colo.', 'denver')
+                     |->('toledo ohio', 'toledo')
+                     |->('tucson ariz.', 'tucson')
+                 {[LIT:'salt lake city'], } -> 1/31
+                     |->('salt lake city utah', 'salt lake city')
+                 {[LIT:'atlanta?'], } -> 1/31
+                     |->('atlanta ga.', 'atlanta?')
+
+--- Not covered inputs:
+****************

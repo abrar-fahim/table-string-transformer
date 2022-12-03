@@ -1,0 +1,193 @@
+---------------
+Results for new york govs 1
+Coverage in golden matched rows: 55/55 = 100.00%
+Best pattern Coverage  in golden matched rows: 38.18%
+Coverage: 59/59 = 100.00%
+Best pattern Coverage: 40.68%
+Total Patterns: 13, input rows: 59
+Average Input length (Num chars): 31.084745762711865, Average output length (Num chars): 14.76271186440678
+Max Tokens: 3
+Total Run time: 1.1072568893432617, Generalization time:9.5367431640625e-07
+Total number of placeholder combinations (After removing duplicates): 212
+Total number of all generated patterns: 15452
+Number of duplicate patterns removed: 1872
+Total number of generated patterns to try: 13580
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 356
+Number of all remaining placeholder comb.: 301
+Number of all removed placeholder comb.: 55
+Number of init remaining placeholder comb.: 178
+Number of splitted remaining placeholder comb.: 123
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 55
+
+placeholder generation time: 0.02216506004333496
+extract patterns time: 0.06461071968078613
+duplicate patterns remove time: 0.00661015510559082
+patterns applying time: 0.9952859878540039
+get covering set time: 0.0185849666595459
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 801220
+Number of successful patterns: 17106
+Number of failed patterns: 784114
+Number of failed patterns filtered by cache (cache hit): 637953
+N-gram Row Matching: P:0.9322033898305084,R:1.0,F:0.9649122807017544
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 24/59
+                     |->('lucius robinson (1877 - 1880)', 'lucius robinson')
+                     |->('horatio seymour (1863 - 1865)', 'horatio seymour')
+                     |->('eliot spitzer (2007 - 2008)', 'eliot spitzer')
+                     |->('horace white (1910 - 1911)', 'horace white')
+                     |->('horatio seymour (1853 - 1855)', 'horatio seymour')
+                     |->('malcolm wilson (1973 - 1975)', 'malcolm wilson')
+                     |->('morgan lewis (1804 - 1807)', 'morgan lewis')
+                     |->('george clinton (1777 - 1795)', 'george clinton')
+                     |->('george pataki (1995 - 2007)', 'george pataki')
+                     |->('george clinton (1801 - 1804)', 'george clinton')
+                     |->('john jay (1795 - 1801)', 'john jay')
+                     |->('charles poletti (1942 - 1943)', 'charles poletti')
+                     |->('dewitt clinton (1825 - 1828)', 'dewitt clinton')
+                     |->('john tayler (1817 - 1817)', 'john tayler')
+                     |->('washington hunt (1851 - 1853)', 'washington hunt')
+                     |->('hamilton fish (1849 - 1851)', 'hamilton fish')
+                     |->('andrew cuomo (2011 - present)', 'andrew cuomo')
+                     |->('dewitt clinton (1817 - 1823)', 'dewitt clinton')
+                     |->('nathaniel pitcher (1828 - 1829)', 'nathaniel pitcher')
+                     |->('john young (1847 - 1849)', 'john young')
+                     |->('silas wright (1845 - 1847)', 'silas wright')
+                     |->('william sulzer (1913 - 1913)', 'william sulzer')
+                     |->('david paterson (2008 - 2011)', 'david paterson')
+                     |->('theodore roosevelt (1899 - 1901)', 'theodore roosevelt')
+                 {[Split: ' ', [0, 1, 2] ], } -> 9/59
+                     |->('martin van buren (1829)', 'martin van buren')
+                     |->('john alden dix (1910 - 1912)', 'john alden dix')
+                     |->('charles evans hughes (1907 - 1910)', 'charles evans hughes')
+                     |->('daniel d. tompkins (1807 - 1817)', 'daniel d. tompkins')
+                     |->('john thompson hoffman (1869 - 1873)', 'john thompson hoffman')
+                     |->('john adams dix (1872 - 1874)', 'john adams dix')
+                     |->('john alsop king (1857 - 1859)', 'john alsop king')
+                     |->('nathan lewis miller (1921 - 1923)', 'nathan lewis miller')
+                     |->('william c. bouck (1843 - 1845)', 'william c. bouck')
+                 {[SplitSubstr: '3', 0, (0-9) ], [LIT:'. '], [Split: ' ', 2 ], } -> 6/59
+                     |->('roswell pettibone flower (1892 - 1895)', 'roswell p. flower')
+                     |->('william learned marcy (1833 - 1839)', 'william l. marcy')
+                     |->('william henry seward (1839 - 1843)', 'william h. seward')
+                     |->('charles seymour whitman (1915 - 1919)', 'charles s. whitman')
+                     |->('herbert henry lehman (1933 - 1942)', 'herbert h. lehman')
+                     |->('william c. bouck (1843 - 1845)', 'william c. bouck')
+                 {[SplitSubstr: 'f', 0, (0-6) ], [LIT:' '], [Split: ' ', 2 ], } -> 5/59
+                     |->('thomas edmund dewey (1943 - 1955)', 'thomas dewey')
+                     |->('nelson aldrich rockefeller (1959 - 1973)', 'nelson rockefeller')
+                     |->('reuben eaton fenton (1865 - 1869)', 'reuben fenton')
+                     |->('alfred emanuel smith (1919 - 1921)', 'al smith')
+                     |->('alfred emanuel smith (1923 - 1929)', 'al smith')
+                 {[SplitSubstr: '3', 0, (0-8) ], [LIT:'. '], [Split: ' ', 2 ], } -> 5/59
+                     |->('alonzo barton cornell (1880 - 1883)', 'alonzo b. cornell')
+                     |->('samuel jones tilden (1875 - 1877)', 'samuel j. tilden')
+                     |->('joseph christopher yates (1823 - 1825)', 'joseph c. yates')
+                     |->('daniel d. tompkins (1807 - 1817)', 'daniel d. tompkins')
+                     |->('martin henry glynn (1913 - 1915)', 'martin h. glynn')
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 2 ], } -> 5/59
+                     |->('thomas edmund dewey (1943 - 1955)', 'thomas dewey')
+                     |->('nelson aldrich rockefeller (1959 - 1973)', 'nelson rockefeller')
+                     |->('reuben eaton fenton (1865 - 1869)', 'reuben fenton')
+                     |->('mario matthew cuomo (1983 - 1995)', 'mario cuomo')
+                     |->('hugh leo carey (1974 - 1982)', 'hugh carey')
+                 {[SplitSubstr: ')', 0, (0-7) ], [LIT:'. '], [Split: ' ', 2 ], } -> 4/59
+                     |->('myron holley clark (1855 - 1857)', 'myron h. clark')
+                     |->('david bennett hill (1885 - 1892)', 'david b. hill')
+                     |->('frank swett black (1897 - 1899)', 'frank s. black')
+                     |->('edwin denison morgan (1859 - 1863)', 'edwin d. morgan')
+                 {[LIT:'w. averell harriman'], } -> 1/59  -- Original Trans.: {[SplitSubstr: 'h', 0, (0-1) ], [LIT:'.'], [SplitSubstr: ')', 0, (7-24) ], }
+                     |->('william averell harriman (1955 - 1959)', 'w. averell harriman')
+                 {[LIT:'franklin d. roosevelt'], } -> 1/59  -- Original Trans.: {[SplitSubstr: '3', 0, (0-10) ], [LIT:'.'], [SplitSubstr: '2', 0, (15-25) ], }
+                     |->('franklin delano roosevelt (1929 - 1933)', 'franklin d. roosevelt')
+                 {[LIT:'benjamin barker odell jr'], } -> 1/59  -- Original Trans.: {[SplitSubstr: '(', 0, (0-11) ], [LIT:'rker odell jr'], }
+                     |->('benjamin baker odell (1901 - 1905)', 'benjamin barker odell jr')
+                 {[LIT:'grover cleveland'], } -> 1/59  -- Original Trans.: {[LIT:'grover '], [SplitSubstr: '-', 0, (14-23) ], }
+                     |->('steven grover cleveland (1883 - 1885)', 'grover cleveland')
+                 {[LIT:'enos t. throop'], } -> 1/59  -- Original Trans.: {[SplitSubstr: 'r', 0, (0-6) ], [LIT:'. throop'], }
+                     |->('enos thompson throop (1829 - 1833)', 'enos t. throop')
+                 {[LIT:'frank w. higgins'], } -> 1/59  -- Original Trans.: {[SplitSubstr: 'i', 0, (0-4) ], [LIT:'k w.'], [SplitSubstr: 'l', 1, (3-11) ], }
+                     |->('francis wayland higgins (1905 - 1907)', 'frank w. higgins')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 21/55
+                     |->('john jay (1795 - 1801)', 'john jay')
+                     |->('george clinton (1801 - 1804)', 'george clinton')
+                     |->('morgan lewis (1804 - 1807)', 'morgan lewis')
+                     |->('john tayler (1817 - 1817)', 'john tayler')
+                     |->('dewitt clinton (1825 - 1828)', 'dewitt clinton')
+                     |->('nathaniel pitcher (1828 - 1829)', 'nathaniel pitcher')
+                     |->('silas wright (1845 - 1847)', 'silas wright')
+                     |->('john young (1847 - 1849)', 'john young')
+                     |->('hamilton fish (1849 - 1851)', 'hamilton fish')
+                     |->('washington hunt (1851 - 1853)', 'washington hunt')
+                     |->('horatio seymour (1863 - 1865)', 'horatio seymour')
+                     |->('lucius robinson (1877 - 1880)', 'lucius robinson')
+                     |->('theodore roosevelt (1899 - 1901)', 'theodore roosevelt')
+                     |->('horace white (1910 - 1911)', 'horace white')
+                     |->('william sulzer (1913 - 1913)', 'william sulzer')
+                     |->('charles poletti (1942 - 1943)', 'charles poletti')
+                     |->('malcolm wilson (1973 - 1975)', 'malcolm wilson')
+                     |->('george pataki (1995 - 2007)', 'george pataki')
+                     |->('eliot spitzer (2007 - 2008)', 'eliot spitzer')
+                     |->('david paterson (2008 - 2011)', 'david paterson')
+                     |->('andrew cuomo (2011 - present)', 'andrew cuomo')
+                 {[Split: ' ', [0, 1, 2] ], } -> 9/55
+                     |->('charles evans hughes (1907 - 1910)', 'charles evans hughes')
+                     |->('daniel d. tompkins (1807 - 1817)', 'daniel d. tompkins')
+                     |->('john alden dix (1910 - 1912)', 'john alden dix')
+                     |->('martin van buren (1829)', 'martin van buren')
+                     |->('nathan lewis miller (1921 - 1923)', 'nathan lewis miller')
+                     |->('william c. bouck (1843 - 1845)', 'william c. bouck')
+                     |->('john alsop king (1857 - 1859)', 'john alsop king')
+                     |->('john thompson hoffman (1869 - 1873)', 'john thompson hoffman')
+                     |->('john adams dix (1872 - 1874)', 'john adams dix')
+                 {[SplitSubstr: '3', 0, (0-9) ], [LIT:'. '], [Split: ' ', 2 ], } -> 6/55
+                     |->('charles seymour whitman (1915 - 1919)', 'charles s. whitman')
+                     |->('william learned marcy (1833 - 1839)', 'william l. marcy')
+                     |->('william henry seward (1839 - 1843)', 'william h. seward')
+                     |->('william c. bouck (1843 - 1845)', 'william c. bouck')
+                     |->('herbert henry lehman (1933 - 1942)', 'herbert h. lehman')
+                     |->('roswell pettibone flower (1892 - 1895)', 'roswell p. flower')
+                 {[SplitSubstr: 'f', 0, (0-6) ], [LIT:' '], [Split: ' ', 2 ], } -> 4/55
+                     |->('alfred emanuel smith (1923 - 1929)', 'al smith')
+                     |->('thomas edmund dewey (1943 - 1955)', 'thomas dewey')
+                     |->('reuben eaton fenton (1865 - 1869)', 'reuben fenton')
+                     |->('nelson aldrich rockefeller (1959 - 1973)', 'nelson rockefeller')
+                 {[SplitSubstr: '3', 0, (0-8) ], [LIT:'. '], [Split: ' ', 2 ], } -> 5/55
+                     |->('daniel d. tompkins (1807 - 1817)', 'daniel d. tompkins')
+                     |->('joseph christopher yates (1823 - 1825)', 'joseph c. yates')
+                     |->('martin henry glynn (1913 - 1915)', 'martin h. glynn')
+                     |->('samuel jones tilden (1875 - 1877)', 'samuel j. tilden')
+                     |->('alonzo barton cornell (1880 - 1883)', 'alonzo b. cornell')
+                 {[SplitSubstr: ')', 0, (0-7) ], [LIT:'. '], [Split: ' ', 2 ], } -> 4/55
+                     |->('myron holley clark (1855 - 1857)', 'myron h. clark')
+                     |->('edwin denison morgan (1859 - 1863)', 'edwin d. morgan')
+                     |->('david bennett hill (1885 - 1892)', 'david b. hill')
+                     |->('frank swett black (1897 - 1899)', 'frank s. black')
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 2 ], } -> 5/55
+                     |->('thomas edmund dewey (1943 - 1955)', 'thomas dewey')
+                     |->('nelson aldrich rockefeller (1959 - 1973)', 'nelson rockefeller')
+                     |->('hugh leo carey (1974 - 1982)', 'hugh carey')
+                     |->('mario matthew cuomo (1983 - 1995)', 'mario cuomo')
+                     |->('reuben eaton fenton (1865 - 1869)', 'reuben fenton')
+                 {[LIT:'w. averell harriman'], } -> 1/55
+                     |->('william averell harriman (1955 - 1959)', 'w. averell harriman')
+                 {[LIT:'franklin d. roosevelt'], } -> 1/55
+                     |->('franklin delano roosevelt (1929 - 1933)', 'franklin d. roosevelt')
+                 {[LIT:'benjamin barker odell jr'], } -> 1/55
+                     |->('benjamin baker odell (1901 - 1905)', 'benjamin barker odell jr')
+                 {[LIT:'grover cleveland'], } -> 1/55
+                     |->('steven grover cleveland (1883 - 1885)', 'grover cleveland')
+                 {[LIT:'enos t. throop'], } -> 1/55
+                     |->('enos thompson throop (1829 - 1833)', 'enos t. throop')
+                 {[LIT:'frank w. higgins'], } -> 1/55
+                     |->('francis wayland higgins (1905 - 1907)', 'frank w. higgins')
+
+--- Not covered inputs:
+****************

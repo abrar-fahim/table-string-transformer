@@ -5,10 +5,6 @@ __pycache__
 
 .idea/**
 Temp/**
-data/*
-output/*
-!data/autojoin-Benchmark/
-!data/autojoin-Benchmark/*
 !data/FlashFill/
 !data/FlashFill/*
 

@@ -1,0 +1,63 @@
+---------------
+Results for us presidents 1
+Coverage in golden matched rows: 41/43 = 95.35%
+Best pattern Coverage  in golden matched rows: 95.35%
+Coverage: 41/43 = 95.35%
+Best pattern Coverage: 95.35%
+Total Patterns: 3, input rows: 43
+Total required runtime: 25.99810481071472
+Execution time: 26.132073879241943, Ranking time:0.0001590251922607422
+rows per subset: 2, number of subsets: 8
+level threshold: 3, gain_threshold: 0.2
+N-gram Row Matching: P:1.0,R:1.0,F:1.0
+blocks: ['PositionPatternBlock', 'TokenPatternBlock', 'LiteralPatternBlock', 'SplitSubstrPatternBlock']
+ranked list: {
+                 {[Split: ';', 0 ], } -> 41/43
+                 {[Substr:(0-14)], } -> 7/43
+                 {[Substr:(0-16)], } -> 6/43
+
+             }
+subset list: {
+                 {
+                     subset:{('james k. polk; november 2 1795 – june 15 1849; (aged 53);', 'james k. polk'), ('grover cleveland; march 18 1837 – june 24 1908; (aged 71);', 'grover cleveland')}
+                     transformation:[[Split: ';', 0 ], ]
+                     time:3.61559796333313
+                 }
+                 {
+                     subset:{('william mckinley; january 29 1843 – september 14 1901; (aged 58);', 'william mckinley'), ('ulysses s. grant; april 27 1822 – july 23 1885; (aged 63);', 'ulysses s. grant')}
+                     transformation:[[Substr:(0-16)], ]
+                     time:3.886585235595703
+                 }
+                 {
+                     subset:{('ronald reagan; february 6 1911 – june 5 2004; (aged 93);', 'ronald reagan'), ('rutherford b. hayes; october 4 1822 – january 17 1893; (aged 70);', 'rutherford b. hayes')}
+                     transformation:[[Split: ';', 0 ], ]
+                     time:3.303006887435913
+                 }
+                 {
+                     subset:{('calvin coolidge; july 4 1872 – january 5 1933; (aged 60);', 'calvin coolidge'), ('millard fillmore; january 7 1800 – march 8 1874; (aged 74);', 'millard fillmore')}
+                     transformation:[[Split: ';', 0 ], ]
+                     time:3.4620180130004883
+                 }
+                 {
+                     subset:{('andrew johnson; december 29 1808 – july 31 1875; (aged 66);', 'andrew johnson'), ('james madison; march 16 1751 – june 28 1836; (aged 85);', 'james madison')}
+                     transformation:[[Split: ';', 0 ], ]
+                     time:3.167145013809204
+                 }
+                 {
+                     subset:{('george w. bush; born: july 6 1946 (age 69);', 'george w. bush'), ('herbert hoover; august 10 1874 – october 20 1964; (aged 90);', 'herbert hoover')}
+                     transformation:[[Substr:(0-14)], ]
+                     time:2.3893420696258545
+                 }
+                 {
+                     subset:{('millard fillmore; january 7 1800 – march 8 1874; (aged 74);', 'millard fillmore'), ('william howard taft; september 15 1857 – march 8 1930; (aged 72);', 'william howard taft')}
+                     transformation:[[Split: ';', 0 ], ]
+                     time:4.251978874206543
+                 }
+                 {
+                     subset:{('bill clinton; born: august 19 1946 (age 69);', 'bill clinton'), ('john tyler; march 29 1790 – january 18 1862; (aged 71);', 'john tyler')}
+                     transformation:[[Split: ';', 0 ], ]
+                     time:1.922271728515625
+                 }
+
+             }
+****************

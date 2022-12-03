@@ -1,0 +1,140 @@
+---------------
+Results for texas govs 1
+Coverage in golden matched rows: 25/25 = 100.00%
+Best pattern Coverage  in golden matched rows: 48.00%
+Coverage: 25/25 = 100.00%
+Best pattern Coverage: 48.00%
+Total Patterns: 11, input rows: 25
+Average Input length (Num chars): 22.96, Average output length (Num chars): 15.72
+Max Tokens: 3
+Total Run time: 0.5216166973114014, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 117
+Total number of all generated patterns: 19621
+Number of duplicate patterns removed: 4517
+Total number of generated patterns to try: 15104
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 204
+Number of all remaining placeholder comb.: 159
+Number of all removed placeholder comb.: 45
+Number of init remaining placeholder comb.: 102
+Number of splitted remaining placeholder comb.: 57
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 45
+
+placeholder generation time: 0.008646726608276367
+extract patterns time: 0.04755711555480957
+duplicate patterns remove time: 0.015526056289672852
+patterns applying time: 0.4337880611419678
+get covering set time: 0.016098737716674805
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 377600
+Number of successful patterns: 15988
+Number of failed patterns: 361612
+Number of failed patterns filtered by cache (cache hit): 316239
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[SplitSubstr: 'g', 1, (4-28) ], } -> 12/25
+                     |->('gov. lawrence sullivan ross', 'lawrence sullivan ross')
+                     |->('gov. thomas mitchell campbell', 'thomas mitchell campbell')
+                     |->('gov. oscar branch colquitt', 'oscar branch colquitt')
+                     |->('gov. pat morris neff', 'pat morris neff')
+                     |->('gov. james v. allred', 'james v. allred')
+                     |->('gov. coke r. stevenson', 'coke r. stevenson')
+                     |->('gov. allan shivers', 'allan shivers')
+                     |->('gov. price daniel', 'price daniel')
+                     |->('gov. preston smith', 'preston smith')
+                     |->('gov. dolph briscoe', 'dolph briscoe')
+                     |->('gov. mark white', 'mark white')
+                     |->('gov. rick perry', 'rick perry')
+                 {[SplitSubstr: 'v', 1, (2-26) ], } -> 11/25
+                     |->('gov. james stephen hogg', 'james stephen hogg')
+                     |->('gov. thomas mitchell campbell', 'thomas mitchell campbell')
+                     |->('gov. oscar branch colquitt', 'oscar branch colquitt')
+                     |->('gov. pat morris neff', 'pat morris neff')
+                     |->('gov. ross s. sterling', 'ross s. sterling')
+                     |->('gov. price daniel', 'price daniel')
+                     |->('gov. preston smith', 'preston smith')
+                     |->('gov. dolph briscoe', 'dolph briscoe')
+                     |->('gov. mark white', 'mark white')
+                     |->('gov. george w. bush', 'george w. bush')
+                     |->('gov. rick perry', 'rick perry')
+                 {[SplitSubstr: '.', 1, (1-10) ], [LIT:'. '], [Split: ' ', 3 ], } -> 6/25
+                     |->('gov. charles allen culberson', 'charles a. culberson')
+                     |->('gov. william pettus hobby', 'william p. hobby')
+                     |->('gov. ross s. sterling', 'ross s. sterling')
+                     |->('gov. james v. allred', 'james v. allred')
+                     |->('gov. coke r. stevenson', 'coke r. stevenson')
+                     |->('gov. george w. bush', 'george w. bush')
+                 {[LIT:'beauford h. jester'], } -> 1/25  -- Original Trans.: {[Substr:(5-15)], [SplitSubstr: 'a', 0, (3-4) ], [SplitSubstr: 'v', 1, (18-25) ], }
+                     |->('gov. beauford halbert jester', 'beauford h. jester')
+                 {[LIT:'s. w. t. lanham'], } -> 1/25  -- Original Trans.: {[SplitSubstr: 't', 0, (17-18) ], [SplitSubstr: 'h', 0, (3-5) ], [LIT:'w. t. lanham'], }
+                     |->('gov. samuel willis tucker lanham', 's. w. t. lanham')
+                 {[LIT:'w. lee o'daniel'], } -> 1/25  -- Original Trans.: {[SplitSubstr: 'b', 0, (5-6) ], [SplitSubstr: 'w', 0, (3-4) ], [SplitSubstr: 'g', 1, (11-24) ], }
+                     |->("gov. wilbert lee o'daniel", "w. lee o'daniel")
+                 {[LIT:'joseph d. sayers'], } -> 1/25  -- Original Trans.: {[Substr:(5-13)], [SplitSubstr: 'g', 1, (2-3) ], [SplitSubstr: '.', 1, (14-21) ], }
+                     |->('gov. joseph draper sayers', 'joseph d. sayers')
+                 {[LIT:'ann richards'], } -> 1/25  -- Original Trans.: {[SplitSubstr: 'd', 1, (7-10) ], [LIT:' '], [SplitSubstr: 'v', 1, (21-29) ], }
+                     |->('gov. dorothy ann willis richards', 'ann richards')
+                 {[LIT:'dan moody'], } -> 1/25  -- Original Trans.: {[Substr:(5-8)], [Split: '.', 2 ], }
+                     |->('gov. daniel j. moody', 'dan moody')
+                 {[LIT:'john connally'], } -> 1/25  -- Original Trans.: {[SplitSubstr: 'd', 0, (5-8) ], [SplitSubstr: 'j', 1, (9-19) ], }
+                     |->('gov. john bowden connally', 'john connally')
+                 {[LIT:'"james e. ""pa"" ferguson"'], } -> 1/25  -- Original Trans.: {[LIT:'"james e. ""pa"" ferguson"'], }
+                     |->('gov. james edward ferguson', '"james e. ""pa"" ferguson"')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[SplitSubstr: 'g', 1, (4-28) ], } -> 12/25
+                     |->('gov. lawrence sullivan ross', 'lawrence sullivan ross')
+                     |->('gov. thomas mitchell campbell', 'thomas mitchell campbell')
+                     |->('gov. oscar branch colquitt', 'oscar branch colquitt')
+                     |->('gov. pat morris neff', 'pat morris neff')
+                     |->('gov. james v. allred', 'james v. allred')
+                     |->('gov. coke r. stevenson', 'coke r. stevenson')
+                     |->('gov. allan shivers', 'allan shivers')
+                     |->('gov. price daniel', 'price daniel')
+                     |->('gov. preston smith', 'preston smith')
+                     |->('gov. dolph briscoe', 'dolph briscoe')
+                     |->('gov. mark white', 'mark white')
+                     |->('gov. rick perry', 'rick perry')
+                 {[SplitSubstr: '.', 1, (1-10) ], [LIT:'. '], [Split: ' ', 3 ], } -> 6/25
+                     |->('gov. charles allen culberson', 'charles a. culberson')
+                     |->('gov. william pettus hobby', 'william p. hobby')
+                     |->('gov. ross s. sterling', 'ross s. sterling')
+                     |->('gov. james v. allred', 'james v. allred')
+                     |->('gov. coke r. stevenson', 'coke r. stevenson')
+                     |->('gov. george w. bush', 'george w. bush')
+                 {[LIT:'beauford h. jester'], } -> 1/25
+                     |->('gov. beauford halbert jester', 'beauford h. jester')
+                 {[LIT:'s. w. t. lanham'], } -> 1/25
+                     |->('gov. samuel willis tucker lanham', 's. w. t. lanham')
+                 {[LIT:'w. lee o'daniel'], } -> 1/25
+                     |->("gov. wilbert lee o'daniel", "w. lee o'daniel")
+                 {[LIT:'joseph d. sayers'], } -> 1/25
+                     |->('gov. joseph draper sayers', 'joseph d. sayers')
+                 {[LIT:'ann richards'], } -> 1/25
+                     |->('gov. dorothy ann willis richards', 'ann richards')
+                 {[LIT:'dan moody'], } -> 1/25
+                     |->('gov. daniel j. moody', 'dan moody')
+                 {[LIT:'john connally'], } -> 1/25
+                     |->('gov. john bowden connally', 'john connally')
+                 {[LIT:'"james e. ""pa"" ferguson"'], } -> 1/25
+                     |->('gov. james edward ferguson', '"james e. ""pa"" ferguson"')
+                 {[SplitSubstr: 'v', 1, (2-26) ], } -> 11/25
+                     |->('gov. james stephen hogg', 'james stephen hogg')
+                     |->('gov. thomas mitchell campbell', 'thomas mitchell campbell')
+                     |->('gov. oscar branch colquitt', 'oscar branch colquitt')
+                     |->('gov. pat morris neff', 'pat morris neff')
+                     |->('gov. ross s. sterling', 'ross s. sterling')
+                     |->('gov. price daniel', 'price daniel')
+                     |->('gov. preston smith', 'preston smith')
+                     |->('gov. dolph briscoe', 'dolph briscoe')
+                     |->('gov. mark white', 'mark white')
+                     |->('gov. george w. bush', 'george w. bush')
+                     |->('gov. rick perry', 'rick perry')
+
+--- Not covered inputs:
+****************

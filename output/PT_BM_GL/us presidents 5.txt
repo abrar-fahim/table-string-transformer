@@ -1,0 +1,136 @@
+---------------
+Results for us presidents 5
+Coverage in golden matched rows: 43/43 = 100.00%
+Best pattern Coverage  in golden matched rows: 95.35%
+Coverage: 43/43 = 100.00%
+Best pattern Coverage: 95.35%
+Total Patterns: 3, input rows: 43
+Average Input length (Num chars): 16.232558139534884, Average output length (Num chars): 15.372093023255815
+Max Tokens: 3
+Total Run time: 0.09303712844848633, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 122
+Total number of all generated patterns: 1926
+Number of duplicate patterns removed: 400
+Total number of generated patterns to try: 1526
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 188
+Number of all remaining placeholder comb.: 167
+Number of all removed placeholder comb.: 21
+Number of init remaining placeholder comb.: 94
+Number of splitted remaining placeholder comb.: 73
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 21
+
+placeholder generation time: 0.009093046188354492
+extract patterns time: 0.007318973541259766
+duplicate patterns remove time: 0.0011811256408691406
+patterns applying time: 0.07488298416137695
+get covering set time: 0.0005609989166259766
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 65618
+Number of successful patterns: 2441
+Number of failed patterns: 63177
+Number of failed patterns filtered by cache (cache hit): 36847
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: '*', 0 ], } -> 41/43
+                     |->('george washington*', 'george washington')
+                     |->('john adams*', 'john adams')
+                     |->('thomas jefferson*', 'thomas jefferson')
+                     |->('james madison*', 'james madison')
+                     |->('james monroe*', 'james monroe')
+                     |->('john quincy adams*', 'john quincy adams')
+                     |->('andrew jackson*', 'andrew jackson')
+                     |->('martin van buren*', 'martin van buren')
+                     |->('william henry harrison*', 'william henry harrison')
+                     |->('john tyler*', 'john tyler')
+                     |->('james k. polk*', 'james k. polk')
+                     |->('zachary taylor*', 'zachary taylor')
+                     |->('millard fillmore*', 'millard fillmore')
+                     |->('franklin pierce*', 'franklin pierce')
+                     |->('james buchanan*', 'james buchanan')
+                     |->('abraham lincoln*', 'abraham lincoln')
+                     |->('andrew johnson*', 'andrew johnson')
+                     |->('ulysses s. grant*', 'ulysses s. grant')
+                     |->('rutherford b. hayes*', 'rutherford b. hayes')
+                     |->('james a. garfield*', 'james a. garfield')
+                     |->('chester a. arthur*', 'chester a. arthur')
+                     |->('grover cleveland*', 'grover cleveland')
+                     |->('benjamin harrison*', 'benjamin harrison')
+                     |->('william mckinley*', 'william mckinley')
+                     |->('theodore roosevelt*', 'theodore roosevelt')
+                     |->('william howard taft*', 'william howard taft')
+                     |->('woodrow wilson*', 'woodrow wilson')
+                     |->('warren g. harding*', 'warren g. harding')
+                     |->('calvin coolidge*', 'calvin coolidge')
+                     |->('herbert hoover*', 'herbert hoover')
+                     |->('franklin d. roosevelt*', 'franklin d. roosevelt')
+                     |->('harry s. truman*', 'harry s. truman')
+                     |->('dwight d. eisenhower*', 'dwight d. eisenhower')
+                     |->('john f. kennedy*', 'john f. kennedy')
+                     |->('lyndon b. johnson*', 'lyndon b. johnson')
+                     |->('jimmy carter*', 'jimmy carter')
+                     |->('ronald reagan*', 'ronald reagan')
+                     |->('george h. w. bush*', 'george h. w. bush')
+                     |->('bill clinton*', 'bill clinton')
+                     |->('george w. bush*', 'george w. bush')
+                     |->('barack obama*', 'barack obama')
+                 {[LIT:'richard m. nixon'], } -> 1/43  -- Original Trans.: {[SplitSubstr: 'x', 0, (0-8) ], [LIT:'m.'], [SplitSubstr: 'c', 1, (4-10) ], }
+                     |->('richard nixon*', 'richard m. nixon')
+                 {[LIT:'gerald r. ford'], } -> 1/43  -- Original Trans.: {[Substr:(0-7)], [SplitSubstr: 'g', 1, (1-2) ], [LIT:'. ford'], }
+                     |->('gerald ford*', 'gerald r. ford')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: '*', 0 ], } -> 41/43
+                     |->('george washington*', 'george washington')
+                     |->('john adams*', 'john adams')
+                     |->('thomas jefferson*', 'thomas jefferson')
+                     |->('james madison*', 'james madison')
+                     |->('james monroe*', 'james monroe')
+                     |->('john quincy adams*', 'john quincy adams')
+                     |->('andrew jackson*', 'andrew jackson')
+                     |->('martin van buren*', 'martin van buren')
+                     |->('william henry harrison*', 'william henry harrison')
+                     |->('john tyler*', 'john tyler')
+                     |->('james k. polk*', 'james k. polk')
+                     |->('zachary taylor*', 'zachary taylor')
+                     |->('millard fillmore*', 'millard fillmore')
+                     |->('franklin pierce*', 'franklin pierce')
+                     |->('james buchanan*', 'james buchanan')
+                     |->('abraham lincoln*', 'abraham lincoln')
+                     |->('andrew johnson*', 'andrew johnson')
+                     |->('ulysses s. grant*', 'ulysses s. grant')
+                     |->('rutherford b. hayes*', 'rutherford b. hayes')
+                     |->('james a. garfield*', 'james a. garfield')
+                     |->('chester a. arthur*', 'chester a. arthur')
+                     |->('grover cleveland*', 'grover cleveland')
+                     |->('benjamin harrison*', 'benjamin harrison')
+                     |->('william mckinley*', 'william mckinley')
+                     |->('theodore roosevelt*', 'theodore roosevelt')
+                     |->('william howard taft*', 'william howard taft')
+                     |->('woodrow wilson*', 'woodrow wilson')
+                     |->('warren g. harding*', 'warren g. harding')
+                     |->('calvin coolidge*', 'calvin coolidge')
+                     |->('herbert hoover*', 'herbert hoover')
+                     |->('franklin d. roosevelt*', 'franklin d. roosevelt')
+                     |->('harry s. truman*', 'harry s. truman')
+                     |->('dwight d. eisenhower*', 'dwight d. eisenhower')
+                     |->('john f. kennedy*', 'john f. kennedy')
+                     |->('lyndon b. johnson*', 'lyndon b. johnson')
+                     |->('jimmy carter*', 'jimmy carter')
+                     |->('ronald reagan*', 'ronald reagan')
+                     |->('george h. w. bush*', 'george h. w. bush')
+                     |->('bill clinton*', 'bill clinton')
+                     |->('george w. bush*', 'george w. bush')
+                     |->('barack obama*', 'barack obama')
+                 {[LIT:'richard m. nixon'], } -> 1/43
+                     |->('richard nixon*', 'richard m. nixon')
+                 {[LIT:'gerald r. ford'], } -> 1/43
+                     |->('gerald ford*', 'gerald r. ford')
+
+--- Not covered inputs:
+****************

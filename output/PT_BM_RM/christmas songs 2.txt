@@ -1,0 +1,321 @@
+---------------
+Results for christmas songs 2
+Coverage in golden matched rows: 48/53 = 90.57%
+Best pattern Coverage  in golden matched rows: 20.75%
+Coverage: 106/106 = 100.00%
+Best pattern Coverage: 11.32%
+Total Patterns: 57, input rows: 106
+Average Input length (Num chars): 39.45283018867924, Average output length (Num chars): 28.037735849056602
+Max Tokens: 3
+Total Run time: 14.711578130722046, Generalization time:1.1920928955078125e-06
+Total number of placeholder combinations (After removing duplicates): 1852
+Total number of all generated patterns: 407550
+Number of duplicate patterns removed: 310723
+Total number of generated patterns to try: 96827
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 3257
+Number of all remaining placeholder comb.: 2996
+Number of all removed placeholder comb.: 261
+Number of init remaining placeholder comb.: 1781
+Number of splitted remaining placeholder comb.: 1215
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 261
+
+placeholder generation time: 3.079285144805908
+extract patterns time: 1.4181396961212158
+duplicate patterns remove time: 0.9692473411560059
+patterns applying time: 8.689628839492798
+get covering set time: 0.5552771091461182
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 10263662
+Number of successful patterns: 99519
+Number of failed patterns: 10164143
+Number of failed patterns filtered by cache (cache hit): 9791157
+N-gram Row Matching: P:0.4095238095238095,R:0.7818181818181819,F:0.5375
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 12/106
+                     |->('sleigh ride - the carpenters', 'sleigh ride')
+                     |->('wonderful christmastime - paul mccartney', 'wonderful christmastime')
+                     |->('mele kalikimaka - bing crosby', 'mele kalikimaka')
+                     |->('christmas canon - trans siberian orchestra', 'christmas canon')
+                     |->('winter wonderland - johnny mathis', 'winter wonderland')
+                     |->('last christmas - wham!', 'last christmas')
+                     |->('christmas wrapping - the waitresses', 'christmas wrapping')
+                     |->('blue christmas - elvis presley', 'blue christmas')
+                     |->('christmas lights - coldplay', 'christmas lights')
+                     |->('white christmas - bing crosby', 'white christmas')
+                     |->('christmas island - jimmy buffett', 'christmas island')
+                     |->("snoopy's christmas - the royal guardsmen", "snoopy's christmas")
+                 {[Split: ' ', [0, 1, 2] ], } -> 11/106
+                     |->('little saint nick - beach boys', 'little saint nick')
+                     |->("baby's first christmas - connie francis", "baby's first christmas")
+                     |->('the christmas shoes - newsong', 'the christmas shoes')
+                     |->('christmas in dixie - alabama', 'christmas in dixie')
+                     |->('someday at christmas - stevie wonder', 'someday at christmas')
+                     |->('merry christmas darling - the carpenters', 'merry christmas darling')
+                     |->('frosty the snowman - jimmy durante', 'frosty the snowman')
+                     |->('grown-up christmas list - amy grant', 'grown-up christmas list')
+                     |->('step into christmas - elton john', 'step into christmas')
+                     |->('the christmas waltz - she & him', 'the christmas waltz')
+                     |->('jingle bell rock - bobby helms', 'jingle bell rock')
+                 {[Split: ' ', [0, 1, 2, 3, 4] ], } -> 11/106
+                     |->('my only wish (this year) - britney spears', 'my only wish (this year)')
+                     |->('what christmas means to me - stevie wonder', 'what christmas means to me')
+                     |->('peace on earth/little drummer boy - david bowie and bing crosby', 'peace on earth/little drummer boy')
+                     |->('please come home for christmas - eagles', 'please come home for christmas')
+                     |->('god rest ye merry gentlemen - barenaked ladies', 'god rest ye merry gentlemen')
+                     |->('redneck 12 days of christmas - jeff foxworthy', 'redneck 12 days of christmas')
+                     |->('i believe in father christmas - greg lake', 'i believe in father christmas')
+                     |->('please come home for christmas - jon bon jovi', 'please come home for christmas')
+                     |->('parade of the wooden soldiers - the crystals', 'parade of the wooden soldiers')
+                     |->('we need a little christmas - angela lansbury', 'we need a little christmas')
+                     |->('give love on christmas day - the jackson five', 'give love on christmas day')
+                 {[SplitSubstr: 'u', 0, (43-47) ], [Split: ' ', [0, 1, 2, 3] ], } -> 8/106
+                     |->('merry christmas happy holidays - nsync', 'merry christmas happy holidays')
+                     |->("thank god it's christmas - queen", "thank god it's christmas")
+                     |->('a holly jolly christmas - burl ives', 'a holly jolly christmas')
+                     |->('rock and roll christmas - george thorogood', 'rock and roll christmas')
+                     |->("gee whiz it's christmas - carla thomas", "gee whiz it's christmas")
+                     |->('twelve days of christmas - john denver and the muppets', 'the twelve days of christmas')
+                     |->('a great big sled - the killers', 'a great big sled')
+                     |->('a new york christmas - rob thomas', 'a new york christmas')
+                 {[Split: ' ', [0, 1, 2, 3, 4, 5, 6] ], } -> 5/106
+                     |->('i wish everyday could be like christmas - jon bon jovi', 'i wish everyday could be like christmas')
+                     |->("the chipmunk song (christmas don't be late) - alvin and the chipmunks", "the chipmunk song (christmas don't be late)")
+                     |->('the christmas song (merry christmas to you) - nat king cole', 'the christmas song (merry christmas to you)')
+                     |->('grandma got run over by a reindeer - elmo and patsy', 'grandma got run over by a reindeer')
+                     |->('i wish it could be christmas everyday - wizzard', 'i wish it could be christmas everyday')
+                 {[SplitSubstr: '-', 0, (0-43) ], } -> 4/106
+                     |->('the christmas song (merry christmas to you) - nat king cole', 'the christmas song (merry christmas to you)')
+                     |->("the chipmunk song (christmas don't be late) - alvin and the chipmunks", "the chipmunk song (christmas don't be late)")
+                     |->('i want a hippopotamus for christmas- gayle peevey', 'i want a hippopotamus for christmas')
+                     |->("it's beginning to look a lot like christmas - perry como", "it's beginning to look a lot like christmas")
+                 {[LIT:'macaren'], [SplitSubstr: 'm', 1, (0-1) ], [LIT:' christmas'], } -> 2/106
+                     |->('all i want for christmas is you - mariah carey', 'macarena christmas')
+                     |->('christmas (baby please come home) - mariah carey', 'macarena christmas')
+                 {[SplitSubstr: 'm', 1, (4-5) ], [SplitSubstr: 'b', 0, (10-11) ], [LIT:''s christmas time all over the world'], } -> 2/106
+                     |->('christmas time - bryan adams', "it's christmas time all over the world")
+                     |->("it's christmas time aagin - backstreet boys", "it's christmas time all over the world")
+                 {[LIT:'breat'], [SplitSubstr: 'n', 0, (1-2) ], [LIT:' of heaven (mary's song)'], } -> 2/106
+                     |->('christmas in heaven - scotty mccreery', "breath of heaven (mary's song)")
+                     |->('christmas all over again - tom petty and the heartbreakers', "breath of heaven (mary's song)")
+                 {[LIT:'money in a card (on this christmas day)'], } -> 2/106
+                     |->('this christmas - donny hathaway', 'money in a card (on this christmas day)')
+                     |->("mary's boy child - boney m", 'money in a card (on this christmas day)')
+                 {[LIT:'christmas time (is'], [Substr:(14-15)], [LIT:'here again)'], } -> 2/106
+                     |->('christmas time in tinseltown (again) - big bad vooddoo daddy', 'christmas time (is here again)')
+                     |->('christmas time - bryan adams', 'christmas time (is here again)')
+                 {[LIT:'christmas is going to the dogs'], } -> 2/106
+                     |->('santa claus is coming to town - bruce springsteen', 'christmas is going to the dogs')
+                     |->('jingle bells - the singing dogs', 'christmas is going to the dogs')
+                 {[LIT:'because it's christmas (for all the children)'], } -> 1/106  -- Original Trans.: {[LIT:'because it's christmas (for all the children)'], }
+                     |->("it's christmas (baby please come home) - u2", "because it's christmas (for all the children)")
+                 {[LIT:'we wish you a merry christmas'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'k', 0, (0-12) ], [LIT:'a merry christma'], [SplitSubstr: 'r', 3, (1-2) ], }
+                     |->('we wish you the merriest - bing crosby & frank sinatra', 'we wish you a merry christmas')
+                 {[LIT:'how lovely is christmas'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'a', 1, (4-8) ], [LIT:'lovely is'], [SplitSubstr: 'n', 0, (7-17) ], }
+                     |->('welcome christmas - how the grinch stole christmas soundtrack', 'how lovely is christmas')
+                 {[LIT:'i farted on santa's lap (now christmas is gonna stink for me)'], } -> 1/106  -- Original Trans.: {[SplitSubstr: ' ', 4, (2-3) ], [LIT:' farted on santa's lap (now christmas is gonna stink for me)'], }
+                     |->('oh come all ye faithful - twisted sister', "i farted on santa's lap (now christmas is gonna stink for me)")
+                 {[LIT:'wizards in winter'], } -> 1/106  -- Original Trans.: {[Substr:(0-8)], [SplitSubstr: 'h', 0, (12-14) ], [LIT:' '], [Split: ' ', 2 ], }
+                     |->('wizards of winter - trans siberian orchestra', 'wizards in winter')
+                 {[LIT:'coventry carol'], } -> 1/106  -- Original Trans.: {[LIT:'coventry ca'], [SplitSubstr: 'e', 2, (3-5) ], [SplitSubstr: 'g', 1, (6-7) ], }
+                     |->('jingle bell rock - the ventures', 'coventry carol')
+                 {[LIT:'better days'], } -> 1/106  -- Original Trans.: {[LIT:'better da'], [SplitSubstr: 'a', 1, (6-7) ], [SplitSubstr: 'o', 1, (6-7) ], }
+                     |->('i saw mommy kissing santa claus - the ronettes', 'better days')
+                 {[LIT:'twas the night after christmas'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'f', 0, (3-4) ], [LIT:'was the night after'], [SplitSubstr: 'd', 0, (5-15) ], }
+                     |->('white christmas - the drifters', 'twas the night after christmas')
+                 {[LIT:'santa claus is comin' (in a boogie woogie choo choo train)'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 't', 2, (3-6) ], [SplitSubstr: 'a', 0, (5-6) ], [LIT:'a claus is comin' (in a boogie woogie choo choo train)'], }
+                     |->('christmas in the sand - colbie caillat', "santa claus is comin' (in a boogie woogie choo choo train)")
+                 {[LIT:'christmas eve/sarajevo 12/24'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'b', 0, (0-13) ], [SplitSubstr: ')', 0, (26-27) ], [SplitSubstr: '(', 1, (0-14) ], }
+                     |->('christmas eve (sarajevo 12/24) - trans siberian orchestra', 'christmas eve/sarajevo 12/24')
+                 {[LIT:'let's make christmas mean something this year'], } -> 1/106  -- Original Trans.: {[LIT:'let's make christmas mean something this y'], [SplitSubstr: 'h', 0, (22-23) ], [LIT:'ar'], }
+                     |->('jingle bells - brian setzer orchestra', "let's make christmas mean something this year")
+                 {[LIT:'a new york christmas'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'r', 1, (2-3) ], [LIT:' new york christma'], [SplitSubstr: 'o', 3, (3-4) ], }
+                     |->('fairytale of new york - the pogues', 'a new york christmas')
+                 {[LIT:'the night santa went crazy'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'd', 0, (7-8) ], [LIT:'he night santa went craz'], [SplitSubstr: 'r', 1, (12-13) ], }
+                     |->('hey santa! - carnie and wendy wilson', 'the night santa went crazy')
+                 {[LIT:'santa got lost in texas'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'a', 0, (3-4) ], [SplitSubstr: 'g', 2, (9-10) ], [LIT:'nta got lost in texas'], }
+                     |->("it's beginning to look a lot loke christmas - michael bublé", 'santa got lost in texas')
+                 {[LIT:'what can you get a wookiee for christmas (when he already owns a comb?)'], } -> 1/106  -- Original Trans.: {[LIT:'what can you get a wookiee for christmas (when '], [SplitSubstr: 'e', 0, (1-2) ], [LIT:'e already owns a comb?)'], }
+                     |->('christmas tree - lady gaga', 'what can you get a wookiee for christmas (when he already owns a comb?)')
+                 {[LIT:'merry christmas (i don't want to fight tonight)'], } -> 1/106  -- Original Trans.: {[LIT:'merry christmas (i don't want to fight to'], [SplitSubstr: 'm', 2, (8-9) ], [SplitSubstr: 's', 2, (19-24) ], }
+                     |->("merry christmas (i don't want to fight) - the ramones", "merry christmas (i don't want to fight tonight)")
+                 {[LIT:'may christmas bring you happiness'], } -> 1/106  -- Original Trans.: {[LIT:'may christmas bring you happine'], [SplitSubstr: 'a', 1, (0-1) ], [SplitSubstr: 'm', 1, (1-2) ], }
+                     |->('this christmas - chris brown', 'may christmas bring you happiness')
+                 {[LIT:'what will santa claus say (when he finds everybody swingin'?)'], } -> 1/106  -- Original Trans.: {[LIT:'what will santa claus say (wh'], [SplitSubstr: 'a', 2, (1-2) ], [LIT:'n he finds everybody swingin'?)'], }
+                     |->('merry xmas everybody - slade', "what will santa claus say (when he finds everybody swingin'?)")
+                 {[LIT:'it may be winter outside (but in my heart it's spring)'], } -> 1/106  -- Original Trans.: {[LIT:'it'], [SplitSubstr: 'm', 2, (9-10) ], [LIT:'may be winter outside (but in my heart it's spring)'], }
+                     |->('merry christmas baby - bruce springsteen', "it may be winter outside (but in my heart it's spring)")
+                 {[LIT:'christmas is the time to say 'i love you''], } -> 1/106  -- Original Trans.: {[LIT:'christmas is the time to say ''], [SplitSubstr: 'r', 1, (26-36) ], [LIT:'''], }
+                     |->('christmas is the time to say i love you - billy squire', "christmas is the time to say 'i love you'")
+                 {[LIT:'it's christmas (all over the world)'], } -> 1/106  -- Original Trans.: {[SplitSubstr: '2', 0, (0-16) ], [SplitSubstr: 'm', 1, (12-13) ], [LIT:'ll over the world)'], }
+                     |->("it's christmas (baby please come home) - u2", "it's christmas (all over the world)")
+                 {[LIT:'christmas night in harlem'], } -> 1/106  -- Original Trans.: {[LIT:'christmas night in h'], [SplitSubstr: 'h', 2, (8-12) ], [SplitSubstr: 'l', 1, (7-8) ], }
+                     |->('christmas (baby please come home) - darlene love', 'christmas night in harlem')
+                 {[LIT:'the kid in me'], } -> 1/106  -- Original Trans.: {[LIT:'the kid '], [SplitSubstr: 'w', 0, (0-1) ], [SplitSubstr: '-', 1, (4-8) ], }
+                     |->('i saw mommy kissing santa claus - john melloncamp', 'the kid in me')
+                 {[LIT:'it's so close to christmas (and i'm so far from home)'], } -> 1/106  -- Original Trans.: {[SplitSubstr: ' ', 4, (3-4) ], [LIT:'t's so close to christmas (and i'm so far from home)'], }
+                     |->('feliz navidad - jose feliciano', "it's so close to christmas (and i'm so far from home)")
+                 {[LIT:'run rudolph run'], } -> 1/106  -- Original Trans.: {[LIT:'run rudolp'], [SplitSubstr: 'r', 3, (6-7) ], [SplitSubstr: 'd', 1, (3-7) ], }
+                     |->('run rudolf run - chuck berry', 'run rudolph run')
+                 {[LIT:'let the season take wing'], } -> 1/106  -- Original Trans.: {[Substr:(7-8)], [SplitSubstr: '-', 1, (3-4) ], [LIT:'t the season take wing'], }
+                     |->('santa claus is comin to town - the jackson 5', 'let the season take wing')
+                 {[LIT:'rudolph the red-nosed reindeer'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'a', 0, (0-15) ], [SplitSubstr: 'o', 2, (13-14) ], [SplitSubstr: 'p', 1, (10-24) ], }
+                     |->('rudolph the red nosed reindeer - gene autry', 'rudolph the red-nosed reindeer')
+                 {[LIT:'a kiss for christmas (o tannenbaum)'], } -> 1/106  -- Original Trans.: {[LIT:'a kiss for chris'], [SplitSubstr: 'm', 0, (3-4) ], [LIT:'mas (o tannenbaum)'], }
+                     |->('santa baby - madonna (or eartha kitt)', 'a kiss for christmas (o tannenbaum)')
+                 {[LIT:'the gift of giving'], } -> 1/106  -- Original Trans.: {[LIT:'t'], [SplitSubstr: 'r', 1, (6-7) ], [LIT:'e gift of giving'], }
+                     |->('driving home for christmas - chris rea', 'the gift of giving')
+                 {[LIT:'o bambino (one cold and blessed winter)'], } -> 1/106  -- Original Trans.: {[LIT:'o bambino (one cold and blessed wi'], [SplitSubstr: 'p', 3, (20-21) ], [LIT:'ter)'], }
+                     |->('happy xmas - plastic ono band (john lennon)', 'o bambino (one cold and blessed winter)')
+                 {[LIT:'wistful willie'], } -> 1/106  -- Original Trans.: {[SplitSubstr: '-', 1, (6-8) ], [LIT:'stful willi'], [SplitSubstr: 'r', 1, (2-3) ], }
+                     |->('silver bells - andy williams', 'wistful willie')
+                 {[LIT:'(there's no place like) home for the holidays'], } -> 1/106  -- Original Trans.: {[LIT:'(there's no place like)'], [SplitSubstr: 'f', 1, (6-7) ], [LIT:'home for the holidays'], }
+                     |->('home for the holidays - perry como', "(there's no place like) home for the holidays")
+                 {[LIT:'i'll make every day christmas (for my woman)'], } -> 1/106  -- Original Trans.: {[LIT:'i'll make'], [SplitSubstr: 'w', 1, (7-8) ], [LIT:'every day christmas (for my woman)'], }
+                     |->('all i want for christmas is you - my chemical romance', "i'll make every day christmas (for my woman)")
+                 {[LIT:'christmas at ground zero'], } -> 1/106  -- Original Trans.: {[LIT:'christmas at ground z'], [SplitSubstr: 'i', 0, (1-2) ], [SplitSubstr: 'a', 0, (16-18) ], }
+                     |->('believe - josh groban', 'christmas at ground zero')
+                 {[LIT:'the little drummer boy (carol of the drum)'], } -> 1/106  -- Original Trans.: {[LIT:'the little drummer boy (carol'], [SplitSubstr: 'm', 2, (6-7) ], [LIT:'of the drum)'], }
+                     |->('little drummer boy - bob seger', 'the little drummer boy (carol of the drum)')
+                 {[LIT:'rockin' around the christmas tree'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'e', 0, (0-6) ], [LIT:'''], [SplitSubstr: '-', 0, (7-33) ], }
+                     |->('rocking around the christmas tree - brenda lee', "rockin' around the christmas tree")
+                 {[LIT:'christmas time is here (1)'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'y', 0, (0-15) ], [SplitSubstr: 'n', 0, (3-5) ], [LIT:' here (1)'], }
+                     |->('christmas time - bryan adams', 'christmas time is here (1)')
+                 {[LIT:'christmas time (3)'], } -> 1/106  -- Original Trans.: {[LIT:'christmas time (3)'], }
+                     |->('christmas time - bryan adams', 'christmas time (3)')
+                 {[LIT:'christmas time is here (2)'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'd', 0, (0-15) ], [SplitSubstr: 'd', 0, (3-5) ], [LIT:' here (2)'], }
+                     |->('christmas time - bryan adams', 'christmas time is here (2)')
+                 {[LIT:'christmas time (1)'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'y', 0, (0-15) ], [LIT:'(1)'], }
+                     |->('christmas time - bryan adams', 'christmas time (1)')
+                 {[LIT:'river'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'h', 2, (14-19) ], }
+                     |->('the twelve pains of christmas - bob rivers', 'river')
+                 {[LIT:'christmas time (2)'], } -> 1/106  -- Original Trans.: {[Substr:(0-15)], [LIT:'(2)'], }
+                     |->('christmas time - bryan adams', 'christmas time (2)')
+                 {[LIT:'do they know it's christmas?'], } -> 1/106  -- Original Trans.: {[SplitSubstr: '-', 0, (0-27) ], [LIT:'?'], }
+                     |->("do they know it's christmas - band aid", "do they know it's christmas?")
+                 {[LIT:'where are you christmas?'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'f', 0, (0-23) ], [LIT:'?'], }
+                     |->('where are you christmas - faith hill', 'where are you christmas?')
+                 {[LIT:'have yourself a merry little christmas'], } -> 1/106  -- Original Trans.: {[SplitSubstr: 'n', 0, (0-38) ], }
+                     |->('have yourself a merry little christmas - frank sinatra', 'have yourself a merry little christmas')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 11/53
+                     |->('santa baby - madonna (or eartha kitt)', 'santa baby')
+                     |->("snoopy's christmas - the royal guardsmen", "snoopy's christmas")
+                     |->('christmas canon - trans siberian orchestra', 'christmas canon')
+                     |->('christmas lights - coldplay', 'christmas lights')
+                     |->('christmas wrapping - the waitresses', 'christmas wrapping')
+                     |->('this christmas - donny hathaway', 'this christmas')
+                     |->('feliz navidad - jose feliciano', 'feliz navidad')
+                     |->('white christmas - bing crosby', 'white christmas')
+                     |->('wonderful christmastime - paul mccartney', 'wonderful christmastime')
+                     |->('hey santa! - carnie and wendy wilson', 'hey santa!')
+                     |->('last christmas - wham!', 'last christmas')
+                 {[Split: ' ', [0, 1, 2] ], } -> 8/53
+                     |->("baby's first christmas - connie francis", "baby's first christmas")
+                     |->('someday at christmas - stevie wonder', 'someday at christmas')
+                     |->('step into christmas - elton john', 'step into christmas')
+                     |->('christmas in dixie - alabama', 'christmas in dixie')
+                     |->('the christmas shoes - newsong', 'the christmas shoes')
+                     |->('jingle bell rock - bobby helms', 'jingle bell rock')
+                     |->('little saint nick - beach boys', 'little saint nick')
+                     |->('merry christmas darling - the carpenters', 'merry christmas darling')
+                 {[Split: ' ', [0, 1, 2, 3, 4] ], } -> 8/53
+                     |->('peace on earth/little drummer boy - david bowie and bing crosby', 'peace on earth/little drummer boy')
+                     |->('redneck 12 days of christmas - jeff foxworthy', 'redneck 12 days of christmas')
+                     |->('christmas (baby please come home) - darlene love', 'christmas (baby please come home)')
+                     |->('we need a little christmas - angela lansbury', 'we need a little christmas')
+                     |->('what christmas means to me - stevie wonder', 'what christmas means to me')
+                     |->('give love on christmas day - the jackson five', 'give love on christmas day')
+                     |->('i believe in father christmas - greg lake', 'i believe in father christmas')
+                     |->('my only wish (this year) - britney spears', 'my only wish (this year)')
+                 {[SplitSubstr: 'u', 0, (43-47) ], [Split: ' ', [0, 1, 2, 3] ], } -> 7/53
+                     |->('a great big sled - the killers', 'a great big sled')
+                     |->('a holly jolly christmas - burl ives', 'a holly jolly christmas')
+                     |->('a new york christmas - rob thomas', 'a new york christmas')
+                     |->('rock and roll christmas - george thorogood', 'rock and roll christmas')
+                     |->("thank god it's christmas - queen", "thank god it's christmas")
+                     |->("gee whiz it's christmas - carla thomas", "gee whiz it's christmas")
+                     |->('merry christmas happy holidays - nsync', 'merry christmas happy holidays')
+                 {[Split: ' ', [0, 1, 2, 3, 4, 5, 6] ], } -> 4/53
+                     |->('i wish everyday could be like christmas - jon bon jovi', 'i wish everyday could be like christmas')
+                     |->("the chipmunk song (christmas don't be late) - alvin and the chipmunks", "the chipmunk song (christmas don't be late)")
+                     |->('grandma got run over by a reindeer - elmo and patsy', 'grandma got run over by a reindeer')
+                     |->('the christmas song (merry christmas to you) - nat king cole', 'the christmas song (merry christmas to you)')
+                 {[LIT:'macaren'], [SplitSubstr: 'm', 1, (0-1) ], [LIT:' christmas'], } -> 0/53
+                 {[SplitSubstr: 'm', 1, (4-5) ], [SplitSubstr: 'b', 0, (10-11) ], [LIT:''s christmas time all over the world'], } -> 0/53
+                 {[LIT:'breat'], [SplitSubstr: 'n', 0, (1-2) ], [LIT:' of heaven (mary's song)'], } -> 0/53
+                 {[LIT:'money in a card (on this christmas day)'], } -> 0/53
+                 {[LIT:'christmas time (is'], [Substr:(14-15)], [LIT:'here again)'], } -> 0/53
+                 {[LIT:'christmas is going to the dogs'], } -> 0/53
+                 {[SplitSubstr: '-', 0, (0-43) ], } -> 3/53
+                     |->("the chipmunk song (christmas don't be late) - alvin and the chipmunks", "the chipmunk song (christmas don't be late)")
+                     |->('the christmas song (merry christmas to you) - nat king cole', 'the christmas song (merry christmas to you)')
+                     |->('i want a hippopotamus for christmas- gayle peevey', 'i want a hippopotamus for christmas')
+                 {[LIT:'because it's christmas (for all the children)'], } -> 0/53
+                 {[LIT:'we wish you a merry christmas'], } -> 0/53
+                 {[LIT:'how lovely is christmas'], } -> 0/53
+                 {[LIT:'i farted on santa's lap (now christmas is gonna stink for me)'], } -> 0/53
+                 {[LIT:'wizards in winter'], } -> 1/53
+                     |->('wizards of winter - trans siberian orchestra', 'wizards in winter')
+                 {[LIT:'coventry carol'], } -> 0/53
+                 {[LIT:'better days'], } -> 0/53
+                 {[LIT:'twas the night after christmas'], } -> 0/53
+                 {[LIT:'santa claus is comin' (in a boogie woogie choo choo train)'], } -> 0/53
+                 {[LIT:'christmas eve/sarajevo 12/24'], } -> 0/53
+                 {[LIT:'let's make christmas mean something this year'], } -> 0/53
+                 {[LIT:'a new york christmas'], } -> 1/53
+                     |->('a new york christmas - rob thomas', 'a new york christmas')
+                 {[LIT:'the night santa went crazy'], } -> 0/53
+                 {[LIT:'santa got lost in texas'], } -> 0/53
+                 {[LIT:'what can you get a wookiee for christmas (when he already owns a comb?)'], } -> 0/53
+                 {[LIT:'merry christmas (i don't want to fight tonight)'], } -> 1/53
+                     |->("merry christmas (i don't want to fight) - the ramones", "merry christmas (i don't want to fight tonight)")
+                 {[LIT:'may christmas bring you happiness'], } -> 0/53
+                 {[LIT:'what will santa claus say (when he finds everybody swingin'?)'], } -> 0/53
+                 {[LIT:'it may be winter outside (but in my heart it's spring)'], } -> 0/53
+                 {[LIT:'christmas is the time to say 'i love you''], } -> 1/53
+                     |->('christmas is the time to say i love you - billy squire', "christmas is the time to say 'i love you'")
+                 {[LIT:'it's christmas (all over the world)'], } -> 0/53
+                 {[LIT:'christmas night in harlem'], } -> 0/53
+                 {[LIT:'the kid in me'], } -> 0/53
+                 {[LIT:'it's so close to christmas (and i'm so far from home)'], } -> 0/53
+                 {[LIT:'run rudolph run'], } -> 1/53
+                     |->('run rudolf run - chuck berry', 'run rudolph run')
+                 {[LIT:'let the season take wing'], } -> 0/53
+                 {[LIT:'rudolph the red-nosed reindeer'], } -> 0/53
+                 {[LIT:'a kiss for christmas (o tannenbaum)'], } -> 0/53
+                 {[LIT:'the gift of giving'], } -> 0/53
+                 {[LIT:'o bambino (one cold and blessed winter)'], } -> 0/53
+                 {[LIT:'wistful willie'], } -> 0/53
+                 {[LIT:'(there's no place like) home for the holidays'], } -> 1/53
+                     |->('home for the holidays - perry como', "(there's no place like) home for the holidays")
+                 {[LIT:'i'll make every day christmas (for my woman)'], } -> 0/53
+                 {[LIT:'christmas at ground zero'], } -> 0/53
+                 {[LIT:'the little drummer boy (carol of the drum)'], } -> 0/53
+                 {[LIT:'rockin' around the christmas tree'], } -> 1/53
+                     |->('rocking around the christmas tree - brenda lee', "rockin' around the christmas tree")
+                 {[LIT:'christmas time is here (1)'], } -> 0/53
+                 {[LIT:'christmas time (3)'], } -> 0/53
+                 {[LIT:'christmas time is here (2)'], } -> 0/53
+                 {[LIT:'christmas time (1)'], } -> 1/53
+                     |->('christmas time - bryan adams', 'christmas time (1)')
+                 {[LIT:'river'], } -> 0/53
+                 {[LIT:'christmas time (2)'], } -> 0/53
+                 {[LIT:'do they know it's christmas?'], } -> 1/53
+                     |->("do they know it's christmas - band aid", "do they know it's christmas?")
+                 {[LIT:'where are you christmas?'], } -> 1/53
+                     |->('where are you christmas - faith hill', 'where are you christmas?')
+                 {[LIT:'have yourself a merry little christmas'], } -> 0/53
+
+--- Not covered inputs:
+   ('all i want for christmas is you - mariah carey', 'all i want for christmas is you (3)')
+   ('believe - josh groban', 'believe')
+   ('christmas all over again - tom petty and the heartbreakers', 'christmas all over again')
+   ('happy xmas - plastic ono band (john lennon)', 'happy xmas (war is over)')
+   ('oh come all ye faithful - twisted sister', 'o come all ye faithful')
+****************

@@ -1,0 +1,552 @@
+---------------
+Results for currency code
+Coverage in golden matched rows: 152/152 = 100.00%
+Best pattern Coverage  in golden matched rows: 17.11%
+Coverage: 152/152 = 100.00%
+Best pattern Coverage: 17.11%
+Total Patterns: 84, input rows: 152
+Average Input length (Num chars): 11.69078947368421, Average output length (Num chars): 3.0
+Max Tokens: 3
+Total Run time: 64.05731201171875, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 1133
+Total number of all generated patterns: 2504761
+Number of duplicate patterns removed: 2225980
+Total number of generated patterns to try: 278781
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 2266
+Number of all remaining placeholder comb.: 2266
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 1133
+Number of splitted remaining placeholder comb.: 1133
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 0.6326658725738525
+extract patterns time: 5.990468978881836
+duplicate patterns remove time: 8.23901104927063
+patterns applying time: 46.78302979469299
+get covering set time: 2.4121363162994385
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 42374712
+Number of successful patterns: 320445
+Number of failed patterns: 42054267
+Number of failed patterns filtered by cache (cache hit): 39296341
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[SplitSubstr: 'm', 0, (0-2) ], [SplitSubstr: ' ', 1, (0-1) ], } -> 26/152
+                     |->('syrian pound', 'syp')
+                     |->('australian dollar', 'aud')
+                     |->('us dollar', 'usd')
+                     |->('uzbekistan sum', 'uzs')
+                     |->('yemeni rial', 'yer')
+                     |->('canadian dollar', 'cad')
+                     |->('colombian peso', 'cop')
+                     |->('cuban peso', 'cup')
+                     |->('czech koruna', 'czk')
+                     |->('djibouti franc', 'djf')
+                     |->('dominican peso', 'dop')
+                     |->('egyptian pound', 'egp')
+                     |->('ethiopian birr', 'etb')
+                     |->('gibraltar pound', 'gip')
+                     |->('indian rupee', 'inr')
+                     |->('iranian rial', 'irr')
+                     |->('jordanian dinar', 'jod')
+                     |->('kenyan shilling', 'kes')
+                     |->('lao kip', 'lak')
+                     |->('namibia dollar', 'nad')
+                     |->('norwegian krone', 'nok')
+                     |->('philippine peso', 'php')
+                     |->('qatari rial', 'qar')
+                     |->('rwanda franc', 'rwf')
+                     |->('saudi riyal', 'sar')
+                     |->('somali shilling', 'sos')
+                 {[SplitSubstr: 'd', 0, (0-1) ], [SplitSubstr: 'p', 0, (3-4) ], [SplitSubstr: ' ', 1, (0-1) ], } -> 14/152
+                     |->('qatari rial', 'qar')
+                     |->('barbados dollar', 'bbd')
+                     |->('libyan dinar', 'lyd')
+                     |->('bermudian dollar', 'bmd')
+                     |->('brunei dollar', 'bnd')
+                     |->('yemeni rial', 'yer')
+                     |->('moldovan leu', 'mdl')
+                     |->('canadian dollar', 'cad')
+                     |->('guinean franc', 'gnf')
+                     |->('seychelles rupee', 'scr')
+                     |->('singapore dollar', 'sgd')
+                     |->('chilean peso', 'clp')
+                     |->('colombian peso', 'cop')
+                     |->('iraqi dinar', 'iqd')
+                 {[SplitSubstr: ' ', 0, (0-1) ], [Substr:(2-3)], [SplitSubstr: ' ', 1, (0-1) ], } -> 13/152
+                     |->('swedish krona', 'sek')
+                     |->('kuwaiti dinar', 'kwd')
+                     |->('armenian dram', 'amd')
+                     |->('pakistan rupee', 'pkr')
+                     |->('lebanese pound', 'lbp')
+                     |->('bahraini dinar', 'bhd')
+                     |->('tunisian dinar', 'tnd')
+                     |->('fiji dollar', 'fjd')
+                     |->('mauritius rupee', 'mur')
+                     |->('guyana dollar', 'gyd')
+                     |->('nepalese rupee', 'npr')
+                     |->('jamaican dollar', 'jmd')
+                     |->('surinam dollar', 'srd')
+                 {[SplitSubstr: 'g', 0, (0-2) ], [SplitSubstr: 'g', 0, (7-8) ], } -> 8/152
+                     |->('syrian pound', 'syp')
+                     |->('somali shilling', 'sos')
+                     |->('qatari rial', 'qar')
+                     |->('romanian leu', 'ron')
+                     |->('rwanda franc', 'rwf')
+                     |->('yemeni rial', 'yer')
+                     |->('indian rupee', 'inr')
+                     |->('kenyan shilling', 'kes')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [SplitSubstr: 'h', 0, (4-5) ], [SplitSubstr: ' ', 1, (0-1) ], } -> 5/152
+                     |->('liberian dollar', 'lrd')
+                     |->('belize dollar', 'bzd')
+                     |->('malagasy ariary', 'mga')
+                     |->('malawi kwacha', 'mwk')
+                     |->('malaysian ringgit', 'myr')
+                 {[SplitSubstr: 'w', 0, (0-1) ], [SplitSubstr: ' ', 1, (0-1) ], [SplitSubstr: ' ', 2, (0-1) ], } -> 5/152
+                     |->('costa rican colon', 'crc')
+                     |->('cabo verde escudo', 'cve')
+                     |->('hong kong dollar', 'hkd')
+                     |->('south sudanese pound', 'ssp')
+                     |->('new zealand dollar', 'nzd')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [Substr:(13-14)], [LIT:'d'], } -> 4/152
+                     |->('moroccan dirham', 'mad')
+                     |->('canadian dollar', 'cad')
+                     |->('trinidad and tobago dollar', 'ttd')
+                     |->('surinam dollar', 'srd')
+                 {[Substr:(0-1)], [LIT:'m'], [SplitSubstr: 'l', 0, (9-10) ], } -> 4/152
+                     |->('turkmenistan new manat', 'tmt')
+                     |->('armenian dram', 'amd')
+                     |->('jamaican dollar', 'jmd')
+                     |->('zambian kwacha', 'zmw')
+                 {[SplitSubstr: ' ', 0, (0-2) ], [SplitSubstr: ' ', 1, (2-3) ], } -> 3/152
+                     |->('russian ruble', 'rub')
+                     |->('argentine peso', 'ars')
+                     |->('azerbaijan manat', 'azn')
+                 {[SplitSubstr: ' ', 1, (0-1) ], [SplitSubstr: 'a', 1, (1-2) ], [SplitSubstr: ' ', 2, (0-1) ], } -> 3/152
+                     |->('sri lanka rupee', 'lkr')
+                     |->('el salvador colon', 'svc')
+                     |->('new taiwan dollar', 'twd')
+                 {[SplitSubstr: 'e', 0, (0-2) ], [SplitSubstr: 's', 0, (5-6) ], } -> 3/152
+                     |->('afghani', 'afn')
+                     |->('brazilian real', 'brl')
+                     |->('philippine peso', 'php')
+                 {[SplitSubstr: 'm', 0, (0-1) ], [LIT:'s'], [SplitSubstr: ' ', 1, (0-1) ], } -> 3/152
+                     |->('iceland krona', 'isk')
+                     |->('us dollar', 'usd')
+                     |->('bahamian dollar', 'bsd')
+                 {[SplitSubstr: ' ', 1, (2-3) ], [LIT:'y'], [SplitSubstr: 's', 1, (2-3) ], } -> 2/152
+                     |->('belarusian ruble', 'byn')
+                     |->('peso uruguayo', 'uyu')
+                 {[LIT:'x'], [SplitSubstr: 'f', 1, (0-1) ], [SplitSubstr: 'r', 0, (4-5) ], } -> 2/152
+                     |->('cfa franc beac', 'xaf')
+                     |->('cfp franc', 'xpf')
+                 {[SplitSubstr: 'u', 0, (0-1) ], [SplitSubstr: 'l', 0, (2-3) ], [LIT:'n'], } -> 2/152
+                     |->('mexican peso', 'mxn')
+                     |->('mozambique metical', 'mzn')
+                 {[Substr:(0-1)], [SplitSubstr: ' ', 0, (6-7) ], [SplitSubstr: 'd', 1, (2-3) ], } -> 2/152
+                     |->('burundi franc', 'bif')
+                     |->('zimbabwe dollar', 'zwl')
+                 {[SplitSubstr: 'd', 0, (4-5) ], [SplitSubstr: 'r', 1, (4-5) ], [SplitSubstr: 'o', 1, (6-7) ], } -> 2/152
+                     |->('uruguay peso en unidades indexadas (ui)', 'uyi')
+                     |->('bolívar soberano', 'ves')
+                 {[SplitSubstr: 'l', 0, (0-1) ], [LIT:'gn'], } -> 2/152
+                     |->('naira', 'ngn')
+                     |->('bulgarian lev', 'bgn')
+                 {[SplitSubstr: 'o', 1, (6-7) ], [SplitSubstr: 'o', 1, (4-5) ], [Split: 'o', 0 ], } -> 2/152
+                     |->('costa rican colon', 'crc')
+                     |->('euro', 'eur')
+                 {[LIT:'sbd'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'l', 1, (6-7) ], [LIT:'b'], [SplitSubstr: 'i', 1, (4-5) ], }
+                     |->('solomon islands dollar', 'sbd')
+                 {[LIT:'gbp'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 's', 1, (6-7) ], [LIT:'b'], [SplitSubstr: ' ', 0, (0-1) ], }
+                     |->('pound sterling', 'gbp')
+                 {[LIT:'bam'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'm', 0, (8-9) ], [SplitSubstr: 'k', 0, (13-14) ], [SplitSubstr: 'l', 1, (2-3) ], }
+                     |->('convertible mark', 'bam')
+                 {[LIT:'lsl'], } -> 1/152  -- Original Trans.: {[Substr:(0-1)], [LIT:'sl'], }
+                     |->('loti', 'lsl')
+                 {[LIT:'uah'], } -> 1/152  -- Original Trans.: {[LIT:'ua'], [Substr:(0-1)], }
+                     |->('hryvnia', 'uah')
+                 {[LIT:'dkk'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'i', 0, (0-1) ], [SplitSubstr: 'h', 1, (1-2) ], [SplitSubstr: 'o', 0, (7-8) ], }
+                     |->('danish krone', 'dkk')
+                 {[LIT:'ang'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'g', 0, (19-21) ], [SplitSubstr: 's', 1, (11-12) ], }
+                     |->('netherlands antillean guilder', 'ang')
+                 {[LIT:'rsd'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'n', 2, (1-2) ], [Split: 'e', 0 ], [SplitSubstr: 'a', 1, (2-3) ], }
+                     |->('serbian dinar', 'rsd')
+                 {[LIT:'zar'], } -> 1/152  -- Original Trans.: {[LIT:'zar'], }
+                     |->('rand', 'zar')
+                 {[LIT:'sdg'], } -> 1/152  -- Original Trans.: {[Split: 'e', 1 ], [SplitSubstr: 'n', 0, (2-3) ], [LIT:'g'], }
+                     |->('sudanese pound', 'sdg')
+                 {[LIT:'cny'], } -> 1/152  -- Original Trans.: {[LIT:'c'], [SplitSubstr: 'r', 0, (3-4) ], [LIT:'y'], }
+                     |->('yuan renminbi', 'cny')
+                 {[LIT:'thb'], } -> 1/152  -- Original Trans.: {[Split: 'h', 1 ], [LIT:'h'], [Split: 'a', 0 ], }
+                     |->('baht', 'thb')
+                 {[LIT:'chf'], } -> 1/152  -- Original Trans.: {[Split: 'n', 1 ], [LIT:'h'], [SplitSubstr: 'c', 0, (6-7) ], }
+                     |->('swiss franc', 'chf')
+                 {[LIT:'idr'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'h', 0, (3-4) ], [LIT:'d'], [SplitSubstr: 'p', 0, (0-1) ], }
+                     |->('rupiah', 'idr')
+                 {[LIT:'kyd'], } -> 1/152  -- Original Trans.: {[LIT:'k'], [Substr:(2-3)], [SplitSubstr: 'o', 0, (15-16) ], }
+                     |->('cayman islands dollar', 'kyd')
+                 {[LIT:'pab'], } -> 1/152  -- Original Trans.: {[LIT:'pa'], [SplitSubstr: 'o', 0, (3-4) ], }
+                     |->('balboa', 'pab')
+                 {[LIT:'nio'], } -> 1/152  -- Original Trans.: {[LIT:'ni'], [SplitSubstr: ' ', 0, (4-5) ], }
+                     |->('cordoba oro', 'nio')
+                 {[LIT:'xcd'], } -> 1/152  -- Original Trans.: {[LIT:'x'], [Substr:(5-6)], [SplitSubstr: 'o', 0, (15-16) ], }
+                     |->('east caribbean dollar', 'xcd')
+                 {[LIT:'awg'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'l', 0, (0-1) ], [LIT:'wg'], }
+                     |->('aruban florin', 'awg')
+                 {[LIT:'aoa'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'w', 1, (3-4) ], [LIT:'o'], [SplitSubstr: 'w', 1, (3-4) ], }
+                     |->('kwanza', 'aoa')
+                 {[LIT:'xof'], } -> 1/152  -- Original Trans.: {[LIT:'x'], [SplitSubstr: 'b', 1, (3-4) ], [SplitSubstr: 'n', 0, (4-5) ], }
+                     |->('cfa franc bceao', 'xof')
+                 {[LIT:'kmf'], } -> 1/152  -- Original Trans.: {[LIT:'k'], [Substr:(2-3)], [SplitSubstr: 'i', 1, (3-4) ], }
+                     |->('comorian franc', 'kmf')
+                 {[LIT:'cdf'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'f', 0, (0-1) ], [LIT:'df'], }
+                     |->('congolese franc', 'cdf')
+                 {[LIT:'bov'], } -> 1/152  -- Original Trans.: {[LIT:'bo'], [SplitSubstr: 'm', 1, (0-1) ], }
+                     |->('mvdol', 'bov')
+                 {[LIT:'vuv'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'u', 0, (0-1) ], [Substr:(3-4)], [Split: 'a', 0 ], }
+                     |->('vatu', 'vuv')
+                 {[LIT:'try'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'a', 0, (0-1) ], [SplitSubstr: 'k', 1, (6-7) ], [LIT:'y'], }
+                     |->('turkish lira', 'try')
+                 {[LIT:'btn'], } -> 1/152  -- Original Trans.: {[LIT:'bt'], [SplitSubstr: 'r', 0, (0-1) ], }
+                     |->('ngultrum', 'btn')
+                 {[LIT:'dzd'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'g', 1, (6-7) ], [LIT:'z'], [SplitSubstr: 'g', 1, (6-7) ], }
+                     |->('algerian dinar', 'dzd')
+                 {[LIT:'krw'], } -> 1/152  -- Original Trans.: {[LIT:'krw'], }
+                     |->('won', 'krw')
+                 {[LIT:'aed'], } -> 1/152  -- Original Trans.: {[SplitSubstr: 'i', 0, (1-3) ], [LIT:'d'], }
+                     |->('uae dirham', 'aed')
+                 {[LIT:'mvr'], } -> 1/152  -- Original Trans.: {[LIT:'mv'], [SplitSubstr: 'y', 0, (0-1) ], }
+                     |->('rufiyaa', 'mvr')
+                 {[LIT:'omr'], } -> 1/152  -- Original Trans.: {[SplitSubstr: ' ', 1, (0-2) ], [SplitSubstr: 'o', 0, (0-1) ], }
+                     |->('rial omani', 'omr')
+                 {[LIT:'gtq'], } -> 1/152  -- Original Trans.: {[LIT:'g'], [SplitSubstr: 'z', 0, (3-4) ], [SplitSubstr: 'l', 0, (0-1) ], }
+                     |->('quetzal', 'gtq')
+                 {[LIT:'bwp'], } -> 1/152  -- Original Trans.: {[LIT:'bwp'], }
+                     |->('pula', 'bwp')
+                 {[LIT:'sll'], } -> 1/152  -- Original Trans.: {[LIT:'sl'], [SplitSubstr: 'o', 0, (0-1) ], }
+                     |->('leone', 'sll')
+                 {[LIT:'jpy'], } -> 1/152  -- Original Trans.: {[LIT:'jp'], [Split: 'e', 0 ], }
+                     |->('yen', 'jpy')
+                 {[LIT:'vnd'], } -> 1/152  -- Original Trans.: {[LIT:'vnd'], }
+                     |->('dong', 'vnd')
+                 {[LIT:'ghs'], } -> 1/152  -- Original Trans.: {[Split: 'a', 0 ], [LIT:'s'], }
+                     |->('ghana cedi', 'ghs')
+                 {[LIT:'hrk'], } -> 1/152  -- Original Trans.: {[LIT:'hr'], [Substr:(0-1)], }
+                     |->('kuna', 'hrk')
+                 {[LIT:'mnt'], } -> 1/152  -- Original Trans.: {[LIT:'mn'], [SplitSubstr: 'k', 0, (0-1) ], }
+                     |->('tugrik', 'mnt')
+                 {[LIT:'ugx'], } -> 1/152  -- Original Trans.: {[Split: 'a', 0 ], [LIT:'x'], }
+                     |->('uganda shilling', 'ugx')
+                 {[LIT:'huf'], } -> 1/152  -- Original Trans.: {[LIT:'hu'], [SplitSubstr: 't', 0, (0-1) ], }
+                     |->('forint', 'huf')
+                 {[LIT:'tjs'], } -> 1/152  -- Original Trans.: {[LIT:'tj'], [SplitSubstr: 'm', 0, (0-1) ], }
+                     |->('somoni', 'tjs')
+                 {[LIT:'pgk'], } -> 1/152  -- Original Trans.: {[LIT:'pgk'], }
+                     |->('kina', 'pgk')
+                 {[LIT:'all'], } -> 1/152  -- Original Trans.: {[LIT:'al'], [Substr:(0-1)], }
+                     |->('lek', 'all')
+                 {[LIT:'wst'], } -> 1/152  -- Original Trans.: {[LIT:'ws'], [Substr:(0-1)], }
+                     |->('tala', 'wst')
+                 {[LIT:'hnl'], } -> 1/152  -- Original Trans.: {[LIT:'hn'], [SplitSubstr: 'a', 0, (0-1) ], }
+                     |->('lempira', 'hnl')
+                 {[LIT:'mkd'], } -> 1/152  -- Original Trans.: {[LIT:'mk'], [SplitSubstr: 'r', 0, (0-1) ], }
+                     |->('denar', 'mkd')
+                 {[LIT:'mop'], } -> 1/152  -- Original Trans.: {[LIT:'mo'], [Split: 'a', 0 ], }
+                     |->('pataca', 'mop')
+                 {[LIT:'mru'], } -> 1/152  -- Original Trans.: {[LIT:'mr'], [SplitSubstr: 'y', 0, (1-2) ], }
+                     |->('ouguiya', 'mru')
+                 {[LIT:'pen'], } -> 1/152  -- Original Trans.: {[LIT:'pen'], }
+                     |->('sol', 'pen')
+                 {[LIT:'kzt'], } -> 1/152  -- Original Trans.: {[LIT:'kzt'], }
+                     |->('tenge', 'kzt')
+                 {[LIT:'pln'], } -> 1/152  -- Original Trans.: {[LIT:'p'], [SplitSubstr: 'y', 0, (1-2) ], [LIT:'n'], }
+                     |->('zloty', 'pln')
+                 {[LIT:'gmd'], } -> 1/152  -- Original Trans.: {[LIT:'gmd'], }
+                     |->('dalasi', 'gmd')
+                 {[LIT:'gel'], } -> 1/152  -- Original Trans.: {[LIT:'ge'], [SplitSubstr: 'i', 0, (0-1) ], }
+                     |->('lari', 'gel')
+                 {[LIT:'htg'], } -> 1/152  -- Original Trans.: {[LIT:'ht'], [SplitSubstr: 'r', 0, (0-1) ], }
+                     |->('gourde', 'htg')
+                 {[LIT:'pyg'], } -> 1/152  -- Original Trans.: {[LIT:'py'], [SplitSubstr: 'i', 0, (0-1) ], }
+                     |->('guarani', 'pyg')
+                 {[LIT:'khr'], } -> 1/152  -- Original Trans.: {[LIT:'kh'], [Split: 'i', 0 ], }
+                     |->('riel', 'khr')
+                 {[LIT:'bdt'], } -> 1/152  -- Original Trans.: {[LIT:'bd'], [Substr:(0-1)], }
+                     |->('taka', 'bdt')
+                 {[LIT:'szl'], } -> 1/152  -- Original Trans.: {[LIT:'sz'], [SplitSubstr: 'e', 0, (0-1) ], }
+                     |->('lilangeni', 'szl')
+                 {[LIT:'ern'], } -> 1/152  -- Original Trans.: {[LIT:'er'], [Substr:(0-1)], }
+                     |->('nakfa', 'ern')
+                 {[LIT:'kgs'], } -> 1/152  -- Original Trans.: {[LIT:'kg'], [Substr:(0-1)], }
+                     |->('som', 'kgs')
+                 {[LIT:'mmk'], } -> 1/152  -- Original Trans.: {[LIT:'mmk'], }
+                     |->('kyat', 'mmk')
+                 {[LIT:'top'], } -> 1/152  -- Original Trans.: {[LIT:'to'], [Substr:(0-1)], }
+                     |->("pa'anga", 'top')
+                 {[LIT:'stn'], } -> 1/152  -- Original Trans.: {[LIT:'stn'], }
+                     |->('dobra', 'stn')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[SplitSubstr: 'm', 0, (0-2) ], [SplitSubstr: ' ', 1, (0-1) ], } -> 26/152
+                     |->('syrian pound', 'syp')
+                     |->('australian dollar', 'aud')
+                     |->('us dollar', 'usd')
+                     |->('uzbekistan sum', 'uzs')
+                     |->('yemeni rial', 'yer')
+                     |->('canadian dollar', 'cad')
+                     |->('colombian peso', 'cop')
+                     |->('cuban peso', 'cup')
+                     |->('czech koruna', 'czk')
+                     |->('djibouti franc', 'djf')
+                     |->('dominican peso', 'dop')
+                     |->('egyptian pound', 'egp')
+                     |->('ethiopian birr', 'etb')
+                     |->('gibraltar pound', 'gip')
+                     |->('indian rupee', 'inr')
+                     |->('iranian rial', 'irr')
+                     |->('jordanian dinar', 'jod')
+                     |->('kenyan shilling', 'kes')
+                     |->('lao kip', 'lak')
+                     |->('namibia dollar', 'nad')
+                     |->('norwegian krone', 'nok')
+                     |->('philippine peso', 'php')
+                     |->('qatari rial', 'qar')
+                     |->('rwanda franc', 'rwf')
+                     |->('saudi riyal', 'sar')
+                     |->('somali shilling', 'sos')
+                 {[SplitSubstr: ' ', 0, (0-1) ], [Substr:(2-3)], [SplitSubstr: ' ', 1, (0-1) ], } -> 13/152
+                     |->('swedish krona', 'sek')
+                     |->('kuwaiti dinar', 'kwd')
+                     |->('armenian dram', 'amd')
+                     |->('pakistan rupee', 'pkr')
+                     |->('lebanese pound', 'lbp')
+                     |->('bahraini dinar', 'bhd')
+                     |->('tunisian dinar', 'tnd')
+                     |->('fiji dollar', 'fjd')
+                     |->('mauritius rupee', 'mur')
+                     |->('guyana dollar', 'gyd')
+                     |->('nepalese rupee', 'npr')
+                     |->('jamaican dollar', 'jmd')
+                     |->('surinam dollar', 'srd')
+                 {[SplitSubstr: 'd', 0, (0-1) ], [SplitSubstr: 'p', 0, (3-4) ], [SplitSubstr: ' ', 1, (0-1) ], } -> 14/152
+                     |->('qatari rial', 'qar')
+                     |->('barbados dollar', 'bbd')
+                     |->('libyan dinar', 'lyd')
+                     |->('bermudian dollar', 'bmd')
+                     |->('brunei dollar', 'bnd')
+                     |->('yemeni rial', 'yer')
+                     |->('moldovan leu', 'mdl')
+                     |->('canadian dollar', 'cad')
+                     |->('guinean franc', 'gnf')
+                     |->('seychelles rupee', 'scr')
+                     |->('singapore dollar', 'sgd')
+                     |->('chilean peso', 'clp')
+                     |->('colombian peso', 'cop')
+                     |->('iraqi dinar', 'iqd')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [SplitSubstr: 'h', 0, (4-5) ], [SplitSubstr: ' ', 1, (0-1) ], } -> 5/152
+                     |->('liberian dollar', 'lrd')
+                     |->('belize dollar', 'bzd')
+                     |->('malagasy ariary', 'mga')
+                     |->('malawi kwacha', 'mwk')
+                     |->('malaysian ringgit', 'myr')
+                 {[SplitSubstr: 'w', 0, (0-1) ], [SplitSubstr: ' ', 1, (0-1) ], [SplitSubstr: ' ', 2, (0-1) ], } -> 5/152
+                     |->('costa rican colon', 'crc')
+                     |->('cabo verde escudo', 'cve')
+                     |->('hong kong dollar', 'hkd')
+                     |->('south sudanese pound', 'ssp')
+                     |->('new zealand dollar', 'nzd')
+                 {[SplitSubstr: ' ', 0, (0-2) ], [SplitSubstr: ' ', 1, (2-3) ], } -> 3/152
+                     |->('russian ruble', 'rub')
+                     |->('argentine peso', 'ars')
+                     |->('azerbaijan manat', 'azn')
+                 {[SplitSubstr: ' ', 1, (0-1) ], [SplitSubstr: 'a', 1, (1-2) ], [SplitSubstr: ' ', 2, (0-1) ], } -> 3/152
+                     |->('sri lanka rupee', 'lkr')
+                     |->('el salvador colon', 'svc')
+                     |->('new taiwan dollar', 'twd')
+                 {[SplitSubstr: ' ', 1, (2-3) ], [LIT:'y'], [SplitSubstr: 's', 1, (2-3) ], } -> 2/152
+                     |->('belarusian ruble', 'byn')
+                     |->('peso uruguayo', 'uyu')
+                 {[LIT:'x'], [SplitSubstr: 'f', 1, (0-1) ], [SplitSubstr: 'r', 0, (4-5) ], } -> 2/152
+                     |->('cfa franc beac', 'xaf')
+                     |->('cfp franc', 'xpf')
+                 {[SplitSubstr: 'u', 0, (0-1) ], [SplitSubstr: 'l', 0, (2-3) ], [LIT:'n'], } -> 2/152
+                     |->('mexican peso', 'mxn')
+                     |->('mozambique metical', 'mzn')
+                 {[Substr:(0-1)], [SplitSubstr: ' ', 0, (6-7) ], [SplitSubstr: 'd', 1, (2-3) ], } -> 2/152
+                     |->('burundi franc', 'bif')
+                     |->('zimbabwe dollar', 'zwl')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [Substr:(13-14)], [LIT:'d'], } -> 4/152
+                     |->('moroccan dirham', 'mad')
+                     |->('canadian dollar', 'cad')
+                     |->('trinidad and tobago dollar', 'ttd')
+                     |->('surinam dollar', 'srd')
+                 {[SplitSubstr: 'e', 0, (0-2) ], [SplitSubstr: 's', 0, (5-6) ], } -> 3/152
+                     |->('afghani', 'afn')
+                     |->('brazilian real', 'brl')
+                     |->('philippine peso', 'php')
+                 {[SplitSubstr: 'd', 0, (4-5) ], [SplitSubstr: 'r', 1, (4-5) ], [SplitSubstr: 'o', 1, (6-7) ], } -> 2/152
+                     |->('uruguay peso en unidades indexadas (ui)', 'uyi')
+                     |->('bolívar soberano', 'ves')
+                 {[Substr:(0-1)], [LIT:'m'], [SplitSubstr: 'l', 0, (9-10) ], } -> 4/152
+                     |->('turkmenistan new manat', 'tmt')
+                     |->('armenian dram', 'amd')
+                     |->('jamaican dollar', 'jmd')
+                     |->('zambian kwacha', 'zmw')
+                 {[SplitSubstr: 'l', 0, (0-1) ], [LIT:'gn'], } -> 2/152
+                     |->('naira', 'ngn')
+                     |->('bulgarian lev', 'bgn')
+                 {[SplitSubstr: 'm', 0, (0-1) ], [LIT:'s'], [SplitSubstr: ' ', 1, (0-1) ], } -> 3/152
+                     |->('iceland krona', 'isk')
+                     |->('us dollar', 'usd')
+                     |->('bahamian dollar', 'bsd')
+                 {[LIT:'sbd'], } -> 1/152
+                     |->('solomon islands dollar', 'sbd')
+                 {[LIT:'gbp'], } -> 1/152
+                     |->('pound sterling', 'gbp')
+                 {[LIT:'bam'], } -> 1/152
+                     |->('convertible mark', 'bam')
+                 {[LIT:'lsl'], } -> 1/152
+                     |->('loti', 'lsl')
+                 {[LIT:'uah'], } -> 1/152
+                     |->('hryvnia', 'uah')
+                 {[LIT:'dkk'], } -> 1/152
+                     |->('danish krone', 'dkk')
+                 {[LIT:'ang'], } -> 1/152
+                     |->('netherlands antillean guilder', 'ang')
+                 {[LIT:'rsd'], } -> 1/152
+                     |->('serbian dinar', 'rsd')
+                 {[LIT:'zar'], } -> 1/152
+                     |->('rand', 'zar')
+                 {[LIT:'sdg'], } -> 1/152
+                     |->('sudanese pound', 'sdg')
+                 {[LIT:'cny'], } -> 1/152
+                     |->('yuan renminbi', 'cny')
+                 {[LIT:'thb'], } -> 1/152
+                     |->('baht', 'thb')
+                 {[LIT:'chf'], } -> 1/152
+                     |->('swiss franc', 'chf')
+                 {[LIT:'idr'], } -> 1/152
+                     |->('rupiah', 'idr')
+                 {[SplitSubstr: 'o', 1, (6-7) ], [SplitSubstr: 'o', 1, (4-5) ], [Split: 'o', 0 ], } -> 2/152
+                     |->('costa rican colon', 'crc')
+                     |->('euro', 'eur')
+                 {[SplitSubstr: 'g', 0, (0-2) ], [SplitSubstr: 'g', 0, (7-8) ], } -> 8/152
+                     |->('syrian pound', 'syp')
+                     |->('somali shilling', 'sos')
+                     |->('qatari rial', 'qar')
+                     |->('romanian leu', 'ron')
+                     |->('rwanda franc', 'rwf')
+                     |->('yemeni rial', 'yer')
+                     |->('indian rupee', 'inr')
+                     |->('kenyan shilling', 'kes')
+                 {[LIT:'kyd'], } -> 1/152
+                     |->('cayman islands dollar', 'kyd')
+                 {[LIT:'pab'], } -> 1/152
+                     |->('balboa', 'pab')
+                 {[LIT:'nio'], } -> 1/152
+                     |->('cordoba oro', 'nio')
+                 {[LIT:'xcd'], } -> 1/152
+                     |->('east caribbean dollar', 'xcd')
+                 {[LIT:'awg'], } -> 1/152
+                     |->('aruban florin', 'awg')
+                 {[LIT:'aoa'], } -> 1/152
+                     |->('kwanza', 'aoa')
+                 {[LIT:'xof'], } -> 1/152
+                     |->('cfa franc bceao', 'xof')
+                 {[LIT:'kmf'], } -> 1/152
+                     |->('comorian franc', 'kmf')
+                 {[LIT:'cdf'], } -> 1/152
+                     |->('congolese franc', 'cdf')
+                 {[LIT:'bov'], } -> 1/152
+                     |->('mvdol', 'bov')
+                 {[LIT:'vuv'], } -> 1/152
+                     |->('vatu', 'vuv')
+                 {[LIT:'try'], } -> 1/152
+                     |->('turkish lira', 'try')
+                 {[LIT:'btn'], } -> 1/152
+                     |->('ngultrum', 'btn')
+                 {[LIT:'dzd'], } -> 1/152
+                     |->('algerian dinar', 'dzd')
+                 {[LIT:'krw'], } -> 1/152
+                     |->('won', 'krw')
+                 {[LIT:'aed'], } -> 1/152
+                     |->('uae dirham', 'aed')
+                 {[LIT:'mvr'], } -> 1/152
+                     |->('rufiyaa', 'mvr')
+                 {[LIT:'omr'], } -> 1/152
+                     |->('rial omani', 'omr')
+                 {[LIT:'gtq'], } -> 1/152
+                     |->('quetzal', 'gtq')
+                 {[LIT:'bwp'], } -> 1/152
+                     |->('pula', 'bwp')
+                 {[LIT:'sll'], } -> 1/152
+                     |->('leone', 'sll')
+                 {[LIT:'jpy'], } -> 1/152
+                     |->('yen', 'jpy')
+                 {[LIT:'vnd'], } -> 1/152
+                     |->('dong', 'vnd')
+                 {[LIT:'ghs'], } -> 1/152
+                     |->('ghana cedi', 'ghs')
+                 {[LIT:'hrk'], } -> 1/152
+                     |->('kuna', 'hrk')
+                 {[LIT:'mnt'], } -> 1/152
+                     |->('tugrik', 'mnt')
+                 {[LIT:'ugx'], } -> 1/152
+                     |->('uganda shilling', 'ugx')
+                 {[LIT:'huf'], } -> 1/152
+                     |->('forint', 'huf')
+                 {[LIT:'tjs'], } -> 1/152
+                     |->('somoni', 'tjs')
+                 {[LIT:'pgk'], } -> 1/152
+                     |->('kina', 'pgk')
+                 {[LIT:'all'], } -> 1/152
+                     |->('lek', 'all')
+                 {[LIT:'wst'], } -> 1/152
+                     |->('tala', 'wst')
+                 {[LIT:'hnl'], } -> 1/152
+                     |->('lempira', 'hnl')
+                 {[LIT:'mkd'], } -> 1/152
+                     |->('denar', 'mkd')
+                 {[LIT:'mop'], } -> 1/152
+                     |->('pataca', 'mop')
+                 {[LIT:'mru'], } -> 1/152
+                     |->('ouguiya', 'mru')
+                 {[LIT:'pen'], } -> 1/152
+                     |->('sol', 'pen')
+                 {[LIT:'kzt'], } -> 1/152
+                     |->('tenge', 'kzt')
+                 {[LIT:'pln'], } -> 1/152
+                     |->('zloty', 'pln')
+                 {[LIT:'gmd'], } -> 1/152
+                     |->('dalasi', 'gmd')
+                 {[LIT:'gel'], } -> 1/152
+                     |->('lari', 'gel')
+                 {[LIT:'htg'], } -> 1/152
+                     |->('gourde', 'htg')
+                 {[LIT:'pyg'], } -> 1/152
+                     |->('guarani', 'pyg')
+                 {[LIT:'khr'], } -> 1/152
+                     |->('riel', 'khr')
+                 {[LIT:'bdt'], } -> 1/152
+                     |->('taka', 'bdt')
+                 {[LIT:'szl'], } -> 1/152
+                     |->('lilangeni', 'szl')
+                 {[LIT:'ern'], } -> 1/152
+                     |->('nakfa', 'ern')
+                 {[LIT:'kgs'], } -> 1/152
+                     |->('som', 'kgs')
+                 {[LIT:'mmk'], } -> 1/152
+                     |->('kyat', 'mmk')
+                 {[LIT:'top'], } -> 1/152
+                     |->("pa'anga", 'top')
+                 {[LIT:'stn'], } -> 1/152
+                     |->('dobra', 'stn')
+
+--- Not covered inputs:
+****************

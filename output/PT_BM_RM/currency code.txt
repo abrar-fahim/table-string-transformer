@@ -1,0 +1,195 @@
+---------------
+Results for currency code
+Coverage in golden matched rows: 0/152 = 0.00%
+Best pattern Coverage  in golden matched rows: 0.00%
+Coverage: NA
+Best pattern Coverage: 0.00%
+Total Patterns: 0, input rows: 0
+Average Input length (Num chars): 0, Average output length (Num chars): 0
+Max Tokens: 3
+Total Run time: 9.989738464355469e-05, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 0
+Total number of all generated patterns: 0
+Number of duplicate patterns removed: 0
+Total number of generated patterns to try: 0
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 0
+Number of all remaining placeholder comb.: 0
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 0
+Number of splitted remaining placeholder comb.: 0
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 3.910064697265625e-05
+extract patterns time: 7.867813110351562e-06
+duplicate patterns remove time: 4.029273986816406e-05
+patterns applying time: 7.867813110351562e-06
+get covering set time: 4.76837158203125e-06
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 0
+Number of successful patterns: 0
+Number of failed patterns: 0
+Number of failed patterns filtered by cache (cache hit): 0
+N-gram Row Matching: P:0.0,R:0.0,F:0.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+
+****Golden rows apply patterns******
+golden pattern list: {
+
+--- Not covered inputs:
+   ('afghani', 'afn')
+   ('algerian dinar', 'dzd')
+   ('argentine peso', 'ars')
+   ('armenian dram', 'amd')
+   ('aruban florin', 'awg')
+   ('australian dollar', 'aud')
+   ('azerbaijan manat', 'azn')
+   ('bahamian dollar', 'bsd')
+   ('bahraini dinar', 'bhd')
+   ('baht', 'thb')
+   ('balboa', 'pab')
+   ('barbados dollar', 'bbd')
+   ('belarusian ruble', 'byn')
+   ('belize dollar', 'bzd')
+   ('bermudian dollar', 'bmd')
+   ('bolívar soberano', 'ves')
+   ('brazilian real', 'brl')
+   ('brunei dollar', 'bnd')
+   ('bulgarian lev', 'bgn')
+   ('burundi franc', 'bif')
+   ('cabo verde escudo', 'cve')
+   ('canadian dollar', 'cad')
+   ('cayman islands dollar', 'kyd')
+   ('cfa franc bceao', 'xof')
+   ('cfa franc beac', 'xaf')
+   ('cfp franc', 'xpf')
+   ('chilean peso', 'clp')
+   ('colombian peso', 'cop')
+   ('comorian franc', 'kmf')
+   ('congolese franc', 'cdf')
+   ('convertible mark', 'bam')
+   ('cordoba oro', 'nio')
+   ('costa rican colon', 'crc')
+   ('cuban peso', 'cup')
+   ('czech koruna', 'czk')
+   ('dalasi', 'gmd')
+   ('danish krone', 'dkk')
+   ('denar', 'mkd')
+   ('djibouti franc', 'djf')
+   ('dobra', 'stn')
+   ('dominican peso', 'dop')
+   ('dong', 'vnd')
+   ('east caribbean dollar', 'xcd')
+   ('egyptian pound', 'egp')
+   ('el salvador colon', 'svc')
+   ('ethiopian birr', 'etb')
+   ('euro', 'eur')
+   ('fiji dollar', 'fjd')
+   ('forint', 'huf')
+   ('ghana cedi', 'ghs')
+   ('gibraltar pound', 'gip')
+   ('gourde', 'htg')
+   ('guarani', 'pyg')
+   ('guinean franc', 'gnf')
+   ('guyana dollar', 'gyd')
+   ('hong kong dollar', 'hkd')
+   ('hryvnia', 'uah')
+   ('iceland krona', 'isk')
+   ('indian rupee', 'inr')
+   ('iranian rial', 'irr')
+   ('iraqi dinar', 'iqd')
+   ('jamaican dollar', 'jmd')
+   ('jordanian dinar', 'jod')
+   ('kenyan shilling', 'kes')
+   ('kina', 'pgk')
+   ('kuna', 'hrk')
+   ('kuwaiti dinar', 'kwd')
+   ('kwanza', 'aoa')
+   ('kyat', 'mmk')
+   ('lao kip', 'lak')
+   ('lari', 'gel')
+   ('lebanese pound', 'lbp')
+   ('lek', 'all')
+   ('lempira', 'hnl')
+   ('leone', 'sll')
+   ('liberian dollar', 'lrd')
+   ('libyan dinar', 'lyd')
+   ('lilangeni', 'szl')
+   ('loti', 'lsl')
+   ('malagasy ariary', 'mga')
+   ('malawi kwacha', 'mwk')
+   ('malaysian ringgit', 'myr')
+   ('mauritius rupee', 'mur')
+   ('mexican peso', 'mxn')
+   ('moldovan leu', 'mdl')
+   ('moroccan dirham', 'mad')
+   ('mozambique metical', 'mzn')
+   ('mvdol', 'bov')
+   ('naira', 'ngn')
+   ('nakfa', 'ern')
+   ('namibia dollar', 'nad')
+   ('nepalese rupee', 'npr')
+   ('netherlands antillean guilder', 'ang')
+   ('new taiwan dollar', 'twd')
+   ('new zealand dollar', 'nzd')
+   ('ngultrum', 'btn')
+   ('norwegian krone', 'nok')
+   ('ouguiya', 'mru')
+   ("pa'anga", 'top')
+   ('pakistan rupee', 'pkr')
+   ('pataca', 'mop')
+   ('peso uruguayo', 'uyu')
+   ('philippine peso', 'php')
+   ('pound sterling', 'gbp')
+   ('pula', 'bwp')
+   ('qatari rial', 'qar')
+   ('quetzal', 'gtq')
+   ('rand', 'zar')
+   ('rial omani', 'omr')
+   ('riel', 'khr')
+   ('romanian leu', 'ron')
+   ('rufiyaa', 'mvr')
+   ('rupiah', 'idr')
+   ('russian ruble', 'rub')
+   ('rwanda franc', 'rwf')
+   ('saudi riyal', 'sar')
+   ('serbian dinar', 'rsd')
+   ('seychelles rupee', 'scr')
+   ('singapore dollar', 'sgd')
+   ('sol', 'pen')
+   ('solomon islands dollar', 'sbd')
+   ('som', 'kgs')
+   ('somali shilling', 'sos')
+   ('somoni', 'tjs')
+   ('south sudanese pound', 'ssp')
+   ('sri lanka rupee', 'lkr')
+   ('sudanese pound', 'sdg')
+   ('surinam dollar', 'srd')
+   ('swedish krona', 'sek')
+   ('swiss franc', 'chf')
+   ('syrian pound', 'syp')
+   ('taka', 'bdt')
+   ('tala', 'wst')
+   ('tenge', 'kzt')
+   ('trinidad and tobago dollar', 'ttd')
+   ('tugrik', 'mnt')
+   ('tunisian dinar', 'tnd')
+   ('turkish lira', 'try')
+   ('turkmenistan new manat', 'tmt')
+   ('uae dirham', 'aed')
+   ('uganda shilling', 'ugx')
+   ('uruguay peso en unidades indexadas (ui)', 'uyi')
+   ('us dollar', 'usd')
+   ('uzbekistan sum', 'uzs')
+   ('vatu', 'vuv')
+   ('won', 'krw')
+   ('yemeni rial', 'yer')
+   ('yen', 'jpy')
+   ('yuan renminbi', 'cny')
+   ('zambian kwacha', 'zmw')
+   ('zimbabwe dollar', 'zwl')
+   ('zloty', 'pln')
+****************

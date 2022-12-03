@@ -1,0 +1,102 @@
+---------------
+Results for chinese provinces
+Coverage in golden matched rows: 25/25 = 100.00%
+Best pattern Coverage  in golden matched rows: 100.00%
+Coverage: 28/28 = 100.00%
+Best pattern Coverage: 89.29%
+Total Patterns: 3, input rows: 28
+Average Input length (Num chars): 17.892857142857142, Average output length (Num chars): 6.857142857142857
+Max Tokens: 3
+Total Run time: 0.10310792922973633, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 79
+Total number of all generated patterns: 10106
+Number of duplicate patterns removed: 7299
+Total number of generated patterns to try: 2807
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 162
+Number of all remaining placeholder comb.: 162
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 81
+Number of splitted remaining placeholder comb.: 81
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 0.006996870040893555
+extract patterns time: 0.022510051727294922
+duplicate patterns remove time: 0.023859024047851562
+patterns applying time: 0.04879903793334961
+get covering set time: 0.0009429454803466797
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 78596
+Number of successful patterns: 3172
+Number of failed patterns: 75424
+Number of failed patterns filtered by cache (cache hit): 71296
+N-gram Row Matching: P:0.8928571428571429,R:1.0,F:0.9433962264150945
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 0 ], } -> 25/28
+                     |->('jiangxi province', 'jiangxi')
+                     |->('guangdong province', 'guangdong')
+                     |->('ningxia hui autonomous region', 'ningxia')
+                     |->('hubei province', 'hubei')
+                     |->('hebei province', 'hebei')
+                     |->('shaanxi province', 'shaanxi')
+                     |->('xinjiang uyghur autonomous region', 'xinjiang')
+                     |->('zhejiang province', 'zhejiang')
+                     |->('anhui province', 'anhui')
+                     |->('shanxi province', 'shanxi')
+                     |->('liaoning province', 'liaoning')
+                     |->('qinghai province', 'qinghai')
+                     |->('heilongjiang province', 'heilongjiang')
+                     |->('guangxi zhuang autonomous region', 'guangxi')
+                     |->('guizhou province', 'guizhou')
+                     |->('hainan province', 'hainan')
+                     |->('shandong province', 'shandong')
+                     |->('yunnan province', 'yunnan')
+                     |->('henan province', 'henan')
+                     |->('sichuan province', 'sichuan')
+                     |->('gansu province', 'gansu')
+                     |->('jiangsu province', 'jiangsu')
+                     |->('fujian province', 'fujian')
+                     |->('hunan province', 'hunan')
+                     |->('jilin province', 'jilin')
+                 {[LIT:'qingh'], [SplitSubstr: ' ', 1, (7-8) ], [SplitSubstr: 'm', 1, (4-5) ], } -> 2/28
+                     |->('chongqing municipality', 'qinghai')
+                     |->('shanghai municipality', 'qinghai')
+                 {[LIT:'mudanjiang'], } -> 1/28  -- Original Trans.: {[LIT:'mudanji'], [SplitSubstr: 'y', 0, (2-4) ], [LIT:'g'], }
+                     |->('tianjin municipality', 'mudanjiang')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 0 ], } -> 25/25
+                     |->('hebei province', 'hebei')
+                     |->('shanxi province', 'shanxi')
+                     |->('liaoning province', 'liaoning')
+                     |->('jilin province', 'jilin')
+                     |->('heilongjiang province', 'heilongjiang')
+                     |->('jiangsu province', 'jiangsu')
+                     |->('zhejiang province', 'zhejiang')
+                     |->('anhui province', 'anhui')
+                     |->('fujian province', 'fujian')
+                     |->('jiangxi province', 'jiangxi')
+                     |->('shandong province', 'shandong')
+                     |->('henan province', 'henan')
+                     |->('hubei province', 'hubei')
+                     |->('hunan province', 'hunan')
+                     |->('guangdong province', 'guangdong')
+                     |->('guangxi zhuang autonomous region', 'guangxi')
+                     |->('hainan province', 'hainan')
+                     |->('sichuan province', 'sichuan')
+                     |->('guizhou province', 'guizhou')
+                     |->('yunnan province', 'yunnan')
+                     |->('shaanxi province', 'shaanxi')
+                     |->('gansu province', 'gansu')
+                     |->('qinghai province', 'qinghai')
+                     |->('ningxia hui autonomous region', 'ningxia')
+                     |->('xinjiang uyghur autonomous region', 'xinjiang')
+                 {[LIT:'qingh'], [SplitSubstr: ' ', 1, (7-8) ], [SplitSubstr: 'm', 1, (4-5) ], } -> 0/25
+                 {[LIT:'mudanjiang'], } -> 0/25
+
+--- Not covered inputs:
+****************

@@ -1,0 +1,225 @@
+---------------
+Results for uk prime ministers
+Coverage in golden matched rows: 72/74 = 97.30%
+Best pattern Coverage  in golden matched rows: 41.89%
+Coverage: 76/76 = 100.00%
+Best pattern Coverage: 40.79%
+Total Patterns: 14, input rows: 76
+Average Input length (Num chars): 27.789473684210527, Average output length (Num chars): 16.13157894736842
+Max Tokens: 3
+Total Run time: 4.61567497253418, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 232
+Total number of all generated patterns: 178250
+Number of duplicate patterns removed: 132546
+Total number of generated patterns to try: 45704
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 556
+Number of all remaining placeholder comb.: 449
+Number of all removed placeholder comb.: 107
+Number of init remaining placeholder comb.: 278
+Number of splitted remaining placeholder comb.: 171
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 107
+
+placeholder generation time: 0.03226590156555176
+extract patterns time: 0.482882022857666
+duplicate patterns remove time: 0.4972701072692871
+patterns applying time: 3.5360119342803955
+get covering set time: 0.0672450065612793
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 3473504
+Number of successful patterns: 61812
+Number of failed patterns: 3411692
+Number of failed patterns filtered by cache (cache hit): 3060019
+N-gram Row Matching: P:0.9342105263157895,R:0.9594594594594594,F:0.9466666666666667
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[SplitSubstr: '1', 1, (4-28) ], } -> 31/76
+                     |->('1990 john major', 'john major')
+                     |->('1974 harold wilson', 'harold wilson')
+                     |->('1924 stanley baldwin', 'stanley baldwin')
+                     |->('1923 stanley baldwin', 'stanley baldwin')
+                     |->('1827 george canning', 'george canning')
+                     |->('1970 edward heath', 'edward heath')
+                     |->('1957 harold macmillan', 'harold macmillan')
+                     |->('1834 sir robert peel', 'sir robert peel')
+                     |->('1804 william pitt the younger', 'william pitt the younger')
+                     |->('1855 viscount palmerston', 'viscount palmerston')
+                     |->('1945 clement attlee', 'clement attlee')
+                     |->('1894 earl of rosebery', 'earl of rosebery')
+                     |->('1858 viscount palmerston', 'viscount palmerston')
+                     |->('1743 henry pelham', 'henry pelham')
+                     |->('1976 james callaghan', 'james callaghan')
+                     |->('1935 stanley baldwin', 'stanley baldwin')
+                     |->('1997 tony blair', 'tony blair')
+                     |->('1783 william pitt the younger', 'william pitt the younger')
+                     |->('1763 george grenville', 'george grenville')
+                     |->('1955 sir anthony eden', 'sir anthony eden')
+                     |->('1963 sir alec douglas-home', 'sir alec douglas-home')
+                     |->('1964 harold wilson', 'harold wilson')
+                     |->('1979 margaret thatcher', 'margaret thatcher')
+                     |->('1868 benjamin disraeli', 'benjamin disraeli')
+                     |->('1874 benjamin disraeli', 'benjamin disraeli')
+                     |->('1885 marquess of salisbury', 'marquess of salisbury')
+                     |->('1937 neville chamberlain', 'neville chamberlain')
+                     |->('1922 andrew bonar law', 'andrew bonar law')
+                     |->('1895 marquess of salisbury', 'marquess of salisbury')
+                     |->('1809 spencer perceval', 'spencer perceval')
+                     |->('1886 marquess of salisbury', 'marquess of salisbury')
+                 {[Split: ' ', [3, 4, 5] ], } -> 17/76
+                     |->('1782 charles watson-wentworth marquess of rockingham', 'marquess of rockingham')
+                     |->('1756 william cavendish duke of devonshire', 'duke of devonshire')
+                     |->('1782 william fitzmaurice earl of shelburne', 'earl of shelburne')
+                     |->('1767 augustus fitzroy duke of grafton', 'duke of grafton')
+                     |->('1783 william bentinck duke of portland', 'duke of portland')
+                     |->('1852 edward stanley earl of derby', 'earl of derby')
+                     |->('1834 arthur wellesley duke of wellington', 'duke of wellington')
+                     |->('1742 spencer compton earl of wilmington', 'earl of wilmington')
+                     |->('1757 thomas pelham-holles duke of newcastle', 'duke of newcastle')
+                     |->('1812 robert jenkinson earl of liverpool', 'earl of liverpool')
+                     |->('1765 charles watson-wentworth marquess of rockingham', 'marquess of rockingham')
+                     |->('1828 arthur wellesley duke of wellington', 'duke of wellington')
+                     |->('1858 edward stanley earl of derby', 'earl of derby')
+                     |->('1762 john stuart earl of bute', 'earl of bute')
+                     |->('1866 edward stanley earl of derby', 'earl of derby')
+                     |->('1754 thomas pelham-holles duke of newcastle', 'duke of newcastle')
+                     |->('1807 william bentinck duke of portland', 'duke of portland')
+                 {[Split: ' ', 3 ], [LIT:' '], [Split: ' ', 4 ], } -> 6/76
+                     |->('1806 william grenville lord grenville', 'lord grenville')
+                     |->('1835 william lamb viscount melbourne', 'viscount melbourne')
+                     |->('1770 frederick north lord north', 'lord north')
+                     |->('1830 charles grey earl grey', 'earl grey')
+                     |->('1827 frederick robinson viscount goderich', 'viscount goderich')
+                     |->('1834 william lamb viscount melbourne', 'viscount melbourne')
+                 {[SplitSubstr: 'u', 0, (5-6) ], [SplitSubstr: '1', 1, (11-13) ], [LIT:' '], [Split: ' ', 3 ], } -> 5/76
+                     |->('1908 herbert h. asquith', 'h h asquith')
+                     |->('1868 william ewart gladstone', 'w e gladstone')
+                     |->('1886 william ewart gladstone', 'w e gladstone')
+                     |->('1892 william ewart gladstone', 'w e gladstone')
+                     |->('1880 william ewart gladstone', 'w e gladstone')
+                 {[LIT:'ramsay '], [Split: ' ', 3 ], } -> 3/76
+                     |->('1924 james ramsay macdonald', 'ramsay macdonald')
+                     |->('1931 james ramsay macdonald', 'ramsay macdonald')
+                     |->('1929 james ramsay macdonald', 'ramsay macdonald')
+                 {[SplitSubstr: '1', 2, (1-19) ], } -> 3/76
+                     |->('1721 sir robert walpole', 'sir robert walpole')
+                     |->('1801 henry addington', 'henry addington')
+                     |->('1841 sir robert peel', 'sir robert peel')
+                 {[SplitSubstr: 'j', 1, (10-11) ], [LIT:'ord'], [SplitSubstr: 'j', 1, (3-11) ], } -> 2/76
+                     |->('1846 lord john russell', 'lord russell')
+                     |->('1865 john russell earl russell', 'lord russell')
+                 {[LIT:'s'], [SplitSubstr: 'o', 1, (8-9) ], [LIT:'r winston churchill'], } -> 2/76
+                     |->('1940 winston churchill', 'sir winston churchill')
+                     |->('1951 winston churchill', 'sir winston churchill')
+                 {[SplitSubstr: '2', 1, (4-17) ], } -> 2/76
+                     |->('2010 david cameron', 'david cameron')
+                     |->('2007 gordon brown', 'gordon brown')
+                 {[SplitSubstr: '6', 1, (1-19) ], } -> 2/76
+                     |->('1916 david lloyd george', 'david lloyd george')
+                     |->('1976 james callaghan', 'james callaghan')
+                 {[LIT:'lord aberdeen'], } -> 1/76  -- Original Trans.: {[SplitSubstr: '1', 1, (15-16) ], [SplitSubstr: ' ', 2, (10-13) ], [SplitSubstr: '5', 1, (32-41) ], }
+                     |->('1852 george hamilton-gordon earl of aberdeen', 'lord aberdeen')
+                 {[LIT:'william pitt the younger'], } -> 1/76  -- Original Trans.: {[LIT:'william pitt the young'], [SplitSubstr: 't', 3, (6-8) ], }
+                     |->('1766 william pitt the elder earl of chatham', 'william pitt the younger')
+                 {[LIT:'sir h campbell-bannerman'], } -> 1/76  -- Original Trans.: {[LIT:'sir'], [SplitSubstr: 'l', 0, (4-6) ], [LIT:' campbell-bannerman'], }
+                     |->('1905 henry campbell-bannerman', 'sir h campbell-bannerman')
+                 {[LIT:'arthur james balfour'], } -> 1/76  -- Original Trans.: {[SplitSubstr: 'b', 0, (5-12) ], [LIT:'james'], [Substr:(11-19)], }
+                     |->('1902 arthur balfour', 'arthur james balfour')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[SplitSubstr: '1', 1, (4-28) ], } -> 31/74
+                     |->('1743 henry pelham', 'henry pelham')
+                     |->('1763 george grenville', 'george grenville')
+                     |->('1783 william pitt the younger', 'william pitt the younger')
+                     |->('1804 william pitt the younger', 'william pitt the younger')
+                     |->('1809 spencer perceval', 'spencer perceval')
+                     |->('1827 george canning', 'george canning')
+                     |->('1834 sir robert peel', 'sir robert peel')
+                     |->('1855 viscount palmerston', 'viscount palmerston')
+                     |->('1859 viscount palmerston', 'viscount palmerston')
+                     |->('1868 benjamin disraeli', 'benjamin disraeli')
+                     |->('1874 benjamin disraeli', 'benjamin disraeli')
+                     |->('1885 marquess of salisbury', 'marquess of salisbury')
+                     |->('1886 marquess of salisbury', 'marquess of salisbury')
+                     |->('1894 earl of rosebery', 'earl of rosebery')
+                     |->('1895 marquess of salisbury', 'marquess of salisbury')
+                     |->('1922 andrew bonar law', 'andrew bonar law')
+                     |->('1923 stanley baldwin', 'stanley baldwin')
+                     |->('1924 stanley baldwin', 'stanley baldwin')
+                     |->('1935 stanley baldwin', 'stanley baldwin')
+                     |->('1937 neville chamberlain', 'neville chamberlain')
+                     |->('1945 clement attlee', 'clement attlee')
+                     |->('1955 sir anthony eden', 'sir anthony eden')
+                     |->('1957 harold macmillan', 'harold macmillan')
+                     |->('1963 sir alec douglas-home', 'sir alec douglas-home')
+                     |->('1964 harold wilson', 'harold wilson')
+                     |->('1970 edward heath', 'edward heath')
+                     |->('1974 harold wilson', 'harold wilson')
+                     |->('1976 james callaghan', 'james callaghan')
+                     |->('1979 margaret thatcher', 'margaret thatcher')
+                     |->('1990 john major', 'john major')
+                     |->('1997 tony blair', 'tony blair')
+                 {[Split: ' ', [3, 4, 5] ], } -> 16/74
+                     |->('1742 spencer compton earl of wilmington', 'earl of wilmington')
+                     |->('1858 edward stanley earl of derby', 'earl of derby')
+                     |->('1754 thomas pelham-holles duke of newcastle', 'duke of newcastle')
+                     |->('1756 william cavendish duke of devonshire', 'duke of devonshire')
+                     |->('1757 thomas pelham-holles duke of newcastle', 'duke of newcastle')
+                     |->('1762 john stuart earl of bute', 'earl of bute')
+                     |->('1866 edward stanley earl of derby', 'earl of derby')
+                     |->('1765 charles watson-wentworth marquess of rockingham', 'marquess of rockingham')
+                     |->('1767 augustus fitzroy duke of grafton', 'duke of grafton')
+                     |->('1782 charles watson-wentworth marquess of rockingham', 'marquess of rockingham')
+                     |->('1782 william fitzmaurice earl of shelburne', 'earl of shelburne')
+                     |->('1783 william bentinck duke of portland', 'duke of portland')
+                     |->('1807 william bentinck duke of portland', 'duke of portland')
+                     |->('1812 robert jenkinson earl of liverpool', 'earl of liverpool')
+                     |->('1828 arthur wellesley duke of wellington', 'duke of wellington')
+                     |->('1852 edward stanley earl of derby', 'earl of derby')
+                 {[Split: ' ', 3 ], [LIT:' '], [Split: ' ', 4 ], } -> 6/74
+                     |->('1770 frederick north lord north', 'lord north')
+                     |->('1806 william grenville lord grenville', 'lord grenville')
+                     |->('1827 frederick robinson viscount goderich', 'viscount goderich')
+                     |->('1830 charles grey earl grey', 'earl grey')
+                     |->('1834 william lamb viscount melbourne', 'viscount melbourne')
+                     |->('1835 william lamb viscount melbourne', 'viscount melbourne')
+                 {[SplitSubstr: 'u', 0, (5-6) ], [SplitSubstr: '1', 1, (11-13) ], [LIT:' '], [Split: ' ', 3 ], } -> 5/74
+                     |->('1868 william ewart gladstone', 'w e gladstone')
+                     |->('1880 william ewart gladstone', 'w e gladstone')
+                     |->('1886 william ewart gladstone', 'w e gladstone')
+                     |->('1892 william ewart gladstone', 'w e gladstone')
+                     |->('1908 herbert h. asquith', 'h h asquith')
+                 {[LIT:'ramsay '], [Split: ' ', 3 ], } -> 1/74
+                     |->('1924 james ramsay macdonald', 'ramsay macdonald')
+                 {[SplitSubstr: '1', 2, (1-19) ], } -> 3/74
+                     |->('1721 sir robert walpole', 'sir robert walpole')
+                     |->('1841 sir robert peel', 'sir robert peel')
+                     |->('1801 henry addington', 'henry addington')
+                 {[SplitSubstr: 'j', 1, (10-11) ], [LIT:'ord'], [SplitSubstr: 'j', 1, (3-11) ], } -> 2/74
+                     |->('1865 john russell earl russell', 'lord russell')
+                     |->('1846 lord john russell', 'lord russell')
+                 {[LIT:'s'], [SplitSubstr: 'o', 1, (8-9) ], [LIT:'r winston churchill'], } -> 2/74
+                     |->('1940 winston churchill', 'sir winston churchill')
+                     |->('1951 winston churchill', 'sir winston churchill')
+                 {[SplitSubstr: '2', 1, (4-17) ], } -> 2/74
+                     |->('2007 gordon brown', 'gordon brown')
+                     |->('2010 david cameron', 'david cameron')
+                 {[LIT:'lord aberdeen'], } -> 1/74
+                     |->('1852 george hamilton-gordon earl of aberdeen', 'lord aberdeen')
+                 {[LIT:'william pitt the younger'], } -> 2/74
+                     |->('1804 william pitt the younger', 'william pitt the younger')
+                     |->('1783 william pitt the younger', 'william pitt the younger')
+                 {[LIT:'sir h campbell-bannerman'], } -> 1/74
+                     |->('1905 henry campbell-bannerman', 'sir h campbell-bannerman')
+                 {[LIT:'arthur james balfour'], } -> 1/74
+                     |->('1902 arthur balfour', 'arthur james balfour')
+                 {[SplitSubstr: '6', 1, (1-19) ], } -> 2/74
+                     |->('1916 david lloyd george', 'david lloyd george')
+                     |->('1976 james callaghan', 'james callaghan')
+
+--- Not covered inputs:
+   ('1929 james ramsay macdonald', 'ramsey macdonald')
+   ('1931 james ramsay macdonald', 'ramsey macdonald')
+****************

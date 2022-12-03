@@ -1,0 +1,92 @@
+---------------
+Results for fruits 2
+Coverage in golden matched rows: 21/21 = 100.00%
+Best pattern Coverage  in golden matched rows: 90.48%
+Coverage: 21/21 = 100.00%
+Best pattern Coverage: 90.48%
+Total Patterns: 3, input rows: 21
+Average Input length (Num chars): 17.19047619047619, Average output length (Num chars): 7.809523809523809
+Max Tokens: 3
+Total Run time: 0.17027711868286133, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 56
+Total number of all generated patterns: 14175
+Number of duplicate patterns removed: 7700
+Total number of generated patterns to try: 6475
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 112
+Number of all remaining placeholder comb.: 112
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 56
+Number of splitted remaining placeholder comb.: 56
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 0.00391077995300293
+extract patterns time: 0.024728059768676758
+duplicate patterns remove time: 0.027177095413208008
+patterns applying time: 0.11270284652709961
+get covering set time: 0.0017583370208740234
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 135975
+Number of successful patterns: 6772
+Number of failed patterns: 129203
+Number of failed patterns filtered by cache (cache hit): 118394
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 0 ], } -> 19/21
+                     |->('apple (with the peel)', 'apple')
+                     |->('apricot', 'apricot')
+                     |->('avocado', 'avocado')
+                     |->('blackberries (½ cup)', 'blackberries')
+                     |->('blueberries fresh (½ cup)', 'blueberries')
+                     |->('cranberries fresh raw (½ cup)', 'cranberries')
+                     |->('grapefruit (1 medium half)', 'grapefruit')
+                     |->('grapes (10 medium seedless)', 'grapes')
+                     |->('guava (½ cup)', 'guava')
+                     |->('kiwi (medium)', 'kiwi')
+                     |->('mango fresh', 'mango')
+                     |->('nectarine (medium)', 'nectarine')
+                     |->('orange', 'orange')
+                     |->('papaya (½ cup cubed)', 'papaya')
+                     |->('peach', 'peach')
+                     |->('pear (medium)', 'pear')
+                     |->('pineapple fresh (½ cup cubed)', 'pineapple')
+                     |->('strawberries (½ cup)', 'strawberries')
+                     |->('tangerine', 'tangerine')
+                 {[LIT:'cantaloupe'], } -> 1/21  -- Original Trans.: {[SplitSubstr: 'e', 1, (4-8) ], [SplitSubstr: '(', 1, (3-4) ], [SplitSubstr: 'a', 1, (3-8) ], }
+                     |->('melon canteloupe (1 half)', 'cantaloupe')
+                 {[LIT:'raspberries'], } -> 1/21  -- Original Trans.: {[LIT:'raspberri'], [Substr:(5-6)], [SplitSubstr: '(', 0, (2-3) ], }
+                     |->('raspberry (½ cup)', 'raspberries')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 0 ], } -> 19/21
+                     |->('apple (with the peel)', 'apple')
+                     |->('apricot', 'apricot')
+                     |->('avocado', 'avocado')
+                     |->('blackberries (½ cup)', 'blackberries')
+                     |->('blueberries fresh (½ cup)', 'blueberries')
+                     |->('cranberries fresh raw (½ cup)', 'cranberries')
+                     |->('grapefruit (1 medium half)', 'grapefruit')
+                     |->('grapes (10 medium seedless)', 'grapes')
+                     |->('guava (½ cup)', 'guava')
+                     |->('kiwi (medium)', 'kiwi')
+                     |->('mango fresh', 'mango')
+                     |->('nectarine (medium)', 'nectarine')
+                     |->('orange', 'orange')
+                     |->('papaya (½ cup cubed)', 'papaya')
+                     |->('peach', 'peach')
+                     |->('pear (medium)', 'pear')
+                     |->('pineapple fresh (½ cup cubed)', 'pineapple')
+                     |->('strawberries (½ cup)', 'strawberries')
+                     |->('tangerine', 'tangerine')
+                 {[LIT:'cantaloupe'], } -> 1/21
+                     |->('melon canteloupe (1 half)', 'cantaloupe')
+                 {[LIT:'raspberries'], } -> 1/21
+                     |->('raspberry (½ cup)', 'raspberries')
+
+--- Not covered inputs:
+****************

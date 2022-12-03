@@ -1,0 +1,182 @@
+---------------
+Results for vegetables
+Coverage in golden matched rows: 67/67 = 100.00%
+Best pattern Coverage  in golden matched rows: 67.16%
+Coverage: 67/67 = 100.00%
+Best pattern Coverage: 67.16%
+Total Patterns: 2, input rows: 67
+Average Input length (Num chars): 19.880597014925375, Average output length (Num chars): 10.044776119402986
+Max Tokens: 3
+Total Run time: 0.14253592491149902, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 129
+Total number of all generated patterns: 2417
+Number of duplicate patterns removed: 424
+Total number of generated patterns to try: 1993
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 270
+Number of all remaining placeholder comb.: 270
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 135
+Number of splitted remaining placeholder comb.: 135
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 0.019540786743164062
+extract patterns time: 0.007811069488525391
+duplicate patterns remove time: 0.0010619163513183594
+patterns applying time: 0.11366128921508789
+get covering set time: 0.0004608631134033203
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 133531
+Number of successful patterns: 3090
+Number of failed patterns: 130441
+Number of failed patterns filtered by cache (cache hit): 100087
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 0 ], } -> 45/67
+                     |->('artichoke-jerusalem - boiled', 'artichoke-jerusalem')
+                     |->('asparagus - boiled', 'asparagus')
+                     |->('asparagus - canned drained', 'asparagus')
+                     |->('beetroot - raw', 'beetroot')
+                     |->('beetroot - boiled', 'beetroot')
+                     |->('beetroot - pickled drained', 'beetroot')
+                     |->('broccoli - green boiled', 'broccoli')
+                     |->('broccoli - green raw', 'broccoli')
+                     |->('broccoli - purple boiled', 'broccoli')
+                     |->('broccoli - purple raw', 'broccoli')
+                     |->('brusselssprouts - boiled', 'brusselssprouts')
+                     |->('cabbagesavoy - raw', 'cabbagesavoy')
+                     |->('cabbage - white raw', 'cabbage')
+                     |->('carrots - old boiled', 'carrots')
+                     |->('carrots - young raw', 'carrots')
+                     |->('cassava - steamed', 'cassava')
+                     |->('cauliflower - boiled', 'cauliflower')
+                     |->('celeriac - raw', 'celeriac')
+                     |->('celery - raw', 'celery')
+                     |->('corn - baby sweetcorn boiled', 'corn')
+                     |->('corn-on-cob - boiled plain', 'corn-on-cob')
+                     |->('cucumber - unpeeled raw', 'cucumber')
+                     |->('chicory - raw', 'chicory')
+                     |->('fennel - raw', 'fennel')
+                     |->('garlic - fresh raw', 'garlic')
+                     |->('leeks - raw', 'leeks')
+                     |->('lettuce - cos romaine raw', 'lettuce')
+                     |->('lettuce - iceberg raw', 'lettuce')
+                     |->('marrow - boiled', 'marrow')
+                     |->('mushrooms - common raw', 'mushrooms')
+                     |->('potatoes - new boiled', 'potatoes')
+                     |->('potatoes - old raw', 'potatoes')
+                     |->('okra - raw', 'okra')
+                     |->('onions - raw', 'onions')
+                     |->('parsnip - raw', 'parsnip')
+                     |->('peas - frozen raw', 'peas')
+                     |->('peas - fresh raw', 'peas')
+                     |->('pumpkin - raw', 'pumpkin')
+                     |->('radish - red raw', 'radish')
+                     |->('spinach - raw', 'spinach')
+                     |->('squash - butternut baked', 'squash')
+                     |->('tomatoes - canned & liquid', 'tomatoes')
+                     |->('tomatoes - ordinary raw', 'tomatoes')
+                     |->('watercress - raw', 'watercress')
+                     |->('yam - baked', 'yam')
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 22/67
+                     |->('aubergine (eggplant) - raw', 'aubergine (eggplant)')
+                     |->('alfalfa sprouts - raw', 'alfalfa sprouts')
+                     |->('bamboo shoots - canned', 'bamboo shoots')
+                     |->('beansprouts mung - raw', 'beansprouts mung')
+                     |->('cabbage spring - boiled', 'cabbage spring')
+                     |->('cabbage chinese - raw', 'cabbage chinese')
+                     |->('cabbage red - raw', 'cabbage red')
+                     |->('capsicum pepper - green raw', 'capsicum pepper')
+                     |->('capsicum pepper - red raw', 'capsicum pepper')
+                     |->('cassava chips -', 'cassava chips')
+                     |->('corn kernels - canned', 'corn kernels')
+                     |->('corn kernels - raw', 'corn kernels')
+                     |->('courgette (zucchini) - raw', 'courgette (zucchini)')
+                     |->('curly kale - raw', 'curly kale')
+                     |->('eggplant (aubergine) - raw', 'eggplant (aubergine)')
+                     |->('endive (escarole) -', 'endive (escarole)')
+                     |->('lettuce leaf - butterhead raw', 'lettuce leaf')
+                     |->('squash spaghetti - baked', 'squash spaghetti')
+                     |->('zucchini (courgette) - raw', 'zucchini (courgette)')
+                     |->('sweet potato - baked', 'sweet potato')
+                     |->('tomatoes cherry - raw', 'tomatoes cherry')
+                     |->('water chestnuts - canned', 'water chestnuts')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 0 ], } -> 45/67
+                     |->('artichoke-jerusalem - boiled', 'artichoke-jerusalem')
+                     |->('asparagus - boiled', 'asparagus')
+                     |->('asparagus - canned drained', 'asparagus')
+                     |->('beetroot - raw', 'beetroot')
+                     |->('beetroot - boiled', 'beetroot')
+                     |->('beetroot - pickled drained', 'beetroot')
+                     |->('broccoli - green boiled', 'broccoli')
+                     |->('broccoli - green raw', 'broccoli')
+                     |->('broccoli - purple boiled', 'broccoli')
+                     |->('broccoli - purple raw', 'broccoli')
+                     |->('brusselssprouts - boiled', 'brusselssprouts')
+                     |->('cabbagesavoy - raw', 'cabbagesavoy')
+                     |->('cabbage - white raw', 'cabbage')
+                     |->('carrots - old boiled', 'carrots')
+                     |->('carrots - young raw', 'carrots')
+                     |->('cassava - steamed', 'cassava')
+                     |->('cauliflower - boiled', 'cauliflower')
+                     |->('celeriac - raw', 'celeriac')
+                     |->('celery - raw', 'celery')
+                     |->('corn - baby sweetcorn boiled', 'corn')
+                     |->('corn-on-cob - boiled plain', 'corn-on-cob')
+                     |->('cucumber - unpeeled raw', 'cucumber')
+                     |->('chicory - raw', 'chicory')
+                     |->('fennel - raw', 'fennel')
+                     |->('garlic - fresh raw', 'garlic')
+                     |->('leeks - raw', 'leeks')
+                     |->('lettuce - cos romaine raw', 'lettuce')
+                     |->('lettuce - iceberg raw', 'lettuce')
+                     |->('marrow - boiled', 'marrow')
+                     |->('mushrooms - common raw', 'mushrooms')
+                     |->('potatoes - new boiled', 'potatoes')
+                     |->('potatoes - old raw', 'potatoes')
+                     |->('okra - raw', 'okra')
+                     |->('onions - raw', 'onions')
+                     |->('parsnip - raw', 'parsnip')
+                     |->('peas - frozen raw', 'peas')
+                     |->('peas - fresh raw', 'peas')
+                     |->('pumpkin - raw', 'pumpkin')
+                     |->('radish - red raw', 'radish')
+                     |->('spinach - raw', 'spinach')
+                     |->('squash - butternut baked', 'squash')
+                     |->('tomatoes - canned & liquid', 'tomatoes')
+                     |->('tomatoes - ordinary raw', 'tomatoes')
+                     |->('watercress - raw', 'watercress')
+                     |->('yam - baked', 'yam')
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 22/67
+                     |->('aubergine (eggplant) - raw', 'aubergine (eggplant)')
+                     |->('alfalfa sprouts - raw', 'alfalfa sprouts')
+                     |->('bamboo shoots - canned', 'bamboo shoots')
+                     |->('beansprouts mung - raw', 'beansprouts mung')
+                     |->('cabbage spring - boiled', 'cabbage spring')
+                     |->('cabbage chinese - raw', 'cabbage chinese')
+                     |->('cabbage red - raw', 'cabbage red')
+                     |->('capsicum pepper - green raw', 'capsicum pepper')
+                     |->('capsicum pepper - red raw', 'capsicum pepper')
+                     |->('cassava chips -', 'cassava chips')
+                     |->('corn kernels - canned', 'corn kernels')
+                     |->('corn kernels - raw', 'corn kernels')
+                     |->('courgette (zucchini) - raw', 'courgette (zucchini)')
+                     |->('curly kale - raw', 'curly kale')
+                     |->('eggplant (aubergine) - raw', 'eggplant (aubergine)')
+                     |->('endive (escarole) -', 'endive (escarole)')
+                     |->('lettuce leaf - butterhead raw', 'lettuce leaf')
+                     |->('squash spaghetti - baked', 'squash spaghetti')
+                     |->('zucchini (courgette) - raw', 'zucchini (courgette)')
+                     |->('sweet potato - baked', 'sweet potato')
+                     |->('tomatoes cherry - raw', 'tomatoes cherry')
+                     |->('water chestnuts - canned', 'water chestnuts')
+
+--- Not covered inputs:
+****************

@@ -1,0 +1,102 @@
+---------------
+Results for park to state 2
+Coverage in golden matched rows: 27/27 = 100.00%
+Best pattern Coverage  in golden matched rows: 81.48%
+Coverage: 27/27 = 100.00%
+Best pattern Coverage: 81.48%
+Total Patterns: 2, input rows: 27
+Average Input length (Num chars): 9.74074074074074, Average output length (Num chars): 7.962962962962963
+Max Tokens: 3
+Total Run time: 0.013401031494140625, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 59
+Total number of all generated patterns: 414
+Number of duplicate patterns removed: 129
+Total number of generated patterns to try: 285
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 108
+Number of all remaining placeholder comb.: 108
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 54
+Number of splitted remaining placeholder comb.: 54
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 0.005305051803588867
+extract patterns time: 0.0015702247619628906
+duplicate patterns remove time: 0.0005056858062744141
+patterns applying time: 0.0059261322021484375
+get covering set time: 9.393692016601562e-05
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 7695
+Number of successful patterns: 637
+Number of failed patterns: 7058
+Number of failed patterns filtered by cache (cache hit): 5309
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 0 ], } -> 22/27
+                     |->('alaska (8)', 'alaska')
+                     |->('arizona (3)', 'arizona')
+                     |->('arkansas', 'arkansas')
+                     |->('california (8)', 'california')
+                     |->('colorado (4)', 'colorado')
+                     |->('florida (3)', 'florida')
+                     |->('hawaii (2)', 'hawaii')
+                     |->('idaho', 'idaho')
+                     |->('kentucky', 'kentucky')
+                     |->('maine', 'maine')
+                     |->('michigan', 'michigan')
+                     |->('minnesota', 'minnesota')
+                     |->('montana (2)', 'montana')
+                     |->('nevada', 'nevada')
+                     |->('ohio', 'ohio')
+                     |->('oregon', 'oregon')
+                     |->('tennessee', 'tennessee')
+                     |->('texas (2)', 'texas')
+                     |->('utah (5)', 'utah')
+                     |->('virginia', 'virginia')
+                     |->('washington (3)', 'washington')
+                     |->('wyoming (2)', 'wyoming')
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 5/27
+                     |->('new mexico', 'new mexico')
+                     |->('north carolina', 'north carolina')
+                     |->('north dakota', 'north dakota')
+                     |->('south carolina', 'south carolina')
+                     |->('south dakota (2)', 'south dakota')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 0 ], } -> 22/27
+                     |->('alaska (8)', 'alaska')
+                     |->('arizona (3)', 'arizona')
+                     |->('arkansas', 'arkansas')
+                     |->('california (8)', 'california')
+                     |->('colorado (4)', 'colorado')
+                     |->('florida (3)', 'florida')
+                     |->('hawaii (2)', 'hawaii')
+                     |->('idaho', 'idaho')
+                     |->('kentucky', 'kentucky')
+                     |->('maine', 'maine')
+                     |->('michigan', 'michigan')
+                     |->('minnesota', 'minnesota')
+                     |->('montana (2)', 'montana')
+                     |->('nevada', 'nevada')
+                     |->('ohio', 'ohio')
+                     |->('oregon', 'oregon')
+                     |->('tennessee', 'tennessee')
+                     |->('texas (2)', 'texas')
+                     |->('utah (5)', 'utah')
+                     |->('virginia', 'virginia')
+                     |->('washington (3)', 'washington')
+                     |->('wyoming (2)', 'wyoming')
+                 {[Split: ' ', 0 ], [LIT:' '], [Split: ' ', 1 ], } -> 5/27
+                     |->('new mexico', 'new mexico')
+                     |->('north carolina', 'north carolina')
+                     |->('north dakota', 'north dakota')
+                     |->('south carolina', 'south carolina')
+                     |->('south dakota (2)', 'south dakota')
+
+--- Not covered inputs:
+****************

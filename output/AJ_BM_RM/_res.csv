@@ -1,0 +1,3 @@
+file_name,Input Rows,Matched pairs,Total Patterns,Golden Coverage,Golden Best tran Coverage,Coverage,Best tran Coverage,Required Runtime,Execution time,Ranking time,rows per subset,number of subsets,level threshold,gain_threshold,Row_Match_P,Row_Match_R,Row_Match_F1
+stock market,1364,466,6,0.0,0.0,0.48283261802575106,0.44849785407725323,3.6851677894592285,3.6938350200653076,0.003943920135498047,2,8,3,0.2,0.0,0.0,0.0
+us presidents 1,43,43,3,0.9534883720930233,0.9534883720930233,0.9534883720930233,0.9534883720930233,25.99810481071472,26.132073879241943,0.0001590251922607422,2,8,3,0.2,1.0,1.0,1.0

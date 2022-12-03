@@ -1,0 +1,146 @@
+---------------
+Results for us presidents 6
+Coverage in golden matched rows: 44/44 = 100.00%
+Best pattern Coverage  in golden matched rows: 50.00%
+Coverage: 44/44 = 100.00%
+Best pattern Coverage: 50.00%
+Total Patterns: 6, input rows: 44
+Average Input length (Num chars): 30.75, Average output length (Num chars): 15.386363636363637
+Max Tokens: 3
+Total Run time: 0.4644899368286133, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 127
+Total number of all generated patterns: 8490
+Number of duplicate patterns removed: 745
+Total number of generated patterns to try: 7745
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 202
+Number of all remaining placeholder comb.: 182
+Number of all removed placeholder comb.: 20
+Number of init remaining placeholder comb.: 101
+Number of splitted remaining placeholder comb.: 81
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 20
+
+placeholder generation time: 0.010355949401855469
+extract patterns time: 0.02129507064819336
+duplicate patterns remove time: 0.0025010108947753906
+patterns applying time: 0.4256141185760498
+get covering set time: 0.004723787307739258
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 340780
+Number of successful patterns: 9970
+Number of failed patterns: 330810
+Number of failed patterns filtered by cache (cache hit): 209687
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[Split: ' ', 1 ], [LIT:' '], [Split: ' ', 2 ], } -> 22/44
+                     |->('1. george washington (1732-1799)', 'george washington')
+                     |->('2. john adams (1735-1826)', 'john adams')
+                     |->('3. thomas jefferson (1743-1826)', 'thomas jefferson')
+                     |->('4. james madison (1751-1836)', 'james madison')
+                     |->('5. james monroe (1758-1831)', 'james monroe')
+                     |->('7. andrew jackson (1767-1845)', 'andrew jackson')
+                     |->('10. john tyler (1790-1862)', 'john tyler')
+                     |->('12. zachary taylor (1784-1850)', 'zachary taylor')
+                     |->('13. millard fillmore (1800-1874)', 'millard fillmore')
+                     |->('14. franklin pierce (1804-1869)', 'franklin pierce')
+                     |->('15. james buchanan (1791-1868)', 'james buchanan')
+                     |->('16. abraham lincoln (1809-1865)', 'abraham lincoln')
+                     |->('17. andrew johnson (1808-1875)', 'andrew johnson')
+                     |->('22. grover cleveland (1837-1908)', 'grover cleveland')
+                     |->('23. benjamin harrison (1833-1901)', 'benjamin harrison')
+                     |->('24. grover cleveland (1837-1908)', 'grover cleveland')
+                     |->('25. william mckinley (1843-1901)', 'william mckinley')
+                     |->('26. theodore roosevelt (1858-1919)', 'theodore roosevelt')
+                     |->('28. woodrow wilson (1856-1924)', 'woodrow wilson')
+                     |->('30. calvin coolidge (1872-1933)', 'calvin coolidge')
+                     |->('42. bill clinton (1946-)', 'bill clinton')
+                     |->('44. barack obama (1961-)', 'barack obama')
+                 {[Split: ' ', [1, 2, 3] ], } -> 17/44
+                     |->('33. harry s. truman (1884-1972)', 'harry s. truman')
+                     |->('34. dwight d. eisenhower (1890-1969)', 'dwight d. eisenhower')
+                     |->('35. john f. kennedy (1917-1963)', 'john f. kennedy')
+                     |->('36. lyndon b. johnson (1908-1973)', 'lyndon b. johnson')
+                     |->('37. richard m. nixon (1913-1994)', 'richard m. nixon')
+                     |->('6. john quincy adams (1767-1848)', 'john quincy adams')
+                     |->('38. gerald r. ford (1913- 2006)', 'gerald r. ford')
+                     |->('8. martin van buren (1782-1862)', 'martin van buren')
+                     |->('9. william henry harrison (1773-1841)', 'william henry harrison')
+                     |->('11. james k. polk (1795-1849)', 'james k. polk')
+                     |->('43. george w. bush (1946-)', 'george w. bush')
+                     |->('18. ulysses s. grant (1822-1885)', 'ulysses s. grant')
+                     |->('19. rutherford b. hayes (1822-1893)', 'rutherford b. hayes')
+                     |->('20. james a. garfield (1831-1881)', 'james a. garfield')
+                     |->('21. chester a. arthur (1829-1886)', 'chester a. arthur')
+                     |->('29. warren g. harding (1865-1923)', 'warren g. harding')
+                     |->('32. franklin d. roosevelt (1882-1945)', 'franklin d. roosevelt')
+                 {[Split: ' ', 1 ], [LIT:' '], [Split: ' ', 3 ], } -> 2/44
+                     |->('31. herbert c. hoover (1874-1964)', 'herbert hoover')
+                     |->('40. ronald w. reagan (1911- 2004)', 'ronald reagan')
+                 {[LIT:'george '], [SplitSubstr: 'r', 1, (3-13) ], } -> 2/44
+                     |->('1. george washington (1732-1799)', 'george washington')
+                     |->('41. george h. w. bush (1924-)', 'george h. w. bush')
+                 {[LIT:'william howard taft'], } -> 1/44  -- Original Trans.: {[SplitSubstr: '9', 0, (4-12) ], [LIT:'howard'], [SplitSubstr: '7', 1, (9-14) ], }
+                     |->('27. william taft (1857-1930)', 'william howard taft')
+                 {[LIT:'jimmy carter'], } -> 1/44  -- Original Trans.: {[Substr:(4-5)], [LIT:'immy'], [SplitSubstr: '1', 0, (9-16) ], }
+                     |->('39. james carter (1924-)', 'jimmy carter')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[Split: ' ', 1 ], [LIT:' '], [Split: ' ', 2 ], } -> 22/44
+                     |->('1. george washington (1732-1799)', 'george washington')
+                     |->('2. john adams (1735-1826)', 'john adams')
+                     |->('3. thomas jefferson (1743-1826)', 'thomas jefferson')
+                     |->('4. james madison (1751-1836)', 'james madison')
+                     |->('5. james monroe (1758-1831)', 'james monroe')
+                     |->('7. andrew jackson (1767-1845)', 'andrew jackson')
+                     |->('10. john tyler (1790-1862)', 'john tyler')
+                     |->('12. zachary taylor (1784-1850)', 'zachary taylor')
+                     |->('13. millard fillmore (1800-1874)', 'millard fillmore')
+                     |->('14. franklin pierce (1804-1869)', 'franklin pierce')
+                     |->('15. james buchanan (1791-1868)', 'james buchanan')
+                     |->('16. abraham lincoln (1809-1865)', 'abraham lincoln')
+                     |->('17. andrew johnson (1808-1875)', 'andrew johnson')
+                     |->('22. grover cleveland (1837-1908)', 'grover cleveland')
+                     |->('23. benjamin harrison (1833-1901)', 'benjamin harrison')
+                     |->('24. grover cleveland (1837-1908)', 'grover cleveland')
+                     |->('25. william mckinley (1843-1901)', 'william mckinley')
+                     |->('26. theodore roosevelt (1858-1919)', 'theodore roosevelt')
+                     |->('28. woodrow wilson (1856-1924)', 'woodrow wilson')
+                     |->('30. calvin coolidge (1872-1933)', 'calvin coolidge')
+                     |->('42. bill clinton (1946-)', 'bill clinton')
+                     |->('44. barack obama (1961-)', 'barack obama')
+                 {[Split: ' ', [1, 2, 3] ], } -> 17/44
+                     |->('33. harry s. truman (1884-1972)', 'harry s. truman')
+                     |->('34. dwight d. eisenhower (1890-1969)', 'dwight d. eisenhower')
+                     |->('35. john f. kennedy (1917-1963)', 'john f. kennedy')
+                     |->('36. lyndon b. johnson (1908-1973)', 'lyndon b. johnson')
+                     |->('37. richard m. nixon (1913-1994)', 'richard m. nixon')
+                     |->('6. john quincy adams (1767-1848)', 'john quincy adams')
+                     |->('38. gerald r. ford (1913- 2006)', 'gerald r. ford')
+                     |->('8. martin van buren (1782-1862)', 'martin van buren')
+                     |->('9. william henry harrison (1773-1841)', 'william henry harrison')
+                     |->('11. james k. polk (1795-1849)', 'james k. polk')
+                     |->('43. george w. bush (1946-)', 'george w. bush')
+                     |->('18. ulysses s. grant (1822-1885)', 'ulysses s. grant')
+                     |->('19. rutherford b. hayes (1822-1893)', 'rutherford b. hayes')
+                     |->('20. james a. garfield (1831-1881)', 'james a. garfield')
+                     |->('21. chester a. arthur (1829-1886)', 'chester a. arthur')
+                     |->('29. warren g. harding (1865-1923)', 'warren g. harding')
+                     |->('32. franklin d. roosevelt (1882-1945)', 'franklin d. roosevelt')
+                 {[Split: ' ', 1 ], [LIT:' '], [Split: ' ', 3 ], } -> 2/44
+                     |->('31. herbert c. hoover (1874-1964)', 'herbert hoover')
+                     |->('40. ronald w. reagan (1911- 2004)', 'ronald reagan')
+                 {[LIT:'william howard taft'], } -> 1/44
+                     |->('27. william taft (1857-1930)', 'william howard taft')
+                 {[LIT:'george '], [SplitSubstr: 'r', 1, (3-13) ], } -> 2/44
+                     |->('1. george washington (1732-1799)', 'george washington')
+                     |->('41. george h. w. bush (1924-)', 'george h. w. bush')
+                 {[LIT:'jimmy carter'], } -> 1/44
+                     |->('39. james carter (1924-)', 'jimmy carter')
+
+--- Not covered inputs:
+****************

@@ -1,0 +1,124 @@
+---------------
+Results for california govs 1
+Coverage in golden matched rows: 24/24 = 100.00%
+Best pattern Coverage  in golden matched rows: 33.33%
+Coverage: 25/25 = 100.00%
+Best pattern Coverage: 32.00%
+Total Patterns: 10, input rows: 25
+Average Input length (Num chars): 23.08, Average output length (Num chars): 15.68
+Max Tokens: 3
+Total Run time: 1.2410759925842285, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 173
+Total number of all generated patterns: 35696
+Number of duplicate patterns removed: 8408
+Total number of generated patterns to try: 27288
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 296
+Number of all remaining placeholder comb.: 218
+Number of all removed placeholder comb.: 78
+Number of init remaining placeholder comb.: 150
+Number of splitted remaining placeholder comb.: 68
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 78
+
+placeholder generation time: 0.015730857849121094
+extract patterns time: 0.09463715553283691
+duplicate patterns remove time: 0.029669761657714844
+patterns applying time: 1.0685949325561523
+get covering set time: 0.03244328498840332
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 682200
+Number of successful patterns: 31348
+Number of failed patterns: 650852
+Number of failed patterns filtered by cache (cache hit): 550981
+N-gram Row Matching: P:0.96,R:1.0,F:0.9795918367346939
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[SplitSubstr: 'v', 1, (2-27) ], } -> 8/25
+                     |->('gov. pete wilson', 'pete wilson')
+                     |->('gov. george stoneman', 'george stoneman')
+                     |->('gov. earl warren', 'earl warren')
+                     |->('gov. washington bartlett', 'washington bartlett')
+                     |->('gov. friend william richardson', 'friend william richardson')
+                     |->('gov. culbert l. olson', 'culbert l. olson')
+                     |->('gov. george deukmejian', 'george deukmejian')
+                     |->('gov. william irwin', 'william irwin')
+                 {[SplitSubstr: 'g', 1, (4-11) ], [SplitSubstr: 's', 0, (3-4) ], [LIT:' '], [Split: ' ', 3 ], } -> 5/25
+                     |->('gov. henry harrison markham', 'henry h. markham')
+                     |->('gov. frank finley merriam', 'frank f. merriam')
+                     |->('gov. james herbert budd', 'james h. budd')
+                     |->('gov. hiram warren johnson', 'hiram w. johnson')
+                     |->('gov. henry tifft gage', 'henry t. gage')
+                 {[SplitSubstr: 'h', 0, (5-14) ], [SplitSubstr: 'u', 0, (3-4) ], [LIT:' '], [Split: ' ', 3 ], } -> 5/25
+                     |->('gov. goodwin jess knight', 'goodwin j. knight')
+                     |->('gov. clement calhoun young', 'clement c. young')
+                     |->('gov. william dennison stephens', 'william d. stephens')
+                     |->('gov. culbert l. olson', 'culbert l. olson')
+                     |->('gov. robert whitney waterman', 'robert w. waterman')
+                 {[SplitSubstr: '.', 1, (1-16) ], } -> 5/25
+                     |->('gov. pete wilson', 'pete wilson')
+                     |->('gov. george stoneman', 'george stoneman')
+                     |->('gov. earl warren', 'earl warren')
+                     |->('gov. william irwin', 'william irwin')
+                     |->('gov. gray davis', 'gray davis')
+                 {[SplitSubstr: 'k', 0, (5-13) ], [SplitSubstr: 'v', 1, (0-1) ], [LIT:' '], [Split: ' ', 3 ], } -> 3/25
+                     |->('gov. george cooper pardee', 'george c. pardee')
+                     |->('gov. george clement perkins', 'george c. perkins')
+                     |->('gov. robert whitney waterman', 'robert w. waterman')
+                 {[LIT:'james rolph jr'], } -> 1/25  -- Original Trans.: {[SplitSubstr: '.', 1, (1-12) ], [Substr:(4-6)], [SplitSubstr: 'g', 1, (10-11) ], }
+                     |->('gov. james rolph', 'james rolph jr')
+                 {[LIT:'ronald reagan'], } -> 1/25  -- Original Trans.: {[SplitSubstr: 'v', 1, (2-8) ], [LIT:' '], [SplitSubstr: 'l', 2, (4-10) ], }
+                     |->('gov. ronald wilson reagan', 'ronald reagan')
+                 {[LIT:'james n. gillet'], } -> 1/25  -- Original Trans.: {[SplitSubstr: 'v', 1, (2-9) ], [SplitSubstr: 'r', 0, (3-4) ], [SplitSubstr: 'n', 1, (5-12) ], }
+                     |->('gov. james norris gillett', 'james n. gillet')
+                 {[LIT:'edmund g. brown sr'], } -> 1/25  -- Original Trans.: {[LIT:'edmund g. brown s'], [SplitSubstr: 'b', 0, (14-15) ], }
+                     |->('gov. edmund gerald brown', 'edmund g. brown sr')
+                 {[LIT:'edmund g. brown jr'], } -> 1/25  -- Original Trans.: {[Substr:(5-13)], [Substr:(3-4)], [LIT:' brown jr'], }
+                     |->('gov. edmund gerald brown', 'edmund g. brown jr')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[SplitSubstr: 'v', 1, (2-27) ], } -> 8/24
+                     |->('gov. pete wilson', 'pete wilson')
+                     |->('gov. george deukmejian', 'george deukmejian')
+                     |->('gov. earl warren', 'earl warren')
+                     |->('gov. culbert l. olson', 'culbert l. olson')
+                     |->('gov. friend william richardson', 'friend william richardson')
+                     |->('gov. washington bartlett', 'washington bartlett')
+                     |->('gov. george stoneman', 'george stoneman')
+                     |->('gov. william irwin', 'william irwin')
+                 {[SplitSubstr: 'g', 1, (4-11) ], [SplitSubstr: 's', 0, (3-4) ], [LIT:' '], [Split: ' ', 3 ], } -> 5/24
+                     |->('gov. frank finley merriam', 'frank f. merriam')
+                     |->('gov. hiram warren johnson', 'hiram w. johnson')
+                     |->('gov. henry tifft gage', 'henry t. gage')
+                     |->('gov. james herbert budd', 'james h. budd')
+                     |->('gov. henry harrison markham', 'henry h. markham')
+                 {[SplitSubstr: 'h', 0, (5-14) ], [SplitSubstr: 'u', 0, (3-4) ], [LIT:' '], [Split: ' ', 3 ], } -> 5/24
+                     |->('gov. goodwin jess knight', 'goodwin j. knight')
+                     |->('gov. culbert l. olson', 'culbert l. olson')
+                     |->('gov. clement calhoun young', 'clement c. young')
+                     |->('gov. william dennison stephens', 'william d. stephens')
+                     |->('gov. robert whitney waterman', 'robert w. waterman')
+                 {[SplitSubstr: 'k', 0, (5-13) ], [SplitSubstr: 'v', 1, (0-1) ], [LIT:' '], [Split: ' ', 3 ], } -> 3/24
+                     |->('gov. robert whitney waterman', 'robert w. waterman')
+                     |->('gov. george clement perkins', 'george c. perkins')
+                     |->('gov. george cooper pardee', 'george c. pardee')
+                 {[LIT:'james rolph jr'], } -> 1/24
+                     |->('gov. james rolph', 'james rolph jr')
+                 {[LIT:'ronald reagan'], } -> 1/24
+                     |->('gov. ronald wilson reagan', 'ronald reagan')
+                 {[LIT:'james n. gillet'], } -> 1/24
+                     |->('gov. james norris gillett', 'james n. gillet')
+                 {[LIT:'edmund g. brown sr'], } -> 1/24
+                     |->('gov. edmund gerald brown', 'edmund g. brown sr')
+                 {[LIT:'edmund g. brown jr'], } -> 0/24
+                 {[SplitSubstr: '.', 1, (1-16) ], } -> 5/24
+                     |->('gov. gray davis', 'gray davis')
+                     |->('gov. pete wilson', 'pete wilson')
+                     |->('gov. earl warren', 'earl warren')
+                     |->('gov. george stoneman', 'george stoneman')
+                     |->('gov. william irwin', 'william irwin')
+
+--- Not covered inputs:
+****************
