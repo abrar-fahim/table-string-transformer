@@ -45,11 +45,13 @@ class RowMatcherUnit:
                 if item[gt_target_row_id] not in rows:
                     fn += 1
 
+        # print('GTTT ', gt)
+
         self._fn = fn
         tp, fp = 0, 0
 
-        print('gt ', gt)
-        print('self rows ', self.rows['rows'])
+        # print('gt ', gt)
+        # print('self rows ', self.rows['rows'])
         for s, val in self.rows['rows'].items():
             if s not in gt.keys():
                 fp += 1

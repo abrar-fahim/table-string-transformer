@@ -2,31 +2,31 @@ source-City,target-Code
 Basel,EAP
 Niushan,LYG
 Beaumont-Hague,ACI
-Sankt Anton am Arlberg,AST
+Sankt Anton am Arlberg,ANT
 Satapuala,APW
 Linyi,LYI
-Rionegro,JTN
+Rionegro,MDE
 De Soto,MDH
-Itanhaém,MDE
-Mbandaka,AST
+Itanhaém,JTN
+Mbandaka,MDK
 Madivaru,LMV
 La Orilla,LZC
 Arequipa,AQP
 Warrenton,AST
-Mengfeng,AST
+Mengfeng,TYC
 Labu,LZH
 Manta,MEC
 Dazhou,DZH
-Berenice City,AST
+Berenice City,EES
 Kukës,KFZ
 Tauá,JTA
 Orvakal,KJB
 Ezhou,EHU
-Fuzuli,AST
+Fuzuli,FZL
 Kolaka,KXB
 Angra dos Reis,GDR
 Zhaodong,HLJ
-Majialin Village,AST
+Majialin Village,HZU
 Cairu,MXQ
 Ampara,AFK
 São Roque,JHF
@@ -86,8 +86,8 @@ Koh Kong,DSY
 Vadodara,BDQ
 Meadville,MEJ
 Elizabeth,EWR
-Meulaboh,IUP
-Apui,MEQ
+Meulaboh,MEQ
+Apui,IUP
 Almeirim,MEU
 Richland,RLD
 Merced,MER
@@ -152,8 +152,8 @@ London,LOZ
 Ingenio,LPA
 Lobatse,LOQ
 Ginebra,LPE
-Linkoping,AHI
-Amahai,LPI
+Linkoping,LPI
+Amahai,AHI
 Trollenhagen,FNB
 Machico,FNC
 Funadhoo,FND
@@ -196,5 +196,5 @@ Sungai Nyamuk,LSM
 Los Banos,LSN
 Les Sables-d'Olonne,LSO
 Los Angeles,LSQ
-Pahrump,DMM
-Al Awjam,LSV
+Pahrump,LSV
+Al Awjam,DMM

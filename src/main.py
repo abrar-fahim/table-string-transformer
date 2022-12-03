@@ -26,7 +26,7 @@ import pathlib
 
 BASE_PATH = str(pathlib.Path(__file__).absolute().parent.parent.absolute())
 
-METHOD = "PT"
+METHOD = "AJ"
 
 # MUST Be Kept updated in order for config file to work. It also should be updated in the Finder.py
 PT_PARAMS = {
@@ -160,6 +160,8 @@ def get_pattern(func, params, verbose=False):
         else:
             rows, is_swapped = matcher.get_matching_rows_for_table(tables, item, ROW_MATCHING_N_START, ROW_MATCHING_N_END,
                                                          swap_src_target=SWAP_SRC_TARGET)
+
+            
         if verbose:
             print(f"source and target columns are {'' if is_swapped else 'NOT '}swapped")
         new_rows = {}
@@ -171,6 +173,7 @@ def get_pattern(func, params, verbose=False):
             'is_swapped': is_swapped,
             'rows': new_rows
         }
+
         all_rows.append(rr)
 
         rmu = None
@@ -214,6 +217,8 @@ def get_pattern(func, params, verbose=False):
             else:
                 globals()[func](item, rows, params, tables, None, rmu, verbose=verbose)
 
+
+    print('ALL ROWSSS ', all_rows[0])
     if all_has_gt and len(all_rows) > 0:
         rme = RowMatcherEval(tables, all_rows)
         print("Row matching performance:" + str(rme))
@@ -372,15 +377,20 @@ def lookup_table_map(tables: dict, lookup_tables: dict):
         pass
 
 
-def lookup_table_brute_force(data_tables: dict, lookup_tables: dict) -> dict:
-    for data_table in data_tables.items():
-        data_table = data_table[1]
+def lookup_table_brute_force(data_table: dict, lookup_tables: dict) -> dict:
+
+    # joined_output_tables = []
+    # for data_table in data_tables.items():
+        # data_table = data_table[1]
         # print(data_table)
+
+        
         
 
-        if data_table['name'] not in ['airports', 'currency', 'stock']:
-            continue
-
+        # if data_table['name'] not in ['airports', 'currency code', 'stock market']:
+        #     continue
+        
+        # print(data_table)
 
         src_column_name = data_table['rows']['src']
         src_column_index = data_table['src']['titles'].index(src_column_name)
@@ -394,7 +404,10 @@ def lookup_table_brute_force(data_tables: dict, lookup_tables: dict) -> dict:
             'items': []
         }
 
+        # print('DATA TABLE ', data_table)
+
         for data_row in data_table['src']['items']:
+            # print('STH ', data_row[src_column_index])
 
             for lookup_table in lookup_tables.items():
                 lookup_table = lookup_table[1]
@@ -406,28 +419,37 @@ def lookup_table_brute_force(data_tables: dict, lookup_tables: dict) -> dict:
 
                 for lookup_row in lookup_table['items']:
                     data_row_lookup_table_index += 1
-                    lookup_row[lookup_src_columnn_index]
+                    
+
+                    
+
+
 
                     if data_row[src_column_index] == lookup_row[lookup_src_columnn_index]:
+                        
+                        # print('STH ELSE', lookup_row[lookup_src_columnn_index])
                     # if :
                         found= True
                         joined_src_lookup_table['items'].append(data_row + [lookup_row[1 - lookup_src_columnn_index]]) # assuming lookup table has only 2 columns
                         if (len(joined_src_lookup_table['titles']) < 2):
                             joined_src_lookup_table['titles'] += [lookup_table['titles'][1 - lookup_src_columnn_index]] # appending only the target column of lookup table
 
-                        break
+                        # break
 
                     pass
 
                 if found:
+                    pass
                     
-                    break                    
+                    # break                    
         
         target_column_name = data_table['rows']['target']
         target_column_index = data_table['target']['titles'].index(target_column_name)
 
         data_row_lookup_table_index = -1
         found = False
+
+        # print('LEFT JOIN ' , joined_src_lookup_table)
 
         joined_src_lookup_target_table = {
             'name': data_table["name"] + "_lookup_table_target",
@@ -452,8 +474,10 @@ def lookup_table_brute_force(data_tables: dict, lookup_tables: dict) -> dict:
                     break
 
                 pass
+        
 
-    return joined_src_lookup_target_table
+        # joined_output_tables.append(joined_src_lookup_target_table)
+        return joined_src_lookup_target_table
 
 
 def pt_print(res, filename, row_matcher, tr_eval):
@@ -754,14 +778,14 @@ if __name__ == '__main__':
         if os.path.exists(OUTPUT_DIR):
             shutil.rmtree(OUTPUT_DIR)
 
-    # METHOD = 'LT'
+    
     lookup_tables = {}
 
     tables, all_tables = dl.get_tables_from_dir(DS_PATH, [], make_lower=True, verbose=False)
 
     
     # lt_files = [dI for dI in os.listdir(LT_PATH)]
-    lt_files = ['airport_LT.csv']
+    lt_files = ['airport_LT.csv', 'currency_LT.csv', 'stock_LT.csv']
     make_lower = True
     
     for lt in lt_files:
@@ -781,7 +805,7 @@ if __name__ == '__main__':
             else:
                 res['items'] = [line.strip().split(',') for line in f.readlines()]
         lookup_tables[lt] = res
-
+    # print('look ', lookup_tables['currency_LT.csv'])
     # print(lookup_tables)
 
     # print('LOOKUPPPP ', lookup_tables)
@@ -793,7 +817,7 @@ if __name__ == '__main__':
     # print("-----------------")
 
 
-
+    METHOD = 'LT'
     if METHOD == 'PT':
         get_pattern('run_pattern', PT_PARAMS, verbose=False)
     elif METHOD == 'AJ':
@@ -801,8 +825,87 @@ if __name__ == '__main__':
     elif METHOD == 'RMT':
         row_matching_test()
     elif METHOD == 'LT':
-        out = lookup_table_brute_force(tables, lookup_tables)
 
-        print(out)
+        # print(tables['airports'])
+        
+
+        # print('OUTTT ', tables)
+
+        '''
+            out = {
+                'name': name,
+                'titles': [],
+                'items': []
+
+            }
+        '''
+        '''
+            {'col_info': {'src_table': 'src_us cities', 'src_row': 'United States Cities', 'src_row_id': 0, 'target_table': 'target_us cities', 'target_row': 'City', 'target_row_id': 0}
+        '''
+
+
+
+
+        for table in tables.items():
+
+
+            table = table[1]
+
+
+            # if table['name'] not in [ 'stock market']:
+            if table['name'] not in ['airports', 'currency code', 'stock market']:
+                # print(table['name'])
+                continue
+            
+
+            
+            joined_output_table = lookup_table_brute_force(table, lookup_tables)
+            
+            print('STATS FOR TABLE: ', table['name'])
+
+            # print('JOINED TABLE ', joined_output_table)
+
+            rows = {}
+            for row in joined_output_table['items']:
+                rows[row[0]] = [row[-1]]   # ASSUMING THAT FIRST COLUMN IS SOURCE AND LAST COLUMN IS TARGET, CHANGE LATER   
+
+            all_rows = []
+
+            
+            new_rows = {}
+            # print('MY ROWWWSSS ', rows)
+
+            for src, target in rows.items():
+                new_rows[src] = [[t, t] for t in target]
+                
+
+            rr = {
+                # 'col_info': {
+                #     'src_table': f"src_{list(tables.items())[0][1]['name']}", # src_{table name}
+                #     'src_row': list(tables.items())[0][1]['rows']['src'], # src col name
+                #     'src_row_id': 0,
+                #     'target_table': f"target_{list(tables.items())[0][1]['name']}", # target_{table name}
+                #     'target_row': list(tables.items())[0][1]['rows']['target'], # Target col name
+                #     'target_row_id': 0
+
+                # },
+                'col_info': {
+                    'src_table': f"src_{table['name']}", # src_{table name}
+                    'src_row': table['rows']['src'], # src col name
+                    'src_row_id': 0,
+                    'target_table': f"target_{table['name']}", # target_{table name}
+                    'target_row': table['rows']['target'], # Target col name
+                    'target_row_id': 0
+
+                },
+                'is_swapped': False,
+                'rows': new_rows
+            }
+            
+            all_rows.append(rr)
+            
+
+            rme = RowMatcherEval(tables, all_rows)
+            print(rme)
     else:
         raise NotImplementedError()
