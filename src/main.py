@@ -26,7 +26,7 @@ import pathlib
 
 BASE_PATH = str(pathlib.Path(__file__).absolute().parent.parent.absolute())
 
-METHOD = "AJ"
+METHOD = "PT"
 
 # MUST Be Kept updated in order for config file to work. It also should be updated in the Finder.py
 PT_PARAMS = {
@@ -817,7 +817,7 @@ if __name__ == '__main__':
     # print("-----------------")
 
 
-    METHOD = 'LT'
+    # METHOD = 'LT'
     if METHOD == 'PT':
         get_pattern('run_pattern', PT_PARAMS, verbose=False)
     elif METHOD == 'AJ':
