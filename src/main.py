@@ -5,6 +5,7 @@ import os
 import random
 import shutil
 import sys
+import time
 
 from data_processor import DataLoader as dl
 from data_processor import Matcher as matcher
@@ -77,10 +78,15 @@ ROW_MATCHING_N_END = 20
 CNT_CUR = multiprocessing.Value('i', 0)
 CNT_ALL = 0
 
+LT_TST_DATA = {
+    'airports': ['city', 'city codes'],
+    'currency code': ['currency names', 'currency codes'],
+    'date case 2': ['dd month yyyy', 'dd mm yyyy'],
+    'stock market': ['companies', 'stock symbols']
+}
 
 
-
-def get_pattern(func, params, verbose=False):
+def get_pattern(func, params, verbose=False, lt_tst=False, lt_tst_key=None):
     lst = []
     '''
     You can insert list of some tables in lst to limit loading to those tables, if lst=[], all tables are loaded
@@ -93,6 +99,12 @@ def get_pattern(func, params, verbose=False):
     '''
 
     tables, all_tables = dl.get_tables_from_dir(DS_PATH, lst, make_lower=True, verbose=False)
+    table_keys = list(tables.keys())
+
+    if (lt_tst):
+        for key in table_keys:
+            if key != lt_tst_key:
+                del tables[key]
 
     print("Reading Done!")
 
@@ -137,6 +149,8 @@ def get_pattern(func, params, verbose=False):
 
     all_rows = []
     data = []
+    # if (lt_tst and !res['items']):
+    #     res['items'] = ['cities']
 
     if not MULTI_CORE:
         print("Running on single core mode")
@@ -218,7 +232,7 @@ def get_pattern(func, params, verbose=False):
                 globals()[func](item, rows, params, tables, None, rmu, verbose=verbose)
 
 
-    print('ALL ROWSSS ', all_rows[0])
+    # print('ALL ROWSSS ', all_rows[0])
     if all_has_gt and len(all_rows) > 0:
         rme = RowMatcherEval(tables, all_rows)
         print("Row matching performance:" + str(rme))
@@ -378,20 +392,6 @@ def lookup_table_map(tables: dict, lookup_tables: dict):
 
 
 def lookup_table_brute_force(data_table: dict, lookup_tables: dict) -> dict:
-
-    # joined_output_tables = []
-    # for data_table in data_tables.items():
-        # data_table = data_table[1]
-        # print(data_table)
-
-        
-        
-
-        # if data_table['name'] not in ['airports', 'currency code', 'stock market']:
-        #     continue
-        
-        # print(data_table)
-
         src_column_name = data_table['rows']['src']
         src_column_index = data_table['src']['titles'].index(src_column_name)
 
@@ -404,52 +404,34 @@ def lookup_table_brute_force(data_table: dict, lookup_tables: dict) -> dict:
             'items': []
         }
 
-        # print('DATA TABLE ', data_table)
-
         for data_row in data_table['src']['items']:
-            # print('STH ', data_row[src_column_index])
 
             for lookup_table in lookup_tables.items():
                 lookup_table = lookup_table[1]
-
-                # print('LOOKUP TABLE', lookup_table)
 
                 lookup_src_columnn_name = lookup_table['source_col']
                 lookup_src_columnn_index = lookup_table['titles'].index(lookup_src_columnn_name)
 
                 for lookup_row in lookup_table['items']:
                     data_row_lookup_table_index += 1
-                    
-
-                    
-
-
 
                     if data_row[src_column_index] == lookup_row[lookup_src_columnn_index]:
-                        
-                        # print('STH ELSE', lookup_row[lookup_src_columnn_index])
-                    # if :
+
                         found= True
                         joined_src_lookup_table['items'].append(data_row + [lookup_row[1 - lookup_src_columnn_index]]) # assuming lookup table has only 2 columns
                         if (len(joined_src_lookup_table['titles']) < 2):
                             joined_src_lookup_table['titles'] += [lookup_table['titles'][1 - lookup_src_columnn_index]] # appending only the target column of lookup table
 
-                        # break
-
                     pass
 
                 if found:
                     pass
-                    
-                    # break                    
-        
+
         target_column_name = data_table['rows']['target']
         target_column_index = data_table['target']['titles'].index(target_column_name)
 
         data_row_lookup_table_index = -1
         found = False
-
-        # print('LEFT JOIN ' , joined_src_lookup_table)
 
         joined_src_lookup_target_table = {
             'name': data_table["name"] + "_lookup_table_target",
@@ -467,16 +449,13 @@ def lookup_table_brute_force(data_table: dict, lookup_tables: dict) -> dict:
 
                 if target_data_row[target_column_index] == data_row[-1]: # assuming that the target col of lookup table is appended at the end
                     found = True
-                    # print('LOOK ROW', lookup_row)
+
                     joined_src_lookup_target_table['items'].append(data_row + target_data_row) # assuming lookup table has only 2 columns
-                    # joined_src_lookup_target_table['titles'] += [lookup_table['titles'][1 - lookup_src_columnn_index]] # appending only the target column of lookup table
 
                     break
 
                 pass
-        
 
-        # joined_output_tables.append(joined_src_lookup_target_table)
         return joined_src_lookup_target_table
 
 
@@ -724,6 +703,99 @@ def row_matching_test(n_start_from=2, n_start_to=25, file_write=True):
             with open(OUTPUT_FILE, "a+") as f:
                 print(f"{n_start},{rme.precision},{rme.recall},{rme.f1}", file=f)
 
+def run_LT():
+    tables, all_tables = dl.get_tables_from_dir(DS_PATH, [], make_lower=True, verbose=False)
+    for table in tables.items():
+
+        table = table[1]
+
+        if table['name'] not in ['airports', 'currency code', 'date case 2', 'stock market']:
+            continue
+
+        joined_output_table = lookup_table_brute_force(table, lookup_tables)
+
+        print('STATS FOR TABLE: ', table['name'])
+
+        rows = {}
+        for row in joined_output_table['items']:
+            rows[row[0]] = [row[-1]]  # ASSUMING THAT FIRST COLUMN IS SOURCE AND LAST COLUMN IS TARGET, CHANGE LATER
+
+        all_rows = []
+
+        new_rows = {}
+
+        for src, target in rows.items():
+            new_rows[src] = [[t, t] for t in target]
+
+        rr = {
+            'col_info': {
+                'src_table': f"src_{table['name']}",  # src_{table name}
+                'src_row': table['rows']['src'],  # src col name
+                'src_row_id': 0,
+                'target_table': f"target_{table['name']}",  # target_{table name}
+                'target_row': table['rows']['target'],  # Target col name
+                'target_row_id': 0
+
+            },
+            'is_swapped': False,
+            'rows': new_rows
+        }
+
+        all_rows.append(rr)
+
+        rme = RowMatcherEval(tables, all_rows)
+        print(rme)
+
+def run_LT_TST():
+    tables, all_tables = dl.get_tables_from_dir(DS_PATH, [], make_lower=True, verbose=False)
+
+    for dataset in LT_TST_DATA.keys():
+
+        start_time = time.time()
+
+        get_pattern('run_pattern', PT_PARAMS, verbose=False, lt_tst=True, lt_tst_key=LT_TST_DATA[dataset][0])  # SOURCE ---(T1)---> LT's SOURCE
+
+        for table in tables.items():
+
+            table = table[1]
+
+            if table['name'] not in [dataset]:
+                continue
+
+            joined_output_table = lookup_table_brute_force(table, lookup_tables)
+
+            rows = {}
+            for row in joined_output_table['items']:
+                rows[row[0]] = [row[-1]]  # ASSUMING THAT FIRST COLUMN IS SOURCE AND LAST COLUMN IS TARGET, CHANGE LATER
+
+            all_rows = []
+
+            new_rows = {}
+
+            for src, target in rows.items():
+                new_rows[src] = [[t, t] for t in target]
+
+            rr = {
+                'col_info': {
+                    'src_table': f"src_{table['name']}",  # src_{table name}
+                    'src_row': table['rows']['src'],  # src col name
+                    'src_row_id': 0,
+                    'target_table': f"target_{table['name']}",  # target_{table name}
+                    'target_row': table['rows']['target'],  # Target col name
+                    'target_row_id': 0
+
+                },
+                'is_swapped': False,
+                'rows': new_rows
+            }
+
+            all_rows.append(rr)
+
+            # rme = RowMatcherEval(tables, all_rows)
+            # print(rme)
+            get_pattern('run_pattern', PT_PARAMS, verbose=False, lt_tst=True, lt_tst_key=LT_TST_DATA[dataset][1])
+            print('Run time of', dataset,': ', time.time() - start_time, 'sec')
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -781,17 +853,11 @@ if __name__ == '__main__':
     
     lookup_tables = {}
 
-    tables, all_tables = dl.get_tables_from_dir(DS_PATH, [], make_lower=True, verbose=False)
-
-    
-    # lt_files = [dI for dI in os.listdir(LT_PATH)]
-    lt_files = ['airport_LT.csv', 'currency_LT.csv', 'stock_LT.csv']
+    lt_files = ['date_LT.csv']
     make_lower = True
     
     for lt in lt_files:
         res = {
-            # 'src': {'name': 'src_'+lt, 'titles': None, 'items': []},
-            # 'target': {'name': 'target_'+lt, 'titles': None, 'items': []},
             'titles': None,
             'items': [],
             'name': lt,
@@ -805,19 +871,9 @@ if __name__ == '__main__':
             else:
                 res['items'] = [line.strip().split(',') for line in f.readlines()]
         lookup_tables[lt] = res
-    # print('look ', lookup_tables['currency_LT.csv'])
-    # print(lookup_tables)
-
-    # print('LOOKUPPPP ', lookup_tables)
-
-    # print("-----------------")
-    # print("-----------------")
-    # print("-----------------")
-    # print("-----------------")
-    # print("-----------------")
 
 
-    # METHOD = 'LT'
+    METHOD = 'LT-TST'
     if METHOD == 'PT':
         get_pattern('run_pattern', PT_PARAMS, verbose=False)
     elif METHOD == 'AJ':
@@ -825,87 +881,10 @@ if __name__ == '__main__':
     elif METHOD == 'RMT':
         row_matching_test()
     elif METHOD == 'LT':
-
-        # print(tables['airports'])
-        
-
-        # print('OUTTT ', tables)
-
-        '''
-            out = {
-                'name': name,
-                'titles': [],
-                'items': []
-
-            }
-        '''
-        '''
-            {'col_info': {'src_table': 'src_us cities', 'src_row': 'United States Cities', 'src_row_id': 0, 'target_table': 'target_us cities', 'target_row': 'City', 'target_row_id': 0}
-        '''
-
-
-
-
-        for table in tables.items():
-
-
-            table = table[1]
-
-
-            # if table['name'] not in [ 'stock market']:
-            if table['name'] not in ['airports', 'currency code', 'stock market']:
-                # print(table['name'])
-                continue
-            
-
-            
-            joined_output_table = lookup_table_brute_force(table, lookup_tables)
-            
-            print('STATS FOR TABLE: ', table['name'])
-
-            # print('JOINED TABLE ', joined_output_table)
-
-            rows = {}
-            for row in joined_output_table['items']:
-                rows[row[0]] = [row[-1]]   # ASSUMING THAT FIRST COLUMN IS SOURCE AND LAST COLUMN IS TARGET, CHANGE LATER   
-
-            all_rows = []
-
-            
-            new_rows = {}
-            # print('MY ROWWWSSS ', rows)
-
-            for src, target in rows.items():
-                new_rows[src] = [[t, t] for t in target]
-                
-
-            rr = {
-                # 'col_info': {
-                #     'src_table': f"src_{list(tables.items())[0][1]['name']}", # src_{table name}
-                #     'src_row': list(tables.items())[0][1]['rows']['src'], # src col name
-                #     'src_row_id': 0,
-                #     'target_table': f"target_{list(tables.items())[0][1]['name']}", # target_{table name}
-                #     'target_row': list(tables.items())[0][1]['rows']['target'], # Target col name
-                #     'target_row_id': 0
-
-                # },
-                'col_info': {
-                    'src_table': f"src_{table['name']}", # src_{table name}
-                    'src_row': table['rows']['src'], # src col name
-                    'src_row_id': 0,
-                    'target_table': f"target_{table['name']}", # target_{table name}
-                    'target_row': table['rows']['target'], # Target col name
-                    'target_row_id': 0
-
-                },
-                'is_swapped': False,
-                'rows': new_rows
-            }
-            
-            all_rows.append(rr)
-            
-
-            rme = RowMatcherEval(tables, all_rows)
-            print(rme)
+        start_time = time.time()
+        run_LT()
+        print('Final run time: ', time.time() - start_time)
+    elif METHOD == 'LT-TST':
+        run_LT_TST()
     else:
         raise NotImplementedError()

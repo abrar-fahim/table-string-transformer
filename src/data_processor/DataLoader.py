@@ -157,10 +157,6 @@ def get_tables_from_dir(ds_path, tbl_names, make_lower=False, verbose=False):
             res['source_col'] = l
 
         if has_gt:
-            print('========================')
-            print(ds_dir)
-            print(len(res['GT']['titles']))
-            print(len(res['src']['titles']) + len(res['target']['titles']))
             assert len(res['GT']['titles']) == len(res['src']['titles']) + len(res['target']['titles'])
 
             change = not res['GT']['titles'][0].startswith("source-")

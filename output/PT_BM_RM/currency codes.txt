@@ -1,0 +1,195 @@
+---------------
+Results for currency codes
+Coverage in golden matched rows: 0/152 = 0.00%
+Best pattern Coverage  in golden matched rows: 0.00%
+Coverage: NA
+Best pattern Coverage: 0.00%
+Total Patterns: 0, input rows: 0
+Average Input length (Num chars): 0, Average output length (Num chars): 0
+Max Tokens: 3
+Total Run time: 5.507469177246094e-05, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 0
+Total number of all generated patterns: 0
+Number of duplicate patterns removed: 0
+Total number of generated patterns to try: 0
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 0
+Number of all remaining placeholder comb.: 0
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 0
+Number of splitted remaining placeholder comb.: 0
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 1.3113021850585938e-05
+extract patterns time: 6.9141387939453125e-06
+duplicate patterns remove time: 2.09808349609375e-05
+patterns applying time: 8.821487426757812e-06
+get covering set time: 5.245208740234375e-06
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 0
+Number of successful patterns: 0
+Number of failed patterns: 0
+Number of failed patterns filtered by cache (cache hit): 0
+N-gram Row Matching: P:0.0,R:0.0,F:0.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+
+****Golden rows apply patterns******
+golden pattern list: {
+
+--- Not covered inputs:
+   ('afn', 'afn')
+   ('eur', 'eur')
+   ('all', 'all')
+   ('dzd', 'dzd')
+   ('usd', 'usd')
+   ('aoa', 'aoa')
+   ('xcd', 'xcd')
+   ('ars', 'ars')
+   ('amd', 'amd')
+   ('awg', 'awg')
+   ('aud', 'aud')
+   ('azn', 'azn')
+   ('bsd', 'bsd')
+   ('bhd', 'bhd')
+   ('bdt', 'bdt')
+   ('bbd', 'bbd')
+   ('byn', 'byn')
+   ('bzd', 'bzd')
+   ('xof', 'xof')
+   ('bmd', 'bmd')
+   ('btn', 'btn')
+   ('bov', 'bov')
+   ('bam', 'bam')
+   ('bwp', 'bwp')
+   ('nok', 'nok')
+   ('brl', 'brl')
+   ('bnd', 'bnd')
+   ('bgn', 'bgn')
+   ('bif', 'bif')
+   ('cve', 'cve')
+   ('khr', 'khr')
+   ('xaf', 'xaf')
+   ('cad', 'cad')
+   ('kyd', 'kyd')
+   ('clp', 'clp')
+   ('cny', 'cny')
+   ('cop', 'cop')
+   ('kmf', 'kmf')
+   ('cdf', 'cdf')
+   ('nzd', 'nzd')
+   ('crc', 'crc')
+   ('hrk', 'hrk')
+   ('cup', 'cup')
+   ('ang', 'ang')
+   ('czk', 'czk')
+   ('dkk', 'dkk')
+   ('djf', 'djf')
+   ('dop', 'dop')
+   ('egp', 'egp')
+   ('svc', 'svc')
+   ('ern', 'ern')
+   ('szl', 'szl')
+   ('etb', 'etb')
+   ('fjd', 'fjd')
+   ('gmd', 'gmd')
+   ('gel', 'gel')
+   ('ghs', 'ghs')
+   ('gip', 'gip')
+   ('gtq', 'gtq')
+   ('gbp', 'gbp')
+   ('gnf', 'gnf')
+   ('gyd', 'gyd')
+   ('htg', 'htg')
+   ('hnl', 'hnl')
+   ('hkd', 'hkd')
+   ('huf', 'huf')
+   ('isk', 'isk')
+   ('inr', 'inr')
+   ('idr', 'idr')
+   ('irr', 'irr')
+   ('iqd', 'iqd')
+   ('jmd', 'jmd')
+   ('jpy', 'jpy')
+   ('jod', 'jod')
+   ('kzt', 'kzt')
+   ('kes', 'kes')
+   ('krw', 'krw')
+   ('kwd', 'kwd')
+   ('kgs', 'kgs')
+   ('lak', 'lak')
+   ('lbp', 'lbp')
+   ('lsl', 'lsl')
+   ('lrd', 'lrd')
+   ('lyd', 'lyd')
+   ('chf', 'chf')
+   ('mop', 'mop')
+   ('mkd', 'mkd')
+   ('mga', 'mga')
+   ('mwk', 'mwk')
+   ('myr', 'myr')
+   ('mvr', 'mvr')
+   ('mru', 'mru')
+   ('mur', 'mur')
+   ('mxn', 'mxn')
+   ('mdl', 'mdl')
+   ('mnt', 'mnt')
+   ('mad', 'mad')
+   ('mzn', 'mzn')
+   ('mmk', 'mmk')
+   ('nad', 'nad')
+   ('npr', 'npr')
+   ('xpf', 'xpf')
+   ('nio', 'nio')
+   ('ngn', 'ngn')
+   ('omr', 'omr')
+   ('pkr', 'pkr')
+   ('pab', 'pab')
+   ('pgk', 'pgk')
+   ('pyg', 'pyg')
+   ('pen', 'pen')
+   ('php', 'php')
+   ('pln', 'pln')
+   ('qar', 'qar')
+   ('ron', 'ron')
+   ('rub', 'rub')
+   ('rwf', 'rwf')
+   ('wst', 'wst')
+   ('stn', 'stn')
+   ('sar', 'sar')
+   ('rsd', 'rsd')
+   ('scr', 'scr')
+   ('sll', 'sll')
+   ('sgd', 'sgd')
+   ('sbd', 'sbd')
+   ('sos', 'sos')
+   ('zar', 'zar')
+   ('ssp', 'ssp')
+   ('lkr', 'lkr')
+   ('sdg', 'sdg')
+   ('srd', 'srd')
+   ('sek', 'sek')
+   ('syp', 'syp')
+   ('twd', 'twd')
+   ('tjs', 'tjs')
+   ('thb', 'thb')
+   ('top', 'top')
+   ('ttd', 'ttd')
+   ('tnd', 'tnd')
+   ('try', 'try')
+   ('tmt', 'tmt')
+   ('ugx', 'ugx')
+   ('uah', 'uah')
+   ('aed', 'aed')
+   ('uyu', 'uyu')
+   ('uyi', 'uyi')
+   ('uzs', 'uzs')
+   ('vuv', 'vuv')
+   ('ves', 'ves')
+   ('vnd', 'vnd')
+   ('yer', 'yer')
+   ('zmw', 'zmw')
+   ('zwl', 'zwl')
+****************
