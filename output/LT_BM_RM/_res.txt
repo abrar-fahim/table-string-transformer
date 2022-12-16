@@ -1,0 +1,12 @@
+STATS FOR TABLE:  date case 2
+P=1.0, R=1.0, F1=1.0
+Run time of  date case 2 : 0.04693293571472168
+STATS FOR TABLE:  currency code
+P=1.0, R=1.0, F1=1.0
+Run time of  currency code : 0.11091923713684082
+STATS FOR TABLE:  stock market
+P=1.0, R=0.3343108504398827, F1=0.5010989010989011
+Run time of  stock market : 0.6536338329315186
+STATS FOR TABLE:  airports
+P=1.0, R=1.0, F1=1.0
+Run time of  airports : 0.09510302543640137
