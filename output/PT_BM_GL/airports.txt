@@ -1,0 +1,756 @@
+---------------
+Results for airports
+Coverage in golden matched rows: 199/199 = 100.00%
+Best pattern Coverage  in golden matched rows: 3.52%
+Coverage: 199/199 = 100.00%
+Best pattern Coverage: 3.52%
+Total Patterns: 147, input rows: 199
+Average Input length (Num chars): 8.542713567839195, Average output length (Num chars): 3.0
+Max Tokens: 3
+Total Run time: 31.30830216407776, Generalization time:0.0
+Total number of placeholder combinations (After removing duplicates): 949
+Total number of all generated patterns: 1062583
+Number of duplicate patterns removed: 938696
+Total number of generated patterns to try: 123887
+Effective Generalizations: 0
+
+Number of all generated placeholder comb.: 1898
+Number of all remaining placeholder comb.: 1898
+Number of all removed placeholder comb.: 0
+Number of init remaining placeholder comb.: 949
+Number of splitted remaining placeholder comb.: 949
+Number of removed init placeholder comb.: 0
+Number of removed splitted placeholder comb.: 0
+
+placeholder generation time: 0.3922460079193115
+extract patterns time: 2.704136371612549
+duplicate patterns remove time: 3.2935118675231934
+patterns applying time: 23.20693302154541
+get covering set time: 1.711474895477295
+
+Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 24653513
+Number of successful patterns: 133053
+Number of failed patterns: 24520460
+Number of failed patterns filtered by cache (cache hit): 23458325
+
+Golden Row Matching: P:1.0,R:1.0,F:1.0
+Params: {'max_tokens': 3, 'max_blocks': 3, 'generalize': False, 'sample_size': None, 'token_splitters': [' '], 'remove_duplicate_patterns': True, 'switch_literals_placeholders': True, 'only_first_match': False, 'units_to_extract': [<class 'Transformation.Blocks.LiteralPatternBlock.LiteralPatternBlock'>, <class 'Transformation.Blocks.PositionPatternBlock.PositionPatternBlock'>, <class 'Transformation.Blocks.TokenPatternBlock.TokenPatternBlock'>, <class 'Transformation.Blocks.SplitSubstrPatternBlock.SplitSubstrPatternBlock'>]}
+pattern list: {
+                 {[SplitSubstr: 'p', 0, (0-1) ], [SplitSubstr: 'r', 0, (2-4) ], } -> 7/199
+                     |->('lusk', 'lsk')
+                     |->('laporte', 'lpo')
+                     |->('ganja', 'gnj')
+                     |->('dazhou', 'dzh')
+                     |->('male', 'mle')
+                     |->('billund', 'bll')
+                     |->('livingstone', 'lvi')
+                 {[SplitSubstr: 's', 0, (0-3) ], } -> 7/199
+                     |->('addis ababa', 'add')
+                     |->('mehamn', 'meh')
+                     |->('ezeiza', 'eze')
+                     |->('meknes', 'mek')
+                     |->('mende', 'men')
+                     |->('cody', 'cod')
+                     |->('merced', 'mer')
+                 {[SplitSubstr: 's', 0, (0-1) ], [SplitSubstr: ' ', 0, (2-3) ], [Substr:(6-7)], } -> 5/199
+                     |->('madison', 'mdn')
+                     |->('los banos', 'lsn')
+                     |->('lipetsk', 'lpk')
+                     |->('moberly', 'mby')
+                     |->('dodge city', 'ddc')
+                 {[SplitSubstr: 'e', 0, (0-1) ], [Substr:(4-6)], } -> 5/199
+                     |->('jiande', 'jde')
+                     |->('manteo', 'meo')
+                     |->('hamilton', 'hlt')
+                     |->('lordsburg', 'lsb')
+                     |->('mariquita', 'mqu')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [SplitSubstr: 'i', 0, (2-3) ], [Substr:(4-5)], } -> 5/199
+                     |->('mattoon', 'mto')
+                     |->('ezhou', 'ehu')
+                     |->('fuzuli', 'fzl')
+                     |->('leribe', 'lrb')
+                     |->('funadhoo', 'fnd')
+                 {[Substr:(0-1)], [Substr:(3-4)], [LIT:'i'], } -> 4/199
+                     |->('algeciras', 'aei')
+                     |->('amahai', 'ahi')
+                     |->('al qaysumah', 'aqi')
+                     |->('linyi', 'lyi')
+                 {[SplitSubstr: 'a', 0, (0-1) ], [SplitSubstr: 'd', 0, (2-3) ], [SplitSubstr: 'a', 1, (0-1) ], } -> 4/199
+                     |->('los banos', 'lsn')
+                     |->('isle of islay', 'ily')
+                     |->('vacaria', 'vcc')
+                     |->('funadhoo', 'fnd')
+                 {[SplitSubstr: 'r', 0, (0-1) ], [SplitSubstr: 'm', 1, (3-4) ], [SplitSubstr: 'u', 0, (6-7) ], } -> 3/199
+                     |->('mashhad', 'mhd')
+                     |->('mbandaka', 'mdk')
+                     |->('marsh harbour', 'mhh')
+                 {[Substr:(0-2)], [LIT:'j'], } -> 3/199
+                     |->('meadville', 'mej')
+                     |->('aqaba', 'aqj')
+                     |->('abidjan', 'abj')
+                 {[LIT:'me'], [SplitSubstr: 'd', 0, (3-4) ], } -> 3/199
+                     |->('macae', 'mea')
+                     |->('melfi', 'mef')
+                     |->('meridian', 'mei')
+                 {[LIT:'j'], [SplitSubstr: 'o', 0, (0-1) ], [SplitSubstr: 't', 1, (0-1) ], } -> 3/199
+                     |->('paraty', 'jpy')
+                     |->('tauá', 'jta')
+                     |->('patos', 'jpo')
+                 {[SplitSubstr: 'g', 0, (0-1) ], [SplitSubstr: 'a', 1, (1-2) ], [LIT:'g'], } -> 3/199
+                     |->('la plata', 'lpg')
+                     |->('anqing', 'aqg')
+                     |->('muzaffarabad', 'mfg')
+                 {[SplitSubstr: 'a', 0, (0-1) ], [Substr:(4-5)], [Split: 'e', 1 ], } -> 3/199
+                     |->('manteo', 'meo')
+                     |->('miraflores', 'mfs')
+                     |->('dumaguete', 'dgt')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [SplitSubstr: 'i', 0, (3-4) ], [Substr:(6-7)], } -> 3/199
+                     |->('mashhad', 'mhd')
+                     |->('arequipa', 'aqp')
+                     |->('mombasa', 'mba')
+                 {[SplitSubstr: 'z', 0, (0-1) ], [SplitSubstr: 'z', 0, (3-4) ], [LIT:'b'], } -> 2/199
+                     |->('la paz', 'lpb')
+                     |->('gondia', 'gdb')
+                 {[SplitSubstr: 'n', 0, (0-1) ], [SplitSubstr: 's', 1, (2-3) ], [SplitSubstr: 'u', 0, (7-8) ], } -> 2/199
+                     |->('martinsburg', 'mrb')
+                     |->('masterton', 'mro')
+                 {[SplitSubstr: 'd', 0, (0-1) ], [SplitSubstr: 'd', 0, (5-7) ], } -> 2/199
+                     |->('linkoping', 'lpi')
+                     |->('marshfield', 'mfi')
+                 {[SplitSubstr: 'h', 0, (0-2) ], [LIT:'q'], } -> 2/199
+                     |->('lobatse', 'loq')
+                     |->('meulaboh', 'meq')
+                 {[SplitSubstr: 'r', 0, (0-1) ], [SplitSubstr: 'h', 0, (3-4) ], [LIT:'r'], } -> 2/199
+                     |->('darbhanga', 'dbr')
+                     |->('medford', 'mfr')
+                 {[SplitSubstr: 'm', 0, (6-9) ], } -> 2/199
+                     |->('sankt anton am arlberg', 'ant')
+                     |->('nacogdoches', 'och')
+                 {[SplitSubstr: 's', 0, (0-1) ], [SplitSubstr: 'b', 1, (2-3) ], [LIT:'o'], } -> 2/199
+                     |->('bandung', 'bdo')
+                     |->("les sables-d'olonne", 'lso')
+                 {[SplitSubstr: 'c', 0, (0-2) ], [LIT:'p'], } -> 2/199
+                     |->('mersing', 'mep')
+                     |->('avoca', 'avp')
+                 {[LIT:'er'], [SplitSubstr: 'd', 0, (5-6) ], } -> 2/199
+                     |->('errachidia', 'erh')
+                     |->('fairview', 'eri')
+                 {[LIT:'md'], [SplitSubstr: 'n', 1, (0-1) ], } -> 2/199
+                     |->('xinglong', 'mdg')
+                     |->('rionegro', 'mde')
+                 {[SplitSubstr: 'l', 0, (5-6) ], [LIT:'c'], [SplitSubstr: 'n', 1, (0-1) ], } -> 2/199
+                     |->('puerto francisco de orellana', 'occ')
+                     |->('chenzhou', 'hcz')
+                 {[SplitSubstr: 'a', 1, (6-7) ], [SplitSubstr: 'a', 1, (2-3) ], [LIT:'u'], } -> 2/199
+                     |->('reydarfjoerdur', 'dju')
+                     |->('almeirim', 'meu')
+                 {[SplitSubstr: 'r', 0, (0-1) ], [Substr:(3-4)], [Substr:(1-2)], } -> 2/199
+                     |->('linyi', 'lyi')
+                     |->('mcalester', 'mlc')
+                 {[SplitSubstr: 'r', 1, (0-1) ], [LIT:'ei'], } -> 2/199
+                     |->('algeciras', 'aei')
+                     |->('terney', 'nei')
+                 {[SplitSubstr: 't', 0, (0-1) ], [LIT:'pk'], } -> 2/199
+                     |->('sapporo', 'spk')
+                     |->('lipetsk', 'lpk')
+                 {[LIT:'d'], [SplitSubstr: 't', 0, (0-1) ], [SplitSubstr: 'y', 0, (6-7) ], } -> 2/199
+                     |->('katsina', 'dka')
+                     |->('dodge city', 'ddc')
+                 {[Split: 'a', 0 ], [LIT:'zh'], } -> 2/199
+                     |->('dazhou', 'dzh')
+                     |->('labu', 'lzh')
+                 {[LIT:'ml'], [Substr:(3-4)], } -> 2/199
+                     |->('male', 'mle')
+                     |->('singosari', 'mlg')
+                 {[LIT:'coh'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'k', 1, (1-2) ], [SplitSubstr: ' ', 0, (1-2) ], [SplitSubstr: 'o', 1, (1-2) ], }
+                     |->('koch bihar', 'coh')
+                 {[LIT:'hsf'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 's', 1, (5-6) ], [SplitSubstr: 'f', 0, (0-1) ], [SplitSubstr: 'n', 0, (3-4) ], }
+                     |->('suifenhe', 'hsf')
+                 {[LIT:'uhs'], } -> 1/199  -- Original Trans.: {[LIT:'u'], [SplitSubstr: 'k', 3, (0-1) ], [SplitSubstr: '-', 1, (8-9) ], }
+                     |->('aleksandrovsk-sakhalinskiy', 'uhs')
+                 {[LIT:'eea'], } -> 1/199  -- Original Trans.: {[SplitSubstr: ' ', 0, (4-5) ], [SplitSubstr: 'p', 0, (4-5) ], [SplitSubstr: 'r', 2, (2-3) ], }
+                     |->('correia pinto', 'eea')
+                 {[LIT:'gdr'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'r', 0, (2-3) ], [SplitSubstr: 'n', 1, (4-5) ], [SplitSubstr: 's', 1, (1-2) ], }
+                     |->('angra dos reis', 'gdr')
+                 {[LIT:'ddd'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'a', 2, (0-1) ], [SplitSubstr: 'u', 2, (2-3) ], [SplitSubstr: 'u', 2, (2-3) ], }
+                     |->('kudahuvadhoo', 'ddd')
+                 {[LIT:'cya'], } -> 1/199  -- Original Trans.: {[LIT:'cy'], [SplitSubstr: ' ', 1, (1-2) ], }
+                     |->('les cayes', 'cya')
+                 {[LIT:'mso'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 's', 0, (10-11) ], [Substr:(12-13)], [SplitSubstr: 'a', 1, (4-5) ], }
+                     |->('orchard homes', 'mso')
+                 {[LIT:'mnm'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'n', 0, (0-1) ], [LIT:'n'], [Split: 'a', 0 ], }
+                     |->('marinette', 'mnm')
+                 {[LIT:'meg'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'e', 0, (0-1) ], [Substr:(6-7)], [LIT:'g'], }
+                     |->('malanje', 'meg')
+                 {[LIT:'ees'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'c', 1, (0-1) ], [Substr:(3-4)], [LIT:'s'], }
+                     |->('berenice city', 'ees')
+                 {[LIT:'lpy'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 's', 1, (8-9) ], [SplitSubstr: 'a', 1, (4-5) ], [LIT:'y'], }
+                     |->('saint-paulien', 'lpy')
+                 {[LIT:'lsm'], } -> 1/199  -- Original Trans.: {[LIT:'l'], [SplitSubstr: 'k', 0, (0-1) ], [Substr:(10-11)], }
+                     |->('sungai nyamuk', 'lsm')
+                 {[LIT:'eap'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'b', 1, (2-3) ], [LIT:'ap'], }
+                     |->('basel', 'eap')
+                 {[LIT:'lqm'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'i', 0, (7-8) ], [LIT:'q'], [SplitSubstr: 't', 1, (9-10) ], }
+                     |->('puerto leguizamo', 'lqm')
+                 {[LIT:'mew'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'k', 0, (0-1) ], [SplitSubstr: 'w', 1, (0-1) ], [SplitSubstr: 'k', 0, (1-2) ], }
+                     |->('mweka', 'mew')
+                 {[LIT:'lmv'], } -> 1/199  -- Original Trans.: {[LIT:'l'], [SplitSubstr: 'd', 0, (0-1) ], [LIT:'v'], }
+                     |->('madivaru', 'lmv')
+                 {[LIT:'lrt'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'o', 0, (1-2) ], [LIT:'rt'], }
+                     |->('ploemeur', 'lrt')
+                 {[LIT:'rld'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'a', 0, (0-1) ], [SplitSubstr: 'i', 1, (2-3) ], [SplitSubstr: 'r', 1, (6-7) ], }
+                     |->('richland', 'rld')
+                 {[LIT:'mhq'], } -> 1/199  -- Original Trans.: {[Substr:(7-8)], [SplitSubstr: 'n', 0, (5-6) ], [LIT:'q'], }
+                     |->('mariehamn', 'mhq')
+                 {[LIT:'lbq'], } -> 1/199  -- Original Trans.: {[LIT:'l'], [SplitSubstr: 'a', 1, (1-2) ], [LIT:'q'], }
+                     |->('lambarene', 'lbq')
+                 {[LIT:'lpj'], } -> 1/199  -- Original Trans.: {[LIT:'l'], [SplitSubstr: 'y', 0, (12-13) ], [SplitSubstr: 'e', 0, (4-5) ], }
+                     |->('san juan de payara', 'lpj')
+                 {[LIT:'mem'], } -> 1/199  -- Original Trans.: {[LIT:'m'], [SplitSubstr: 'u', 1, (4-5) ], [LIT:'m'], }
+                     |->('southaven', 'mem')
+                 {[LIT:'dwf'], } -> 1/199  -- Original Trans.: {[LIT:'dwf'], }
+                     |->('kettering', 'dwf')
+                 {[LIT:'dmm'], } -> 1/199  -- Original Trans.: {[LIT:'d'], [Substr:(7-8)], [LIT:'m'], [Split: 'm', 1 ], }
+                     |->('al awjam', 'dmm')
+                 {[LIT:'lrv'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'd', 0, (6-7) ], [SplitSubstr: 'c', 1, (1-2) ], [LIT:'v'], }
+                     |->('caraballeda', 'lrv')
+                 {[LIT:'lpt'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'm', 0, (0-1) ], [SplitSubstr: 'n', 0, (3-4) ], [LIT:'t'], }
+                     |->('lampang', 'lpt')
+                 {[LIT:'ewr'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'b', 1, (0-1) ], [LIT:'wr'], }
+                     |->('elizabeth', 'ewr')
+                 {[LIT:'lsq'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'o', 1, (6-7) ], [Split: 'e', 2 ], [LIT:'q'], }
+                     |->('los angeles', 'lsq')
+                 {[LIT:'mhg'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'h', 1, (2-3) ], [LIT:'hg'], }
+                     |->('mannheim', 'mhg')
+                 {[LIT:'afk'], } -> 1/199  -- Original Trans.: {[Substr:(5-6)], [LIT:'fk'], }
+                     |->('ampara', 'afk')
+                 {[LIT:'mes'], } -> 1/199  -- Original Trans.: {[Substr:(0-2)], [LIT:'s'], }
+                     |->('medan', 'mes')
+                 {[LIT:'jcs'], } -> 1/199  -- Original Trans.: {[LIT:'jcs'], [Split: 's', 1 ], }
+                     |->('crateus', 'jcs')
+                 {[LIT:'eyp'], } -> 1/199  -- Original Trans.: {[LIT:'ey'], [SplitSubstr: 'y', 1, (1-2) ], }
+                     |->('yopal', 'eyp')
+                 {[LIT:'ixi'], } -> 1/199  -- Original Trans.: {[SplitSubstr: ' ', 1, (4-5) ], [LIT:'x'], [SplitSubstr: 'n', 1, (9-10) ], }
+                     |->('north lakhimpur', 'ixi')
+                 {[LIT:'dia'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'a', 0, (0-1) ], [LIT:'i'], [Split: 'h', 1 ], }
+                     |->('doha', 'dia')
+                 {[LIT:'lpf'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'h', 0, (0-1) ], [SplitSubstr: 'i', 1, (1-2) ], [LIT:'f'], }
+                     |->('liupanshui', 'lpf')
+                 {[LIT:'jsb'], } -> 1/199  -- Original Trans.: {[LIT:'j'], [Substr:(0-1)], [SplitSubstr: 't', 0, (4-5) ], }
+                     |->('são benedito', 'jsb')
+                 {[LIT:'mgz'], } -> 1/199  -- Original Trans.: {[LIT:'mgz'], }
+                     |->('myeik', 'mgz')
+                 {[LIT:'fnc'], } -> 1/199  -- Original Trans.: {[LIT:'fn'], [SplitSubstr: 'i', 0, (2-3) ], }
+                     |->('machico', 'fnc')
+                 {[LIT:'ast'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'e', 0, (1-2) ], [LIT:'s'], [Substr:(6-7)], }
+                     |->('warrenton', 'ast')
+                 {[LIT:'msq'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'l', 0, (1-2) ], [SplitSubstr: 'c', 0, (0-1) ], [LIT:'q'], }
+                     |->('smilavichy', 'msq')
+                 {[LIT:'kxb'], } -> 1/199  -- Original Trans.: {[LIT:'kxb'], }
+                     |->('kolaka', 'kxb')
+                 {[LIT:'aci'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'e', 1, (8-9) ], [LIT:'ci'], }
+                     |->('beaumont-hague', 'aci')
+                 {[LIT:'mno'], } -> 1/199  -- Original Trans.: {[LIT:'mno'], [Split: 'o', 1 ], }
+                     |->('kabalo', 'mno')
+                 {[LIT:'iup'], } -> 1/199  -- Original Trans.: {[Split: 'u', 1 ], [SplitSubstr: 'a', 1, (1-2) ], [SplitSubstr: 'a', 1, (0-1) ], }
+                     |->('apui', 'iup')
+                 {[LIT:'dge'], } -> 1/199  -- Original Trans.: {[LIT:'dge'], }
+                     |->('mudgee', 'dge')
+                 {[LIT:'lru'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 's', 1, (1-2) ], [LIT:'ru'], }
+                     |->('mesilla', 'lru')
+                 {[LIT:'mkz'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'r', 1, (4-5) ], [LIT:'kz'], }
+                     |->('batu berendam', 'mkz')
+                 {[LIT:'cwp'], } -> 1/199  -- Original Trans.: {[LIT:'cwp'], }
+                     |->('sanjwal', 'cwp')
+                 {[LIT:'jtn'], } -> 1/199  -- Original Trans.: {[LIT:'j'], [SplitSubstr: 'm', 0, (1-2) ], [Substr:(3-4)], }
+                     |->('itanhaém', 'jtn')
+                 {[LIT:'mlh'], } -> 1/199  -- Original Trans.: {[LIT:'mlh'], }
+                     |->('hesingue', 'mlh')
+                 {[LIT:'lzc'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'o', 1, (2-3) ], [LIT:'zc'], }
+                     |->('la orilla', 'lzc')
+                 {[LIT:'vsk'], } -> 1/199  -- Original Trans.: {[LIT:'vs'], [SplitSubstr: 'n', 0, (0-1) ], }
+                     |->('kennewick', 'vsk')
+                 {[LIT:'ldh'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'a', 0, (7-8) ], [LIT:'dh'], }
+                     |->('woolgoolga', 'ldh')
+                 {[LIT:'jpe'], } -> 1/199  -- Original Trans.: {[LIT:'j'], [SplitSubstr: 'g', 0, (0-1) ], [LIT:'e'], }
+                     |->('paragominas', 'jpe')
+                 {[LIT:'fna'], } -> 1/199  -- Original Trans.: {[LIT:'fna'], [Split: 'a', 2 ], }
+                     |->('masoyila', 'fna')
+                 {[LIT:'lbg'], } -> 1/199  -- Original Trans.: {[LIT:'lbg'], }
+                     |->('gonesse', 'lbg')
+                 {[LIT:'bdq'], } -> 1/199  -- Original Trans.: {[LIT:'b'], [SplitSubstr: 'o', 0, (2-3) ], [LIT:'q'], }
+                     |->('vadodara', 'bdq')
+                 {[LIT:'gyo'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'r', 0, (4-5) ], [LIT:'yo'], }
+                     |->('blangkejeren', 'gyo')
+                 {[LIT:'kfz'], } -> 1/199  -- Original Trans.: {[Substr:(2-3)], [LIT:'fz'], }
+                     |->('kukës', 'kfz')
+                 {[LIT:'mrq'], } -> 1/199  -- Original Trans.: {[LIT:'mrq'], }
+                     |->('masiga', 'mrq')
+                 {[LIT:'mdh'], } -> 1/199  -- Original Trans.: {[LIT:'m'], [SplitSubstr: 'o', 0, (0-1) ], [LIT:'h'], }
+                     |->('de soto', 'mdh')
+                 {[LIT:'mec'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 't', 0, (0-1) ], [LIT:'ec'], }
+                     |->('manta', 'mec')
+                 {[LIT:'whb'], } -> 1/199  -- Original Trans.: {[LIT:'whb'], }
+                     |->('eliwana', 'whb')
+                 {[LIT:'fnb'], } -> 1/199  -- Original Trans.: {[LIT:'f'], [SplitSubstr: 'r', 1, (4-5) ], [LIT:'b'], }
+                     |->('trollenhagen', 'fnb')
+                 {[LIT:'ycm'], } -> 1/199  -- Original Trans.: {[LIT:'ycm'], }
+                     |->('niagara-on-the-lake', 'ycm')
+                 {[LIT:'lsd'], } -> 1/199  -- Original Trans.: {[LIT:'lsd'], }
+                     |->('mount vernon', 'lsd')
+                 {[LIT:'erl'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 't', 0, (0-2) ], [LIT:'l'], }
+                     |->('erenhot', 'erl')
+                 {[LIT:'ext'], } -> 1/199  -- Original Trans.: {[LIT:'ex'], [SplitSubstr: 'a', 0, (0-1) ], }
+                     |->('topsham', 'ext')
+                 {[LIT:'lpe'], } -> 1/199  -- Original Trans.: {[LIT:'lp'], [SplitSubstr: 'a', 0, (3-4) ], }
+                     |->('ginebra', 'lpe')
+                 {[LIT:'mft'], } -> 1/199  -- Original Trans.: {[LIT:'mf'], [SplitSubstr: 'a', 2, (1-2) ], }
+                     |->('santa teresa', 'mft')
+                 {[LIT:'mff'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'n', 0, (0-1) ], [LIT:'ff'], }
+                     |->('moanda', 'mff')
+                 {[LIT:'mfq'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'd', 0, (0-1) ], [LIT:'fq'], }
+                     |->('maradi', 'mfq')
+                 {[LIT:'maw'], } -> 1/199  -- Original Trans.: {[LIT:'maw'], }
+                     |->('malden', 'maw')
+                 {[LIT:'apw'], } -> 1/199  -- Original Trans.: {[LIT:'apw'], }
+                     |->('satapuala', 'apw')
+                 {[LIT:'kjb'], } -> 1/199  -- Original Trans.: {[LIT:'kjb'], }
+                     |->('orvakal', 'kjb')
+                 {[LIT:'mel'], } -> 1/199  -- Original Trans.: {[LIT:'mel'], }
+                     |->('attwood', 'mel')
+                 {[LIT:'ath'], } -> 1/199  -- Original Trans.: {[LIT:'ath'], }
+                     |->('spata', 'ath')
+                 {[LIT:'lqk'], } -> 1/199  -- Original Trans.: {[LIT:'lq'], [SplitSubstr: 'c', 1, (0-1) ], }
+                     |->('pickens', 'lqk')
+                 {[LIT:'hlj'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'o', 0, (1-2) ], [LIT:'lj'], }
+                     |->('zhaodong', 'hlj')
+                 {[LIT:'ltk'], } -> 1/199  -- Original Trans.: {[Substr:(3-4)], [LIT:'tk'], }
+                     |->('jablah', 'ltk')
+                 {[LIT:'axo'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 't', 0, (1-2) ], [LIT:'xo'], }
+                     |->('pantar', 'axo')
+                 {[LIT:'rdl'], } -> 1/199  -- Original Trans.: {[LIT:'rd'], [SplitSubstr: 'a', 0, (1-2) ], }
+                     |->('el hassana', 'rdl')
+                 {[LIT:'loz'], } -> 1/199  -- Original Trans.: {[LIT:'loz'], }
+                     |->('london', 'loz')
+                 {[LIT:'agz'], } -> 1/199  -- Original Trans.: {[SplitSubstr: 'e', 0, (3-4) ], [LIT:'gz'], }
+                     |->('pofadder', 'agz')
+                 {[LIT:'ctv'], } -> 1/199  -- Original Trans.: {[LIT:'ctv'], }
+                     |->('saurimo', 'ctv')
+                 {[LIT:'jhf'], } -> 1/199  -- Original Trans.: {[LIT:'jhf'], }
+                     |->('são roque', 'jhf')
+                 {[LIT:'mbs'], } -> 1/199  -- Original Trans.: {[LIT:'mbs'], }
+                     |->('freeland', 'mbs')
+                 {[LIT:'lpx'], } -> 1/199  -- Original Trans.: {[LIT:'lpx'], }
+                     |->('grobina', 'lpx')
+                 {[LIT:'cny'], } -> 1/199  -- Original Trans.: {[LIT:'cny'], }
+                     |->('moab', 'cny')
+                 {[LIT:'lpa'], } -> 1/199  -- Original Trans.: {[LIT:'lpa'], }
+                     |->('ingenio', 'lpa')
+                 {[LIT:'ood'], } -> 1/199  -- Original Trans.: {[LIT:'ood'], }
+                     |->('newman', 'ood')
+                 {[LIT:'ixj'], } -> 1/199  -- Original Trans.: {[LIT:'ix'], [SplitSubstr: 'm', 0, (0-1) ], }
+                     |->('jammu', 'ixj')
+                 {[LIT:'mbw'], } -> 1/199  -- Original Trans.: {[LIT:'mbw'], }
+                     |->('heatherton', 'mbw')
+                 {[LIT:'mqq'], } -> 1/199  -- Original Trans.: {[Split: 'o', 0 ], [LIT:'qq'], }
+                     |->('moundou', 'mqq')
+                 {[LIT:'dsy'], } -> 1/199  -- Original Trans.: {[LIT:'dsy'], }
+                     |->('koh kong', 'dsy')
+                 {[LIT:'mey'], } -> 1/199  -- Original Trans.: {[LIT:'mey'], }
+                     |->('bharatpur', 'mey')
+                 {[LIT:'max'], } -> 1/199  -- Original Trans.: {[LIT:'max'], }
+                     |->('ouro sogui', 'max')
+                 {[LIT:'tyc'], } -> 1/199  -- Original Trans.: {[LIT:'tyc'], }
+                     |->('mengfeng', 'tyc')
+                 {[LIT:'ffa'], } -> 1/199  -- Original Trans.: {[LIT:'ffa'], }
+                     |->('kill devil hills', 'ffa')
+                 {[LIT:'mhk'], } -> 1/199  -- Original Trans.: {[LIT:'mhk'], }
+                     |->('ogden', 'mhk')
+                 {[LIT:'mqt'], } -> 1/199  -- Original Trans.: {[LIT:'mqt'], }
+                     |->('k. i. sawyer air force base', 'mqt')
+                 {[LIT:'hzu'], } -> 1/199  -- Original Trans.: {[LIT:'hzu'], }
+                     |->('majialin village', 'hzu')
+                 {[LIT:'msp'], } -> 1/199  -- Original Trans.: {[LIT:'msp'], }
+                     |->('richfield', 'msp')
+                 {[LIT:'lyg'], } -> 1/199  -- Original Trans.: {[LIT:'lyg'], }
+                     |->('niushan', 'lyg')
+                 {[LIT:'eyw'], } -> 1/199  -- Original Trans.: {[LIT:'eyw'], }
+                     |->('stock island', 'eyw')
+                 {[LIT:'mxq'], } -> 1/199  -- Original Trans.: {[LIT:'mxq'], }
+                     |->('cairu', 'mxq')
+                 {[LIT:'txc'], } -> 1/199  -- Original Trans.: {[LIT:'txc'], }
+                     |->('orsha', 'txc')
+                 {[LIT:'cok'], } -> 1/199  -- Original Trans.: {[LIT:'cok'], }
+                     |->('angamali', 'cok')
+                 {[LIT:'imq'], } -> 1/199  -- Original Trans.: {[LIT:'imq'], }
+                     |->('showt', 'imq')
+                 {[LIT:'mqs'], } -> 1/199  -- Original Trans.: {[LIT:'mqs'], }
+                     |->('port elizabeth', 'mqs')
+                 {[LIT:'imk'], } -> 1/199  -- Original Trans.: {[LIT:'imk'], }
+                     |->('burang', 'imk')
+                 {[LIT:'mfk'], } -> 1/199  -- Original Trans.: {[LIT:'mfk'], }
+                     |->('nangan', 'mfk')
+                 {[LIT:'lsv'], } -> 1/199  -- Original Trans.: {[LIT:'lsv'], }
+                     |->('pahrump', 'lsv')
+
+****Golden rows apply patterns******
+golden pattern list: {
+                 {[SplitSubstr: 'p', 0, (0-1) ], [SplitSubstr: 'r', 0, (2-4) ], } -> 7/199
+                     |->('lusk', 'lsk')
+                     |->('laporte', 'lpo')
+                     |->('ganja', 'gnj')
+                     |->('dazhou', 'dzh')
+                     |->('male', 'mle')
+                     |->('billund', 'bll')
+                     |->('livingstone', 'lvi')
+                 {[SplitSubstr: 's', 0, (0-3) ], } -> 7/199
+                     |->('addis ababa', 'add')
+                     |->('mehamn', 'meh')
+                     |->('ezeiza', 'eze')
+                     |->('meknes', 'mek')
+                     |->('mende', 'men')
+                     |->('cody', 'cod')
+                     |->('merced', 'mer')
+                 {[SplitSubstr: 's', 0, (0-1) ], [SplitSubstr: ' ', 0, (2-3) ], [Substr:(6-7)], } -> 5/199
+                     |->('madison', 'mdn')
+                     |->('los banos', 'lsn')
+                     |->('lipetsk', 'lpk')
+                     |->('moberly', 'mby')
+                     |->('dodge city', 'ddc')
+                 {[SplitSubstr: 'e', 0, (0-1) ], [Substr:(4-6)], } -> 5/199
+                     |->('jiande', 'jde')
+                     |->('manteo', 'meo')
+                     |->('hamilton', 'hlt')
+                     |->('lordsburg', 'lsb')
+                     |->('mariquita', 'mqu')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [SplitSubstr: 'i', 0, (2-3) ], [Substr:(4-5)], } -> 5/199
+                     |->('mattoon', 'mto')
+                     |->('ezhou', 'ehu')
+                     |->('fuzuli', 'fzl')
+                     |->('leribe', 'lrb')
+                     |->('funadhoo', 'fnd')
+                 {[Substr:(0-1)], [Substr:(3-4)], [LIT:'i'], } -> 4/199
+                     |->('algeciras', 'aei')
+                     |->('amahai', 'ahi')
+                     |->('al qaysumah', 'aqi')
+                     |->('linyi', 'lyi')
+                 {[SplitSubstr: 'r', 0, (0-1) ], [SplitSubstr: 'm', 1, (3-4) ], [SplitSubstr: 'u', 0, (6-7) ], } -> 3/199
+                     |->('mashhad', 'mhd')
+                     |->('mbandaka', 'mdk')
+                     |->('marsh harbour', 'mhh')
+                 {[Substr:(0-2)], [LIT:'j'], } -> 3/199
+                     |->('meadville', 'mej')
+                     |->('aqaba', 'aqj')
+                     |->('abidjan', 'abj')
+                 {[LIT:'me'], [SplitSubstr: 'd', 0, (3-4) ], } -> 3/199
+                     |->('macae', 'mea')
+                     |->('melfi', 'mef')
+                     |->('meridian', 'mei')
+                 {[LIT:'j'], [SplitSubstr: 'o', 0, (0-1) ], [SplitSubstr: 't', 1, (0-1) ], } -> 3/199
+                     |->('paraty', 'jpy')
+                     |->('tauá', 'jta')
+                     |->('patos', 'jpo')
+                 {[SplitSubstr: 'g', 0, (0-1) ], [SplitSubstr: 'a', 1, (1-2) ], [LIT:'g'], } -> 3/199
+                     |->('la plata', 'lpg')
+                     |->('anqing', 'aqg')
+                     |->('muzaffarabad', 'mfg')
+                 {[SplitSubstr: 'a', 0, (0-1) ], [Substr:(4-5)], [Split: 'e', 1 ], } -> 3/199
+                     |->('manteo', 'meo')
+                     |->('miraflores', 'mfs')
+                     |->('dumaguete', 'dgt')
+                 {[SplitSubstr: 'z', 0, (0-1) ], [SplitSubstr: 'z', 0, (3-4) ], [LIT:'b'], } -> 2/199
+                     |->('la paz', 'lpb')
+                     |->('gondia', 'gdb')
+                 {[SplitSubstr: 'i', 0, (0-1) ], [SplitSubstr: 'i', 0, (3-4) ], [Substr:(6-7)], } -> 3/199
+                     |->('mashhad', 'mhd')
+                     |->('arequipa', 'aqp')
+                     |->('mombasa', 'mba')
+                 {[SplitSubstr: 'n', 0, (0-1) ], [SplitSubstr: 's', 1, (2-3) ], [SplitSubstr: 'u', 0, (7-8) ], } -> 2/199
+                     |->('martinsburg', 'mrb')
+                     |->('masterton', 'mro')
+                 {[SplitSubstr: 'a', 0, (0-1) ], [SplitSubstr: 'd', 0, (2-3) ], [SplitSubstr: 'a', 1, (0-1) ], } -> 4/199
+                     |->('los banos', 'lsn')
+                     |->('isle of islay', 'ily')
+                     |->('vacaria', 'vcc')
+                     |->('funadhoo', 'fnd')
+                 {[SplitSubstr: 'd', 0, (0-1) ], [SplitSubstr: 'd', 0, (5-7) ], } -> 2/199
+                     |->('linkoping', 'lpi')
+                     |->('marshfield', 'mfi')
+                 {[SplitSubstr: 'h', 0, (0-2) ], [LIT:'q'], } -> 2/199
+                     |->('lobatse', 'loq')
+                     |->('meulaboh', 'meq')
+                 {[SplitSubstr: 'r', 0, (0-1) ], [SplitSubstr: 'h', 0, (3-4) ], [LIT:'r'], } -> 2/199
+                     |->('darbhanga', 'dbr')
+                     |->('medford', 'mfr')
+                 {[SplitSubstr: 'm', 0, (6-9) ], } -> 2/199
+                     |->('sankt anton am arlberg', 'ant')
+                     |->('nacogdoches', 'och')
+                 {[SplitSubstr: 's', 0, (0-1) ], [SplitSubstr: 'b', 1, (2-3) ], [LIT:'o'], } -> 2/199
+                     |->('bandung', 'bdo')
+                     |->("les sables-d'olonne", 'lso')
+                 {[SplitSubstr: 'c', 0, (0-2) ], [LIT:'p'], } -> 2/199
+                     |->('mersing', 'mep')
+                     |->('avoca', 'avp')
+                 {[LIT:'er'], [SplitSubstr: 'd', 0, (5-6) ], } -> 2/199
+                     |->('errachidia', 'erh')
+                     |->('fairview', 'eri')
+                 {[LIT:'md'], [SplitSubstr: 'n', 1, (0-1) ], } -> 2/199
+                     |->('xinglong', 'mdg')
+                     |->('rionegro', 'mde')
+                 {[SplitSubstr: 'l', 0, (5-6) ], [LIT:'c'], [SplitSubstr: 'n', 1, (0-1) ], } -> 2/199
+                     |->('puerto francisco de orellana', 'occ')
+                     |->('chenzhou', 'hcz')
+                 {[SplitSubstr: 'a', 1, (6-7) ], [SplitSubstr: 'a', 1, (2-3) ], [LIT:'u'], } -> 2/199
+                     |->('reydarfjoerdur', 'dju')
+                     |->('almeirim', 'meu')
+                 {[LIT:'coh'], } -> 1/199
+                     |->('koch bihar', 'coh')
+                 {[LIT:'hsf'], } -> 1/199
+                     |->('suifenhe', 'hsf')
+                 {[LIT:'uhs'], } -> 1/199
+                     |->('aleksandrovsk-sakhalinskiy', 'uhs')
+                 {[LIT:'eea'], } -> 1/199
+                     |->('correia pinto', 'eea')
+                 {[LIT:'gdr'], } -> 1/199
+                     |->('angra dos reis', 'gdr')
+                 {[LIT:'ddd'], } -> 1/199
+                     |->('kudahuvadhoo', 'ddd')
+                 {[LIT:'cya'], } -> 1/199
+                     |->('les cayes', 'cya')
+                 {[LIT:'mso'], } -> 1/199
+                     |->('orchard homes', 'mso')
+                 {[LIT:'mnm'], } -> 1/199
+                     |->('marinette', 'mnm')
+                 {[LIT:'meg'], } -> 1/199
+                     |->('malanje', 'meg')
+                 {[LIT:'ees'], } -> 1/199
+                     |->('berenice city', 'ees')
+                 {[LIT:'lpy'], } -> 1/199
+                     |->('saint-paulien', 'lpy')
+                 {[LIT:'lsm'], } -> 1/199
+                     |->('sungai nyamuk', 'lsm')
+                 {[LIT:'eap'], } -> 1/199
+                     |->('basel', 'eap')
+                 {[LIT:'lqm'], } -> 1/199
+                     |->('puerto leguizamo', 'lqm')
+                 {[LIT:'mew'], } -> 1/199
+                     |->('mweka', 'mew')
+                 {[LIT:'lmv'], } -> 1/199
+                     |->('madivaru', 'lmv')
+                 {[SplitSubstr: 'r', 0, (0-1) ], [Substr:(3-4)], [Substr:(1-2)], } -> 2/199
+                     |->('linyi', 'lyi')
+                     |->('mcalester', 'mlc')
+                 {[SplitSubstr: 'r', 1, (0-1) ], [LIT:'ei'], } -> 2/199
+                     |->('algeciras', 'aei')
+                     |->('terney', 'nei')
+                 {[LIT:'lrt'], } -> 1/199
+                     |->('ploemeur', 'lrt')
+                 {[LIT:'rld'], } -> 1/199
+                     |->('richland', 'rld')
+                 {[LIT:'mhq'], } -> 1/199
+                     |->('mariehamn', 'mhq')
+                 {[LIT:'lbq'], } -> 1/199
+                     |->('lambarene', 'lbq')
+                 {[LIT:'lpj'], } -> 1/199
+                     |->('san juan de payara', 'lpj')
+                 {[LIT:'mem'], } -> 1/199
+                     |->('southaven', 'mem')
+                 {[LIT:'dwf'], } -> 1/199
+                     |->('kettering', 'dwf')
+                 {[LIT:'dmm'], } -> 1/199
+                     |->('al awjam', 'dmm')
+                 {[LIT:'lrv'], } -> 1/199
+                     |->('caraballeda', 'lrv')
+                 {[LIT:'lpt'], } -> 1/199
+                     |->('lampang', 'lpt')
+                 {[SplitSubstr: 't', 0, (0-1) ], [LIT:'pk'], } -> 2/199
+                     |->('sapporo', 'spk')
+                     |->('lipetsk', 'lpk')
+                 {[LIT:'ewr'], } -> 1/199
+                     |->('elizabeth', 'ewr')
+                 {[LIT:'lsq'], } -> 1/199
+                     |->('los angeles', 'lsq')
+                 {[LIT:'mhg'], } -> 1/199
+                     |->('mannheim', 'mhg')
+                 {[LIT:'afk'], } -> 1/199
+                     |->('ampara', 'afk')
+                 {[LIT:'mes'], } -> 1/199
+                     |->('medan', 'mes')
+                 {[LIT:'jcs'], } -> 1/199
+                     |->('crateus', 'jcs')
+                 {[LIT:'eyp'], } -> 1/199
+                     |->('yopal', 'eyp')
+                 {[LIT:'ixi'], } -> 1/199
+                     |->('north lakhimpur', 'ixi')
+                 {[LIT:'dia'], } -> 1/199
+                     |->('doha', 'dia')
+                 {[LIT:'lpf'], } -> 1/199
+                     |->('liupanshui', 'lpf')
+                 {[LIT:'jsb'], } -> 1/199
+                     |->('são benedito', 'jsb')
+                 {[LIT:'mgz'], } -> 1/199
+                     |->('myeik', 'mgz')
+                 {[LIT:'fnc'], } -> 1/199
+                     |->('machico', 'fnc')
+                 {[LIT:'ast'], } -> 1/199
+                     |->('warrenton', 'ast')
+                 {[LIT:'msq'], } -> 1/199
+                     |->('smilavichy', 'msq')
+                 {[LIT:'kxb'], } -> 1/199
+                     |->('kolaka', 'kxb')
+                 {[LIT:'aci'], } -> 1/199
+                     |->('beaumont-hague', 'aci')
+                 {[LIT:'mno'], } -> 1/199
+                     |->('kabalo', 'mno')
+                 {[LIT:'iup'], } -> 1/199
+                     |->('apui', 'iup')
+                 {[LIT:'dge'], } -> 1/199
+                     |->('mudgee', 'dge')
+                 {[LIT:'lru'], } -> 1/199
+                     |->('mesilla', 'lru')
+                 {[LIT:'mkz'], } -> 1/199
+                     |->('batu berendam', 'mkz')
+                 {[LIT:'cwp'], } -> 1/199
+                     |->('sanjwal', 'cwp')
+                 {[LIT:'jtn'], } -> 1/199
+                     |->('itanhaém', 'jtn')
+                 {[LIT:'mlh'], } -> 1/199
+                     |->('hesingue', 'mlh')
+                 {[LIT:'d'], [SplitSubstr: 't', 0, (0-1) ], [SplitSubstr: 'y', 0, (6-7) ], } -> 2/199
+                     |->('katsina', 'dka')
+                     |->('dodge city', 'ddc')
+                 {[LIT:'lzc'], } -> 1/199
+                     |->('la orilla', 'lzc')
+                 {[LIT:'vsk'], } -> 1/199
+                     |->('kennewick', 'vsk')
+                 {[Split: 'a', 0 ], [LIT:'zh'], } -> 2/199
+                     |->('dazhou', 'dzh')
+                     |->('labu', 'lzh')
+                 {[LIT:'ldh'], } -> 1/199
+                     |->('woolgoolga', 'ldh')
+                 {[LIT:'jpe'], } -> 1/199
+                     |->('paragominas', 'jpe')
+                 {[LIT:'fna'], } -> 1/199
+                     |->('masoyila', 'fna')
+                 {[LIT:'lbg'], } -> 1/199
+                     |->('gonesse', 'lbg')
+                 {[LIT:'bdq'], } -> 1/199
+                     |->('vadodara', 'bdq')
+                 {[LIT:'gyo'], } -> 1/199
+                     |->('blangkejeren', 'gyo')
+                 {[LIT:'kfz'], } -> 1/199
+                     |->('kukës', 'kfz')
+                 {[LIT:'mrq'], } -> 1/199
+                     |->('masiga', 'mrq')
+                 {[LIT:'ml'], [Substr:(3-4)], } -> 2/199
+                     |->('male', 'mle')
+                     |->('singosari', 'mlg')
+                 {[LIT:'mdh'], } -> 1/199
+                     |->('de soto', 'mdh')
+                 {[LIT:'mec'], } -> 1/199
+                     |->('manta', 'mec')
+                 {[LIT:'whb'], } -> 1/199
+                     |->('eliwana', 'whb')
+                 {[LIT:'fnb'], } -> 1/199
+                     |->('trollenhagen', 'fnb')
+                 {[LIT:'ycm'], } -> 1/199
+                     |->('niagara-on-the-lake', 'ycm')
+                 {[LIT:'lsd'], } -> 1/199
+                     |->('mount vernon', 'lsd')
+                 {[LIT:'erl'], } -> 1/199
+                     |->('erenhot', 'erl')
+                 {[LIT:'ext'], } -> 1/199
+                     |->('topsham', 'ext')
+                 {[LIT:'lpe'], } -> 1/199
+                     |->('ginebra', 'lpe')
+                 {[LIT:'mft'], } -> 1/199
+                     |->('santa teresa', 'mft')
+                 {[LIT:'mff'], } -> 1/199
+                     |->('moanda', 'mff')
+                 {[LIT:'mfq'], } -> 1/199
+                     |->('maradi', 'mfq')
+                 {[LIT:'maw'], } -> 1/199
+                     |->('malden', 'maw')
+                 {[LIT:'apw'], } -> 1/199
+                     |->('satapuala', 'apw')
+                 {[LIT:'kjb'], } -> 1/199
+                     |->('orvakal', 'kjb')
+                 {[LIT:'mel'], } -> 1/199
+                     |->('attwood', 'mel')
+                 {[LIT:'ath'], } -> 1/199
+                     |->('spata', 'ath')
+                 {[LIT:'lqk'], } -> 1/199
+                     |->('pickens', 'lqk')
+                 {[LIT:'hlj'], } -> 1/199
+                     |->('zhaodong', 'hlj')
+                 {[LIT:'ltk'], } -> 1/199
+                     |->('jablah', 'ltk')
+                 {[LIT:'axo'], } -> 1/199
+                     |->('pantar', 'axo')
+                 {[LIT:'rdl'], } -> 1/199
+                     |->('el hassana', 'rdl')
+                 {[LIT:'loz'], } -> 1/199
+                     |->('london', 'loz')
+                 {[LIT:'agz'], } -> 1/199
+                     |->('pofadder', 'agz')
+                 {[LIT:'ctv'], } -> 1/199
+                     |->('saurimo', 'ctv')
+                 {[LIT:'jhf'], } -> 1/199
+                     |->('são roque', 'jhf')
+                 {[LIT:'mbs'], } -> 1/199
+                     |->('freeland', 'mbs')
+                 {[LIT:'lpx'], } -> 1/199
+                     |->('grobina', 'lpx')
+                 {[LIT:'cny'], } -> 1/199
+                     |->('moab', 'cny')
+                 {[LIT:'lpa'], } -> 1/199
+                     |->('ingenio', 'lpa')
+                 {[LIT:'ood'], } -> 1/199
+                     |->('newman', 'ood')
+                 {[LIT:'ixj'], } -> 1/199
+                     |->('jammu', 'ixj')
+                 {[LIT:'mbw'], } -> 1/199
+                     |->('heatherton', 'mbw')
+                 {[LIT:'mqq'], } -> 1/199
+                     |->('moundou', 'mqq')
+                 {[LIT:'dsy'], } -> 1/199
+                     |->('koh kong', 'dsy')
+                 {[LIT:'mey'], } -> 1/199
+                     |->('bharatpur', 'mey')
+                 {[LIT:'max'], } -> 1/199
+                     |->('ouro sogui', 'max')
+                 {[LIT:'tyc'], } -> 1/199
+                     |->('mengfeng', 'tyc')
+                 {[LIT:'ffa'], } -> 1/199
+                     |->('kill devil hills', 'ffa')
+                 {[LIT:'mhk'], } -> 1/199
+                     |->('ogden', 'mhk')
+                 {[LIT:'mqt'], } -> 1/199
+                     |->('k. i. sawyer air force base', 'mqt')
+                 {[LIT:'hzu'], } -> 1/199
+                     |->('majialin village', 'hzu')
+                 {[LIT:'msp'], } -> 1/199
+                     |->('richfield', 'msp')
+                 {[LIT:'lyg'], } -> 1/199
+                     |->('niushan', 'lyg')
+                 {[LIT:'eyw'], } -> 1/199
+                     |->('stock island', 'eyw')
+                 {[LIT:'mxq'], } -> 1/199
+                     |->('cairu', 'mxq')
+                 {[LIT:'txc'], } -> 1/199
+                     |->('orsha', 'txc')
+                 {[LIT:'cok'], } -> 1/199
+                     |->('angamali', 'cok')
+                 {[LIT:'imq'], } -> 1/199
+                     |->('showt', 'imq')
+                 {[LIT:'mqs'], } -> 1/199
+                     |->('port elizabeth', 'mqs')
+                 {[LIT:'imk'], } -> 1/199
+                     |->('burang', 'imk')
+                 {[LIT:'mfk'], } -> 1/199
+                     |->('nangan', 'mfk')
+                 {[LIT:'lsv'], } -> 1/199
+                     |->('pahrump', 'lsv')
+
+--- Not covered inputs:
+****************

@@ -1,3 +1,17 @@
+# Data Integration 2
+
+To run lookup tables:
+
+    python3 src/main.py -m LT
+
+To run patterns (TST):
+
+    python3 src/main.py -m PT
+
+To run patterns + lookup tables:
+
+    python3 src/main.py -m LTTST
+
 # Efficiently Transforming Tables for Joinability
 This repository contains resources developed within the following paper:
 

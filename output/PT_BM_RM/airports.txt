@@ -7,7 +7,7 @@ Best pattern Coverage: 0.00%
 Total Patterns: 0, input rows: 0
 Average Input length (Num chars): 0, Average output length (Num chars): 0
 Max Tokens: 3
-Total Run time: 4.7206878662109375e-05, Generalization time:0.0
+Total Run time: 5.2928924560546875e-05, Generalization time:0.0
 Total number of placeholder combinations (After removing duplicates): 0
 Total number of all generated patterns: 0
 Number of duplicate patterns removed: 0
@@ -22,11 +22,11 @@ Number of splitted remaining placeholder comb.: 0
 Number of removed init placeholder comb.: 0
 Number of removed splitted placeholder comb.: 0
 
-placeholder generation time: 5.245208740234375e-06
-extract patterns time: 2.6226043701171875e-06
-duplicate patterns remove time: 2.6226043701171875e-05
-patterns applying time: 9.059906005859375e-06
-get covering set time: 4.0531158447265625e-06
+placeholder generation time: 7.867813110351562e-06
+extract patterns time: 6.9141387939453125e-06
+duplicate patterns remove time: 3.0994415283203125e-05
+patterns applying time: 5.0067901611328125e-06
+get covering set time: 2.1457672119140625e-06
 
 Number of all patterns that applied on all rows (#pattern * #rows) (complexity): 0
 Number of successful patterns: 0
@@ -43,31 +43,31 @@ golden pattern list: {
    ('basel', 'eap')
    ('niushan', 'lyg')
    ('beaumont-hague', 'aci')
-   ('sankt anton am arlberg', 'ast')
+   ('sankt anton am arlberg', 'ant')
    ('satapuala', 'apw')
    ('linyi', 'lyi')
-   ('rionegro', 'jtn')
+   ('rionegro', 'mde')
    ('de soto', 'mdh')
-   ('itanhaém', 'mde')
-   ('mbandaka', 'ast')
+   ('itanhaém', 'jtn')
+   ('mbandaka', 'mdk')
    ('madivaru', 'lmv')
    ('la orilla', 'lzc')
    ('arequipa', 'aqp')
    ('warrenton', 'ast')
-   ('mengfeng', 'ast')
+   ('mengfeng', 'tyc')
    ('labu', 'lzh')
    ('manta', 'mec')
    ('dazhou', 'dzh')
-   ('berenice city', 'ast')
+   ('berenice city', 'ees')
    ('kukës', 'kfz')
    ('tauá', 'jta')
    ('orvakal', 'kjb')
    ('ezhou', 'ehu')
-   ('fuzuli', 'ast')
+   ('fuzuli', 'fzl')
    ('kolaka', 'kxb')
    ('angra dos reis', 'gdr')
    ('zhaodong', 'hlj')
-   ('majialin village', 'ast')
+   ('majialin village', 'hzu')
    ('cairu', 'mxq')
    ('ampara', 'afk')
    ('são roque', 'jhf')
@@ -127,8 +127,8 @@ golden pattern list: {
    ('vadodara', 'bdq')
    ('meadville', 'mej')
    ('elizabeth', 'ewr')
-   ('meulaboh', 'iup')
-   ('apui', 'meq')
+   ('meulaboh', 'meq')
+   ('apui', 'iup')
    ('almeirim', 'meu')
    ('richland', 'rld')
    ('merced', 'mer')
@@ -193,8 +193,8 @@ golden pattern list: {
    ('ingenio', 'lpa')
    ('lobatse', 'loq')
    ('ginebra', 'lpe')
-   ('linkoping', 'ahi')
-   ('amahai', 'lpi')
+   ('linkoping', 'lpi')
+   ('amahai', 'ahi')
    ('trollenhagen', 'fnb')
    ('machico', 'fnc')
    ('funadhoo', 'fnd')
@@ -237,6 +237,6 @@ golden pattern list: {
    ('los banos', 'lsn')
    ("les sables-d'olonne", 'lso')
    ('los angeles', 'lsq')
-   ('pahrump', 'dmm')
-   ('al awjam', 'lsv')
+   ('pahrump', 'lsv')
+   ('al awjam', 'dmm')
 ****************

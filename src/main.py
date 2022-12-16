@@ -28,6 +28,8 @@ import pathlib
 BASE_PATH = str(pathlib.Path(__file__).absolute().parent.parent.absolute())
 
 METHOD = "PT"
+# METHOD = "LT"
+# METHOD = "LTTST"
 
 # MUST Be Kept updated in order for config file to work. It also should be updated in the Finder.py
 PT_PARAMS = {
@@ -49,11 +51,12 @@ PT_PARAMS = {
 
 }
 
-GOLDEN_ROWS = False
+GOLDEN_ROWS = True
 SWAP_SRC_TARGET = True
 
 DATASET = "BM"
-DS_PATH = BASE_PATH + '/data/autojoin-Benchmark/'
+# DS_PATH = BASE_PATH + '/data/autojoin-Benchmark/'
+DS_PATH = BASE_PATH + '/data/LT_TST/'
 
 LT_PATH = BASE_PATH + '/data/lookup_tables/'
 # DS_PATH = BASE_PATH + '/data/autojoin-no-gt/' # must set GOLDEN_ROW to False
@@ -79,7 +82,7 @@ CNT_CUR = multiprocessing.Value('i', 0)
 CNT_ALL = 0
 
 LT_TST_DATA = {
-    'airports': ['city', 'city codes'],
+    'airports': ['cities', 'city codes'],
     'currency code': ['currency names', 'currency codes'],
     'date case 2': ['dd month yyyy', 'dd mm yyyy'],
     'stock market': ['companies', 'stock symbols']
@@ -104,6 +107,11 @@ def get_pattern(func, params, verbose=False, lt_tst=False, lt_tst_key=None):
     if (lt_tst):
         for key in table_keys:
             if key != lt_tst_key:
+                del tables[key]
+    else:
+        lt_tst_keys = list(LT_TST_DATA.keys())
+        for key in table_keys:
+            if key not in lt_tst_keys:
                 del tables[key]
 
     print("Reading Done!")
@@ -161,7 +169,8 @@ def get_pattern(func, params, verbose=False, lt_tst=False, lt_tst_key=None):
     all_has_gt = True
 
     for item in res['items']:
-        print(f"Matching rows for '{item['src_table']}' ...")
+        if METHOD != 'LTTST':
+            print(f"Matching rows for '{item['src_table']}' ...")
         has_GT = 'GT' in tables[item['src_table'][4:]]
         all_has_gt = all_has_gt and has_GT
 
@@ -175,7 +184,7 @@ def get_pattern(func, params, verbose=False, lt_tst=False, lt_tst_key=None):
             rows, is_swapped = matcher.get_matching_rows_for_table(tables, item, ROW_MATCHING_N_START, ROW_MATCHING_N_END,
                                                          swap_src_target=SWAP_SRC_TARGET)
 
-            
+
         if verbose:
             print(f"source and target columns are {'' if is_swapped else 'NOT '}swapped")
         new_rows = {}
@@ -233,7 +242,7 @@ def get_pattern(func, params, verbose=False, lt_tst=False, lt_tst_key=None):
 
 
     # print('ALL ROWSSS ', all_rows[0])
-    if all_has_gt and len(all_rows) > 0:
+    if all_has_gt and METHOD != 'LTTST' and len(all_rows) > 0:
         rme = RowMatcherEval(tables, all_rows)
         print("Row matching performance:" + str(rme))
 
@@ -275,7 +284,8 @@ def run_pattern(item, rows, params, tables, table_name=None, rmu=None, verbose=N
     print(f"{len(res['patterns'])} patterns / {res['input_len']} inputs \n-----------")
     if verbose:
         print(tr_eval)
-    pt_print(res, table_name, rmu, tr_eval)
+    if METHOD != 'LTTST' and METHOD != 'LT':
+        pt_print(res, table_name, rmu, tr_eval)
 
 
 def run_aj(item, rows, params, tables, table_name=None, rmu=None, verbose=False):
@@ -351,46 +361,6 @@ def run_aj(item, rows, params, tables, table_name=None, rmu=None, verbose=False)
     aj_print(res, res['print_name'], rmu, tr_eval)
 
 
-def lookup_table_map(tables: dict, lookup_tables: dict):
-    '''
-    Maps source column in source table to target column in target table using lookup table.
-
-    Need run_aj 2 times: 
-        - run_aj between source col and lookup table, to left-join source_table and lookup table
-        - run_aj between new left-joined source + lookup table with target table
-        
-    '''
-    for table in tables.items():
-        
-
-
-        # find best lookup table for table
-        lookup_table_name = match_lookup_table(table, lookup_tables)
-        lookup_table: dict = lookup_tables[lookup_table_name]
-
-        
-
-        # use lookup_table to replace rows of source table in tables
-
-
-        ## find index of source column
-        src_column_name = table['rows']['src']
-        src_column_index = table['src']['titles'].index(src_column_name)
-
-        ## run aj to map from source col of source table to lookup table
-        
-        ## create folder for source to lookup
-
-
-        for item in table['src']['items']:
-            item[src_column_index]
-
-        
-        # save the new source table in a new folder inside data folder, so that we can run aj as normal on the new folder
-
-        pass
-
-
 def lookup_table_brute_force(data_table: dict, lookup_tables: dict) -> dict:
         src_column_name = data_table['rows']['src']
         src_column_index = data_table['src']['titles'].index(src_column_name)
@@ -438,11 +408,11 @@ def lookup_table_brute_force(data_table: dict, lookup_tables: dict) -> dict:
             'titles': joined_src_lookup_table['titles'] + data_table['target']['titles'],
             'items': []
         }
-        
+
 
 
         for data_row in joined_src_lookup_table['items']:
-            
+
             for target_data_row in data_table['target']['items']:
                 data_row_lookup_table_index += 1
                 target_data_row[target_column_index]
@@ -458,6 +428,55 @@ def lookup_table_brute_force(data_table: dict, lookup_tables: dict) -> dict:
 
         return joined_src_lookup_target_table
 
+
+def lookup_table_with_tst_brute_force(data_table: dict, lookup_tables: dict) -> dict:
+    data_table['name'] = data_table['name'].replace('target_', '')
+    src_column_name = data_table['name']
+    # src_column_index = data_table['titles'].index(src_column_name)
+    data_row_lookup_table_index = -1
+    found = False
+    count_found = 0
+
+    joined_src_lookup_table = {
+        'name': data_table['name'] + "_lookup_table",
+        'titles': data_table['titles'],
+        'items': []
+    }
+
+    for data_row in data_table['items']:
+
+        for lookup_table in lookup_tables.items():
+            lookup_table = lookup_table[1]
+
+            lookup_src_columnn_name = lookup_table['source_col']
+            lookup_src_columnn_index = lookup_table['titles'].index(lookup_src_columnn_name)
+
+            for lookup_row in lookup_table['items']:
+                data_row_lookup_table_index += 1
+
+                if data_row[0] == lookup_row[lookup_src_columnn_index]:
+
+                    found = True
+                    count_found += 1
+                    joined_src_lookup_table['items'].append(data_row + [
+                        lookup_row[1 - lookup_src_columnn_index]])  # assuming lookup table has only 2 columns
+                    count_found = 3000
+                    if (len(joined_src_lookup_table['titles']) < 2):
+                        joined_src_lookup_table['titles'] += [lookup_table['titles'][
+                                                                  1 - lookup_src_columnn_index]]  # appending only the target column of lookup table
+
+                pass
+
+            if found:
+                pass
+    rme = {'precision': 0.0, 'recall': 0.0, 'f1': 0.0}
+    if (count_found >= len(data_table['items'])):
+        rme['precision'] = 1.0
+        rme['recall'] = 1.0
+        rme['f1'] = 1.0
+    # print('$$$$$$$$$$$$', len(data_table['items']))
+
+    return joined_src_lookup_table, rme
 
 def pt_print(res, filename, row_matcher, tr_eval):
     coverage = res['covered'] / res['input_len'] if res['input_len'] != 0 else "NA"
@@ -687,7 +706,8 @@ def row_matching_test(n_start_from=2, n_start_to=25, file_write=True):
             all_rows.append(rr)
 
             rmu = RowMatcherUnit(tables, rr)
-            print(rmu)
+            if METHOD != 'LTTST':
+                print(rmu)
             if file_write:
                 if not os.path.exists(file_path):
                     with open(file_path, "a+") as f1:
@@ -705,11 +725,13 @@ def row_matching_test(n_start_from=2, n_start_to=25, file_write=True):
 
 def run_LT():
     tables, all_tables = dl.get_tables_from_dir(DS_PATH, [], make_lower=True, verbose=False)
+
     for table in tables.items():
+        start_time = time.time()
 
         table = table[1]
 
-        if table['name'] not in ['airports', 'currency code', 'date case 2', 'stock market']:
+        if table['name'] not in LT_TST_DATA.keys():
             continue
 
         joined_output_table = lookup_table_brute_force(table, lookup_tables)
@@ -745,6 +767,7 @@ def run_LT():
 
         rme = RowMatcherEval(tables, all_rows)
         print(rme)
+        print('Run time of ', table['name'], ':', time.time() - start_time)
 
 def run_LT_TST():
     tables, all_tables = dl.get_tables_from_dir(DS_PATH, [], make_lower=True, verbose=False)
@@ -755,45 +778,44 @@ def run_LT_TST():
 
         get_pattern('run_pattern', PT_PARAMS, verbose=False, lt_tst=True, lt_tst_key=LT_TST_DATA[dataset][0])  # SOURCE ---(T1)---> LT's SOURCE
 
-        for table in tables.items():
+        for table in all_tables:
 
-            table = table[1]
+            # table = table[1]
 
-            if table['name'] not in [dataset]:
+            if table['name'] not in ['target_'+LT_TST_DATA[dataset][0]]:
                 continue
 
-            joined_output_table = lookup_table_brute_force(table, lookup_tables)
+            joined_output_table, rme = lookup_table_with_tst_brute_force(table, lookup_tables)
 
             rows = {}
             for row in joined_output_table['items']:
                 rows[row[0]] = [row[-1]]  # ASSUMING THAT FIRST COLUMN IS SOURCE AND LAST COLUMN IS TARGET, CHANGE LATER
-
-            all_rows = []
 
             new_rows = {}
 
             for src, target in rows.items():
                 new_rows[src] = [[t, t] for t in target]
 
-            rr = {
-                'col_info': {
-                    'src_table': f"src_{table['name']}",  # src_{table name}
-                    'src_row': table['rows']['src'],  # src col name
-                    'src_row_id': 0,
-                    'target_table': f"target_{table['name']}",  # target_{table name}
-                    'target_row': table['rows']['target'],  # Target col name
-                    'target_row_id': 0
 
-                },
-                'is_swapped': False,
-                'rows': new_rows
-            }
 
-            all_rows.append(rr)
+            # rr = {
+            #     'col_info': {
+            #         'src_table': f"target_{table['name']}",  # src_{table name}
+            #         'src_row': tables[dataset]['rows']['src'],  # src col name
+            #         'src_row_id': 0,
+            #         'target_table': f"src_{LT_TST_DATA[dataset][1]}",  # target_{table name}
+            #         'target_row': table['rows']['target'],  # Target col name
+            #         'target_row_id': 0
+            #
+            #     },
+            #     'is_swapped': False,
+            #     'rows': new_rows
+            # }
+            #
+            # all_rows.append(rr)
 
-            # rme = RowMatcherEval(tables, all_rows)
-            # print(rme)
             get_pattern('run_pattern', PT_PARAMS, verbose=False, lt_tst=True, lt_tst_key=LT_TST_DATA[dataset][1])
+            print('P:', rme['precision'], ', R:', rme['recall'], ', F1:', rme['f1'])
             print('Run time of', dataset,': ', time.time() - start_time, 'sec')
 
 
@@ -801,7 +823,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', '-c', action='store', type=str, required=False,
                         default='', help='Path of config file')
+    parser.add_argument('--method', '-m', action='store', type=str, required=False,
+                        default='', help='Name of the method')
     args = parser.parse_args()
+    METHOD = args.method
     if args.config != '':
         cnf_path = str(pathlib.Path(args.config).absolute())
         print(f"Loading config file: {cnf_path}")
@@ -844,18 +869,30 @@ if __name__ == '__main__':
     OUTPUT_DIR = OUTPUT_PATH + f"{METHOD}_{DATASET}_{'GL' if GOLDEN_ROWS else 'RM'}/"
     OUTPUT_FILE = OUTPUT_DIR + '_res.csv'
 
+    LT_OUTPUT_DIR = OUTPUT_PATH + 'LT_BM_RM'
+    LT_OUTPUT_FILE = LT_OUTPUT_DIR + '_res.txt'
+
+    if not os.path.exists(LT_OUTPUT_FILE) and METHOD == 'LT':
+        pathlib.Path(LT_OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
+
+    LTTST_OUTPUT_DIR = OUTPUT_PATH + 'LTTST_BM_RM'
+    LTTST_OUTPUT_FILE = LTTST_OUTPUT_DIR + '_res.txt'
+
+    if not os.path.exists(LTTST_OUTPUT_FILE) and METHOD == 'LTTST':
+        pathlib.Path(LTTST_OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
+
     NUM_PROCESSORS = multiprocessing.cpu_count() // 2 if NUM_PROCESSORS == 0 else NUM_PROCESSORS
 
     if OVERRIDE:
         if os.path.exists(OUTPUT_DIR):
             shutil.rmtree(OUTPUT_DIR)
 
-    
+
     lookup_tables = {}
 
-    lt_files = ['date_LT.csv']
+    lt_files = ['airport_LT.csv', 'currency_LT.csv', 'date_LT.csv', 'stock_LT.csv']
     make_lower = True
-    
+
     for lt in lt_files:
         res = {
             'titles': None,
@@ -873,7 +910,7 @@ if __name__ == '__main__':
         lookup_tables[lt] = res
 
 
-    METHOD = 'LT-TST'
+    # METHOD = 'LTTST'
     if METHOD == 'PT':
         get_pattern('run_pattern', PT_PARAMS, verbose=False)
     elif METHOD == 'AJ':
@@ -881,10 +918,8 @@ if __name__ == '__main__':
     elif METHOD == 'RMT':
         row_matching_test()
     elif METHOD == 'LT':
-        start_time = time.time()
         run_LT()
-        print('Final run time: ', time.time() - start_time)
-    elif METHOD == 'LT-TST':
+    elif METHOD == 'LTTST':
         run_LT_TST()
     else:
         raise NotImplementedError()
